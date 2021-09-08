@@ -594,7 +594,6 @@ body {
 /* PLANETS */
 .planets {
   background-color: #1a2430;
-  background: url(../images/banner-12-bg.png);
   background-size: cover;
 }
 .planets-card {
