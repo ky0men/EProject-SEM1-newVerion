@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/favico.png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/solarSystemVer6.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Solar System 3D View</title>
+</head>
+
+<body>
+
+    </header>
+
+    <section class="control container">
+        <div class="check-control">
+            <input type="checkbox" id="control-nav-toggle">
+        </div>
+        <label class="control-nav-btn" for="control-nav-toggle">
+            <div><i class="fas fa-cog"></i></div>
+        </label>
+        <div class="view row">
+            <div class="content col-xs-5">
+                <p>Setting View</p>
+            </div>
+            <div class="toggle-btn col-xs-7">
+                <input type="checkbox" id="switch-toggle-view" class="switch-toggle-view-checkbox">
+                <label for="switch-toggle-view" class="switch-toggle-view">
+                    <span class="switch-toggle-view-3d">3D</span>
+                    <span class="switch-toggle-view-2d">2D</span>
+                </label>
+            </div>
+        </div>
+        <div class="zoom row">
+            <div class="content col-xs-5">
+                <p>Setting Zoom</p>
+            </div>
+            <div class="toggle-btn col-xs-7">
+                <input type="checkbox" id="switch-toggle-zoom" class="switch-toggle-zoom-checkbox">
+                <label for="switch-toggle-zoom" class="switch-toggle-zoom">
+                    <span class="switch-toggle-zoom-out">OUT</span>
+                    <span class="switch-toggle-zoom-in">IN</span>
+                </label>
+            </div>
+        </div>
+    </section>
+    <section id="bodySolar" class="universal view-3d">
+        <div class="galaxy">
+            <div class="solar-system">
+                <div class="sun">
+
+                </div>
+                <div id="mercury" class="mercury-orbit orbits">
+                    <div class="mercury planets">
+
+                    </div>
+                </div>
+                <div id="venus" class="venus-orbit orbits ">
+                    <div class="venus planets">
+
+                    </div>
+                </div>
+                <div id="earth" class="earth-orbit orbits">
+                    <div class="earth planets">
+                        <div class="moon-orbit orbits">
+                            <div class="moon planets">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="mars" class="mars-orbit orbits">
+                    <div class="mars planets">
+
+                    </div>
+                </div>
+                <div id="jupiter" class="jupiter-orbit orbits">
+                    <div class="jupiter planets">
+
+                    </div>
+                </div>
+                <div id="saturn" class="saturn-orbit orbits">
+                    <div class="saturn planets">
+                        <div class="ring"></div>
+                    </div>
+                </div>
+                <div id="uranus" class="uranus-orbit orbits">
+                    <div class="uranus planets">
+
+                    </div>
+                </div>
+                <div id="neptune" class="neptune-orbit orbits">
+                    <div class="neptune planets">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="planets-bar">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="planets-navbar-toggle" data-toggle="collapse"
+                            data-target="#planets-navbar">
+                            <i class="fas fa-rocket"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="planets-navbar">
+                        <ul class="nav navbar-nav">
+                            <li id="sun-nav"><a href="#">Sun</a></li>
+                            <li id="mercury-nav"><a href="#">Mercury</a></li>
+                            <li id="venus-nav"><a href="#">Venus</a></li>
+                            <li id="earth-nav"><a href="#">Earth</a></li>
+                            <li id="mars-nav"><a href="#">Mars</a></li>
+                            <li id="jupiter-nav"><a href="#">Jupiter</a></li>
+                            <li id="saturn-nav"><a href="#">Saturn</a></li>
+                            <li id="uranus-nav"><a href="#">Uranus</a></li>
+                            <li id="neptune-nav"><a href="#">Neptune</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="sun-info" class="planets-info sun-info">
+            <span class="top-line"></span>
+            <span class="right-line"></span>
+            <span class="bottom-line"></span>
+            <span class="left-line"></span>
+            <h2 class="text-center">SUN</h2>
+            <p><span class="color-title">Diameter:</span> 1,392,700 km</p>
+            <p><span class="color-title">Mass:</span> 1.989E30 kg</p>
+            <p><span class="color-title">Distance frome Earth:</span> 1.496E8 km</p>
+            <p><span class="color-title">Temperature:</span> 5505<sup>o</sup>C</sup></p>
+            <p class="close-btn close-sun-info"><i class="fas fa-times"></i></p>
+        </div>
+        <div id="mercury-info" class="planets-info mercury-info">
+            <span class="top-line"></span>
+            <span class="right-line"></span>
+            <span class="bottom-line"></span>
+            <span class="left-line"></span>
+            <h2 class="text-center">MERCURY</h2>
+            <p><span class="color-title">Diameter:</span> 4,879 km</p>
+            <p><span class="color-title">Mass:</span> 3.29E23 kg</p>
+            <p><span class="color-title">Moons:</span> None</p>
+            <p><span class="color-title">Orbit distance:</span> 57,909,227 km</p>
+            <p><span class="color-title">Distance frome Earth:</span> 102,839,000 km</p>
+            <p><span class="color-title">Length of Year:</span> 88 days</p>
+            <p><span class="color-title">Temperature:</span> -173<sup>o</sup>C to 427<sup>o</sup>C</p>
+            <p><span class="color-title">First record:</span> 14th century BC</p>
+            <p class="close-btn close-mercury-info"><i class="fas fa-times"></i></p>
+        </div>
+        <div id="venus-info" class="planets-info venus-info">
+            <span class="top-line"></span>
+            <span class="right-line"></span>
+            <span class="bottom-line"></span>
+            <span class="left-line"></span>
+            <h2 class="text-center">VENUS</h2>
+            <p><span class="color-title">Diameter:</span> 12,104 km</p>
+            <p><span class="color-title">Mass:</span> 4.87E24 kg</p>
+            <p><span class="color-title">Moons:</span> None</p>
+            <p><span class="color-title">Orbit distance:</span> 108,209,475 km</p>
+            <p><span class="color-title">Distance frome Earth:</span> 245,518,000 km</p>
+            <p><span class="color-title">Length of Year:</span> 225 days</p>
+            <p><span class="color-title">Temperature:</span> 462<sup>o</sup>C</p>
+            <p><span class="color-title">First record:</span> 17th century BC</p>
+            <p class="close-btn close-venus-info"><i class="fas fa-times"></i></p>
+        </div>
+        <div id="earth-info" class="planets-info earth-info">
+            <span class="top-line"></span>
+            <span class="right-line"></span>
+            <span class="bottom-line"></span>
+            <span class="left-line"></span>
+            <h2 class="text-center">EARTH</h2>
+            <p><span class="color-title">Diameter:</span> 12,756 km</p>
+            <p><span class="color-title">Mass:</span> 5.97E24 kg</p>
+            <p><span class="color-title">Moons:</span> 1 <b>(The Moon)</b></p>
+            <p><span class="color-title">Orbit distance:</span> 149,598,262 km</p>
+            <p><span class="color-title">Length of Year:</span> 365.24 days</p>
+            <p><span class="color-title">Temperature:</span> -88<sup>o</sup>C to 58<sup>o</sup>C</p>
+            <p class="close-btn close-earth-info"><i class="fas fa-times"></i></p>
+        </div>
+        <div id="mars-info" class="planets-info mars-info">
+            <span class="top-line"></span>
+            <span class="right-line"></span>
+            <span class="bottom-line"></span>
+            <span class="left-line"></span>
+            <h2 class="text-center">MARS</h2>
+            <p><span class="color-title">Diameter:</span> 6,792 km</p>
+            <p><span class="color-title">Mass:</span> 6.39E23 kg</p>
+            <p><span class="color-title">Moons:</span> 2 (<strong>Phobos</strong> & <strong>Deimos</strong>)</p>
+            <p><span class="color-title">Orbit distance:</span> 227,943,824 km</p>
+            <p><span class="color-title">Distance frome Earth:</span> 329,823,000 km</p>
+            <p><span class="color-title">Length of Year:</span> 687 days (1.9 years)</p>
+            <p><span class="color-title">Temperature:</span> -87<sup>o</sup>C to -5<sup>o</sup>C</p>
+            <p><span class="color-title">First record:</span> 2nd millennium BC</p>
+            <p class="close-btn close-mars-info"><i class="fas fa-times"></i></p>
+        </div>
+        <div id="jupiter-info" class="planets-info jupiter-info">
+            <span class="top-line"></span>
+            <span class="right-line"></span>
+            <span class="bottom-line"></span>
+            <span class="left-line"></span>
+            <h2 class="text-center">JUPITER</h2>
+            <p><span class="color-title">Diameter:</span> 142,984 km</p>
+            <p><span class="color-title">Mass:</span> 1.99E27 kg</p>
+            <p><span class="color-title">Moons:</span> 79</p>
+            <p><span class="color-title">Orbit distance:</span> 778,340,821 km</p>
+            <p><span class="color-title">Distance frome Earth:</span> 731,831,000 km</p>
+            <p><span class="color-title">Length of Year:</span> 4,333 days (11.9 years)</p>
+            <p><span class="color-title">Temperature:</span> -108<sup>o</sup>C</p>
+            <p><span class="color-title">First record:</span> 7th or 8th century BC</p>
+            <p class="close-btn close-jupiter-info"><i class="fas fa-times"></i></p>
+        </div>
+        <div id="saturn-info" class="planets-info saturn-info">
+            <span class="top-line"></span>
+            <span class="right-line"></span>
+            <span class="bottom-line"></span>
+            <span class="left-line"></span>
+            <h2 class="text-center">SATURN</h2>
+            <p><span class="color-title">Diameter:</span> 120,536 km</p>
+            <p><span class="color-title">Mass:</span> 5.68E26 kg</p>
+            <p><span class="color-title">Moons:</span> 82</p>
+            <p><span class="color-title">Orbit distance:</span> 1,426,666,422 km</p>
+            <p><span class="color-title">Distance frome Earth:</span> 1,430,091,000 km</p>
+            <p><span class="color-title">Length of Year:</span> 10,756 days (29.5 years)</p>
+            <p><span class="color-title">Temperature:</span> -139<sup>o</sup>C</p>
+            <p><span class="color-title">First record:</span> 8th century BC</p>
+            <p class="close-btn close-saturn-info"><i class="fas fa-times"></i></p>
+        </div>
+        <div id="uranus-info" class="planets-info uranus-info">
+            <span class="top-line"></span>
+            <span class="right-line"></span>
+            <span class="bottom-line"></span>
+            <span class="left-line"></span>
+            <h2 class="text-center">URANUS</h2>
+            <p><span class="color-title">Diameter:</span> 51,118 km</p>
+            <p><span class="color-title">Mass:</span> 8.68E25 kg</p>
+            <p><span class="color-title">Moons:</span> 27</p>
+            <p><span class="color-title">Orbit distance:</span> 2,870,658,186 km</p>
+            <p><span class="color-title">Distance frome Earth:</span> 3,094,791,000 km</p>
+            <p><span class="color-title">Length of Year:</span> 30,687 days (84 years)</p>
+            <p><span class="color-title">Temperature:</span> -197<sup>o</sup>C</p>
+            <p><span class="color-title">First record:</span> March 13th 1781</p>
+            <p class="close-btn close-uranus-info"><i class="fas fa-times"></i></p>
+        </div>
+        <div id="neptune-info" class="planets-info neptune-info">
+            <span class="top-line"></span>
+            <span class="right-line"></span>
+            <span class="bottom-line"></span>
+            <span class="left-line"></span>
+            <h2 class="text-center">NEPTUNE</h2>
+            <p><span class="color-title">Diameter:</span> 49,528 km</p>
+            <p><span class="color-title">Mass:</span> 1.02E26 kg</p>
+            <p><span class="color-title">Moons:</span> 14</p>
+            <p><span class="color-title">Orbit distance:</span> 4,498,396,441 km</p>
+            <p><span class="color-title">Distance frome Earth:</span> 4,522,942,000 km</p>
+            <p><span class="color-title">Length of Year:</span> 60,190 days (164.8 years)</p>
+            <p><span class="color-title">Temperature:</span> -201<sup>o</sup>C</p>
+            <p><span class="color-title">First record:</span> September 23rd 1846</p>
+            <p class="close-btn close-neptune-info"><i class="fas fa-times"></i></p>
+        </div>
+    </section>
+
+
+    <script src="./js/solarSystemVer5.js"></script>
+</body>
+
+</html>

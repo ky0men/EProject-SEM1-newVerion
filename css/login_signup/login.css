@@ -1,0 +1,104 @@
+body {
+  background-image: url(../../images/login_signup/bg-login2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login {
+  margin: 100px 20px;
+}
+.login-inner {
+  color: white;
+  padding: 2rem;
+  backdrop-filter: blur(5px) !important;
+  box-shadow: inset 0px 15px 15px -10px rgba(0, 162, 255, 0.5),
+    inset 15px 0 15px -10px rgba(0, 162, 255, 0.5),
+    inset -15px 0 15px -10px rgba(0, 162, 255, 0.5),
+    inset 0px -15px 15px -10px rgba(0, 162, 255, 0.5);
+}
+.login-inner h2 {
+  color: white;
+  margin-bottom: 2rem;
+}
+.login-inner .login-left-img img {
+  width: 100%;
+}
+.login-right {
+  padding: 0 2rem;
+}
+.user-box,
+.pass-box {
+  position: relative;
+}
+.user-box input,
+.pass-box input {
+  width: 100%;
+  padding: 10px 0;
+  color: white;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background: transparent;
+}
+.user-box input:focus,
+.pass-box input:focus {
+  border-bottom: 1px solid #f72585;
+  transition: all 1s ease;
+}
+
+.user-box label,
+.pass-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.user-box input:focus ~ label,
+.user-box input:valid ~ label,
+.pass-box input:focus ~ label,
+.pass-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #f72585;
+  font-size: 14px;
+}
+
+#remember {
+  display: inline-block;
+}
+.login-right p a {
+  color: #14a5d3;
+  font-weight: 700;
+}
+#login-btn {
+  border-radius: 18px;
+  background: linear-gradient(65deg, #f72585 0%, #4361ee 100%);
+  border: none;
+}
+
+#login-btn:hover {
+  background: linear-gradient(245deg, #7209b7 0%, #4cc9f0 100%);
+  transform: scale(0.96);
+}
+.btn:focus,
+.btn-primary:focus {
+  box-shadow: none;
+}
+/* AFTER CHECK */
+.success-img img {
+  width: 60%;
+}
+.alert-link {
+  color: #14a5d3 !important;
+}
+.incorrect-alert {
+  display: none;
+}
+.incorrect-alert.show {
+  display: block;
+}

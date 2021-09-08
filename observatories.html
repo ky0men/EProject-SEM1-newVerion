@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./images/favico.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/observatories/observatories.css">
+  <title>Observatories Page</title>
+</head>
+
+<body>
+  <div id="preloader">
+    <div id="loader"></div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt="Galaxy Hunter Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon">
+          <span></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Planets</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Solar System's Planets</a>
+              <a class="dropdown-item" href="#">Comet</a>
+              <a class="dropdown-item" href="#">Constellation</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">News</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Bigbang Theory</a>
+              <a class="dropdown-item" href="#">Earth Evolution</a>
+              <a class="dropdown-item" href="#">Blackhole</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Solar System</a>
+              <a class="dropdown-item" href="#">Galaxies</a>
+              <a class="dropdown-item" href="#">Exoplanets</a>
+              <a class="dropdown-item" href="#">Space Flight</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Gallery</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Images Of The Day</a>
+              <a class="dropdown-item" href="#">Videos</a>
+              <a class="dropdown-item" href="./page3D/index.html" target="_blank">Solar System 3D View</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="observatories.html">Observatories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="navbar-btn ml-3">
+          <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#searchModal"><i
+              class="fas fa-search"></i></button>
+          <button class="btn btn-secondary btn-sm"><a href="login.html"><i class="fas fa-user"></i></a></button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <!-- SEARCH MODAL -->
+  <div class="modal fade" id="searchModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-center">Search Infomation</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="search.html">
+            <input type="text" placeholder="Search astronomy information...">
+            <button type="submit" class="search-astronomy-information"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="observatories">
+    <div class="container">
+      <h1 class="text-center">LIST OBSERVATORIES IN THE WORLD</h1>
+      <label for="countries">Seclect Country: </label>
+      <select name="countries" id="countries">
+        <option value="all">All</option>
+        <option value="us">United State</option>
+        <option value="russia">Russia</option>
+        <option value="china">China</option>
+        <option value="japan">Japan</option>
+        <option value="india">India</option>
+        <option value="france">France</option>
+      </select>
+      <div class="obser-card">
+        <!-- FILTER PAGE -->
+        <!-- <div class="obser-item row">
+          <div class="col-md-4 ob-img d-flex flex-column justify-content-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Actualidad002.jpg" alt="Argentine Institute ">
+          </div>
+          <div class="col-md-8">
+            <h3>Argentine Institute of Radio Astronomy</h3>
+            <p class="text-justify">The Argentine Institute of Radio Astronomy (IAR) was created in 1962 through an
+              agreement between the scientific agencies CONICET and CIC,[1] and the universities of La Plata (National
+              University of La Plata)
+              and Buenos Aires (University of Buenos Aires). Its functions are to promote and coordinate the research
+              and technical development of radio astronomy in Argentina and to collaborate in the teaching and
+              dissemination of astrophysics and related disciplines. The Institute continues...</p>
+            <div class="text-right">
+              <button class="btn btn-primary read-more-btn btn-sm">Read more...</button>
+            </div>
+          </div>
+        </div>-->
+
+        <!-- INFOMATION DETAIL PAGE -->
+        <!-- <div class="obser-detail">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="obser-content">
+                <h3 class="text-center">NAME OBSERVATORIES IN THE WORLD</h3>
+
+                <div class="content-top">
+                  <p class="text-justify">The Arecibo Observatory, also known as the National Astronomy and Ionosphere
+                    Center
+                    (NAIC) and formerly
+                    known as the Arecibo Ionosphere Observatory, is an observatory in Barrio Esperanza, Arecibo, Puerto
+                    Rico
+                    owned by the US National Science Foundation (NSF).
+
+                    The observatory's main instrument was the Arecibo Telescope, a 305 m (1,000 ft) spherical reflector
+                    dish
+                    built into a natural sinkhole, with a cable-mount steerable receiver and several radar transmitters
+                    for
+                    emitting signals mounted 150 m (492 ft) above the dish. Completed in 1963, it was the world's
+                    largest
+                    single-aperture telescope for 53 years, surpassed in July 2016 by the Five-hundred-meter Aperture
+                    Spherical
+                    Telescope (FAST) in China.</p>
+                </div>
+                <div class="obser-img">
+                  <img
+                    src="https://www.sciencemag.org/sites/default/files/styles/article_main_image_-_1280w__no_aspect_/public/ma_0115_NF_Arecibo_aerial.jpg?itok=AB38bI6a"
+                    alt="">
+                  <p class="text-center describe-img"><i>On 1 December 2020, the 900-ton instrument platform of the
+                      Arecibo
+                      Observatory
+                      crashed
+                      into its dish, which is cradled in a natural sinkhole. RICARDO ARDUENGO/AFP VIA GETTY IMAGES</i>
+                  </p>
+                </div>
+                <div class="content-bottom">
+                  <p class="text-justify">Following two breaks in cables supporting the receiver platform in the prior
+                    months,
+                    the NSF stated on
+                    November 19, 2020 that it was decommissioning the telescope due to safety concerns. On December 1,
+                    2020
+                    the
+                    main telescope collapsed before controlled demolition could be conducted. NASA conducted a full
+                    investigation and reported the findings in Reference "Arecibo Observatory Auxiliary M4N Socket
+                    Termination
+                    Failure Investigation".
+
+                    The observatory includes a radio telescope, a LIDAR facility, and a visitor center, which are
+                    expected
+                    to
+                    remain operational after the damage from the main telescope collapse has been assessed.</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-center obser-map"><i>Position of Observatories</i></p>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3787.0147830218116!2d-66.75278!3d18.34661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDIwJzQ3LjgiTiA2NsKwNDUnMTAuMCJX!5e0!3m2!1svi!2s!4v1629947860586!5m2!1svi!2s"
+                    width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-4">
+              <div class="obser-side-bar">
+                <div class="obser-side-content"></div>
+                <h4 class="text-center">More Observatories</h4>
+                <a href="#">
+                  <div class="row obser-side-card">
+                    <div class="col-md-5 obser-side-img">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/1/15/The_Thoth_telescope_at_the_Algonquin_Radio_Observatory.JPG"
+                        alt="Algonquin Radio Observatory">
+                    </div>
+                    <div class="col-md-7 obser-side-title">
+                      <p><strong>Algonquin Radio Observatory (Canada)</strong></p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="row obser-side-card">
+                    <div class="col-md-5 obser-side-img">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/1/15/The_Thoth_telescope_at_the_Algonquin_Radio_Observatory.JPG"
+                        alt="Algonquin Radio Observatory">
+                    </div>
+                    <div class="col-md-7 obser-side-title">
+                      <p><strong>Algonquin Radio Observatory (Canada)</strong></p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="row obser-side-card">
+                    <div class="col-md-5 obser-side-img">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/1/15/The_Thoth_telescope_at_the_Algonquin_Radio_Observatory.JPG"
+                        alt="Algonquin Radio Observatory">
+                    </div>
+                    <div class="col-md-7 obser-side-title">
+                      <p><strong>Algonquin Radio Observatory (Canada)</strong></p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="row obser-side-card">
+                    <div class="col-md-5 obser-side-img">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/1/15/The_Thoth_telescope_at_the_Algonquin_Radio_Observatory.JPG"
+                        alt="Algonquin Radio Observatory">
+                    </div>
+                    <div class="col-md-7 obser-side-title">
+                      <p><strong>Algonquin Radio Observatory (Canada)</strong></p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="row obser-side-card">
+                    <div class="col-md-5 obser-side-img">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/1/15/The_Thoth_telescope_at_the_Algonquin_Radio_Observatory.JPG"
+                        alt="Algonquin Radio Observatory">
+                    </div>
+                    <div class="col-md-7 obser-side-title">
+                      <p><strong>Algonquin Radio Observatory (Canada)</strong></p>
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div> -->
+      </div>
+      <div class="load-more text-right mt-5">
+        <button class="btn btn-warning load-more-btn">Load More</button>
+      </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="logo-footer"><img src="./images/logo.png" alt="logo-footer"></div>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-3">
+              <h5>Planets</h5>
+              <a href="#">Mercury</a>
+              <a href="#">Venus</a>
+              <a href="#">Earth</a>
+              <a href="#">Mars</a>
+              <a href="#">Jupiter</a>
+              <a href="#">Saturn</a>
+              <a href="#">Uranus</a>
+              <a href="#">Neptune</a>
+            </div>
+            <div class="col-md-3">
+              <h5>Latest News</h5>
+              <a href="#">Bigbang theory...</a>
+              <a href="#">What is a Blackhole?</a>
+              <a href="#">Evolution of Earth</a>
+              <a href="#">The Solar System</a>
+            </div>
+            <div class="col-md-3">
+              <h5 class="text-wrap">Observatories</h5>
+              <a href="observatories.html?us">America</a>
+              <a href="observatories.html?russia">Russia</a>
+              <a href="observatories.html?china">China</a>
+              <a href="observatories.html?japan">Japan</a>
+              <a href="observatories.html?india">Inida</a>
+              <a href="observatories.html?france">France</a>
+            </div>
+            <div class="col-md-3">
+              <a href="login.html"><button class="btn btn-primary mb-2">Login</button></a>
+              <a href="signup.html"><button class="btn btn-light">Sign Up</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="copy">
+        <div class="row">
+          <div class="col-md-6 left-end text-left d-flex align-items-center">
+            <p>&copy; E Project SEM 1, 2021</p>
+          </div>
+          <div class="col-md-6 right-end text-right d-flex justify-content-end align-items-center">
+            <p class="mx-2">Follow us</p>
+            <p class="mx-1 fl-icon"><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></p>
+            <p class="mx-1 fl-icon"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></p>
+            <p class="mx-1 fl-icon"><a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- SCRIPT -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/observatories/observatories.js"></script>
+</body>
+
+</html>

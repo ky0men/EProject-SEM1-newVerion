@@ -1,0 +1,124 @@
+body {
+  background: url(../../images/login_signup/bg-signup.jpg) no-repeat center /
+    cover;
+}
+.signup {
+  margin: 100px 20px;
+}
+.signup-inner {
+  color: white;
+  padding: 2rem;
+  backdrop-filter: blur(5px) !important;
+  box-shadow: inset 0px 15px 15px -10px rgba(0, 162, 255, 0.5),
+    inset 15px 0 15px -10px rgba(0, 162, 255, 0.5),
+    inset -15px 0 15px -10px rgba(0, 162, 255, 0.5),
+    inset 0px -15px 15px -10px rgba(0, 162, 255, 0.5);
+}
+.signup-inner h2 {
+  margin-bottom: 2rem;
+  color: white;
+}
+.signup-inner .signup-left-img img {
+  width: 100%;
+}
+.signup-right {
+  padding: 2rem;
+}
+form small {
+  visibility: hidden;
+}
+small.error {
+  visibility: visible;
+  color: red;
+}
+small.success {
+  visibility: visible;
+  color: green;
+}
+.input-box {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.input-box input {
+  width: 100%;
+  padding: 16px 0 0 0;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background: transparent;
+}
+.input-box input:focus {
+  border-bottom: 1px solid cyan;
+  transition: all 1s ease;
+}
+.input-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: cyan;
+  font-size: 14px;
+}
+.input-box input ~ span::before {
+  position: absolute;
+  right: -20px;
+  top: 20px;
+}
+.input-box input.error {
+  border-bottom: 1px solid red;
+}
+.input-box input.success {
+  border-bottom: 1px solid green;
+}
+.input-box input.error ~ span::before {
+  content: "✖";
+  color: red;
+}
+.input-box input.success ~ span::before {
+  content: "✓";
+  color: green;
+}
+#remember {
+  display: inline-block;
+}
+.signup-right p a {
+  color: #ff6707;
+  font-weight: 700;
+}
+
+.incorrect-alert {
+  display: none;
+}
+.incorrect-alert.show {
+  display: block;
+}
+.success-img img {
+  width: 60%;
+}
+.alert-link {
+  color: #ff6707 !important;
+}
+.signup-btn {
+  border-radius: 18px;
+  background: linear-gradient(65deg, #f72585 0%, #4361ee 100%);
+  border: none;
+}
+
+.signup-btn:hover {
+  background: linear-gradient(245deg, #7209b7 0%, #4cc9f0 100%);
+  transform: scale(0.96);
+}
+.btn:focus,
+.btn-primary:focus {
+  box-shadow: none;
+}
