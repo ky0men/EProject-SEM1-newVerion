@@ -269,8 +269,8 @@ body {
   font-size: 4rem;
 }
 .astro-mark {
-  background: -webkit-linear-gradient(200deg, #f72585 30%, #4361ee);
-  -webkit-background-clip: text;
+  background: -webkit-linear-gradient(0deg, #f72585 30%, #4361ee);
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Superstar X";
 }
