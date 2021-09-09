@@ -34,7 +34,7 @@ function showFirstFourObser() {
               <h3>${obser.name}</h3>
               <p class="text-justify">${obser.shortContent}</p>
               <div class="text-right">
-              <button value="${obser.id}" class="btn btn-primary btn-sm read-more-btn">Read more...</button>
+              <button value="${obser.id}" class="btn btn-sm read-more-btn">Read more...</button>
               </div>
               </div>
               `;
@@ -68,7 +68,7 @@ function loadMoreObser() {
             <h3>${obser.name}</h3>
             <p class="text-justify">${obser.shortContent}</p>
             <div class="text-right">
-            <button value="${obser.id}" class="btn btn-primary btn-sm read-more-btn">Read more...</button>
+            <button value="${obser.id}" class="btn btn-sm read-more-btn">Read more...</button>
             </div>
             </div>
             `;
@@ -82,7 +82,7 @@ function loadMoreObser() {
   }
 }
 //SHOW ALL OBSERVATORIES
-var obserCard = document.querySelector(".obser-card");
+var obserCard = document.querySelector(".obser-card-outer");
 function showAllObser() {
   fetch("https://fake-api-sem.herokuapp.com/observatories")
     .then((res) => res.json())
@@ -99,7 +99,7 @@ function showAllObser() {
         <h3>${obser.name}</h3>
         <p class="text-justify">${obser.shortContent}</p>
         <div class="text-right">
-          <button value="${obser.id}" class="btn btn-primary btn-sm read-more-btn">Read more...</button>
+          <button value="${obser.id}" class="btn btn-sm read-more-btn">Read more...</button>
         </div>
         </div>
         `;
@@ -135,7 +135,7 @@ function showSelectedCountryObser() {
           <h3>${obser.name}</h3>
           <p class="text-justify">${obser.shortContent}</p>
           <div class="text-right">
-            <button value="${obser.id}" class="btn btn-primary btn-sm read-more-btn">Read more...</button>
+            <button value="${obser.id}" class="btn btn-sm read-more-btn">Read more...</button>
           </div>
         </div>
           `;
@@ -409,7 +409,7 @@ function showRelyOnCountry() {
               <h3>${obser.name}</h3>
               <p class="text-justify">${obser.shortContent}</p>
               <div class="text-right">
-              <button value="${obser.id}" class="btn btn-primary btn-sm read-more-btn">Read more...</button>
+              <button value="${obser.id}" class="btn btn-sm read-more-btn">Read more...</button>
               </div>
               </div>
               `;

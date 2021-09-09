@@ -1,18 +1,20 @@
 body {
-  background: url(../../images/login_signup/bg-signup.jpg) no-repeat center /
-    cover;
 }
 .signup {
-  margin: 100px 20px;
+  padding: 100px;
+  background: url(../../images/login_signup/bg-signup.jpg);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 .signup-inner {
-  color: white;
+  /* color: white;
   padding: 2rem;
   backdrop-filter: blur(5px) !important;
   box-shadow: inset 0px 15px 15px -10px rgba(0, 162, 255, 0.5),
     inset 15px 0 15px -10px rgba(0, 162, 255, 0.5),
     inset -15px 0 15px -10px rgba(0, 162, 255, 0.5),
-    inset 0px -15px 15px -10px rgba(0, 162, 255, 0.5);
+    inset 0px -15px 15px -10px rgba(0, 162, 255, 0.5); */
 }
 .signup-inner h2 {
   margin-bottom: 2rem;
@@ -109,14 +111,18 @@ small.success {
   color: #ff6707 !important;
 }
 .signup-btn {
-  border-radius: 18px;
-  background: linear-gradient(65deg, #f72585 0%, #4361ee 100%);
+  background: linear-gradient(45deg, #f72585 30%, #fdbb2d);
+  padding: 0.5rem 2rem;
   border: none;
+  box-shadow: 0 4px 2px 0px black;
+  color: white;
+  border-radius: 24px;
+  transition: 0.5s;
 }
 
 .signup-btn:hover {
-  background: linear-gradient(245deg, #7209b7 0%, #4cc9f0 100%);
-  transform: scale(0.96);
+  background: linear-gradient(0deg, #f72585 30%, #fdbb2d);
+  transform: scale(1.02);
 }
 .btn:focus,
 .btn-primary:focus {

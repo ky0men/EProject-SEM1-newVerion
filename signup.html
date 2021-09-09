@@ -19,7 +19,8 @@
   <div id="preloader">
     <div id="loader"></div>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark active fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt="Galaxy Hunter Logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -71,10 +72,11 @@
             <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
-        <div class="navbar-btn ml-3">
-          <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#searchModal"><i
+        <div class="navbar-btn d-flex ml-3">
+          <button type="button" class="btn btn-navbar btn-sm" data-toggle="modal" data-target="#searchModal"><i
               class="fas fa-search"></i></button>
-          <button class="btn btn-secondary btn-sm"><a href="login.html"><i class="fas fa-user"></i></a></button>
+          <button type="button" class="btn btn-navbar btn-sm ml-2"><a href="login.html"><i
+                class="fas fa-user"></i></a></button>
         </div>
 
       </div>
@@ -102,7 +104,7 @@
   <section class="signup">
     <div class="container">
       <div class="signup-inner">
-        <h2 class="text-center">Sign Up</h2>
+        <h2 class="text-center astro-mark-1">Sign Up</h2>
         <div class="row">
           <div class="col-md-6 signup-left-img">
             <img src="./images/login_signup/left-signup-img.png" alt="">
@@ -158,6 +160,7 @@
 
   <!-- FOOTER -->
   <footer id="footer">
+    <img class="w-100" src="./images/login_signup/footer-login.png" alt="Footer Login">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -166,7 +169,7 @@
         <div class="col-md-8">
           <div class="row">
             <div class="col-md-3">
-              <h5>Planets</h5>
+              <h5 class="astro-mark-1">Planets</h5>
               <a href="#">Mercury</a>
               <a href="#">Venus</a>
               <a href="#">Earth</a>
@@ -177,14 +180,14 @@
               <a href="#">Neptune</a>
             </div>
             <div class="col-md-3">
-              <h5>Latest News</h5>
+              <h5 class="astro-mark-1">Latest News</h5>
               <a href="#">Bigbang theory...</a>
               <a href="#">What is a Blackhole?</a>
               <a href="#">Evolution of Earth</a>
               <a href="#">The Solar System</a>
             </div>
             <div class="col-md-3">
-              <h5 class="text-wrap">Observatories</h5>
+              <h5 class="text-wrap astro-mark-1">Observatories</h5>
               <a href="observatories.html?us">America</a>
               <a href="observatories.html?russia">Russia</a>
               <a href="observatories.html?china">China</a>
@@ -193,8 +196,8 @@
               <a href="observatories.html?france">France</a>
             </div>
             <div class="col-md-3">
-              <a href="login.html"><button class="btn btn-primary mb-2">Login</button></a>
-              <a href="signup.html"><button class="btn btn-light">Sign Up</button></a>
+              <a href="login.html"><button class="btn btn-navbar mb-2">Login</button></a>
+              <a href="signup.html"><button class="btn btn-navbar">Sign Up</button></a>
             </div>
           </div>
         </div>

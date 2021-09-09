@@ -1,37 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 .observatories {
   margin-top: 60px;
   padding: 2rem 0;
 }
 .observatories h1 {
-  color: white;
+  background: -webkit-linear-gradient(0deg, #f72585, #4361ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Righteous", cursive;
 }
 .observatories h3 {
-  color: #ffb830;
+  background: -webkit-linear-gradient(100deg, #f72585 30%, #fdbb2d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Righteous", cursive;
 }
 label {
   color: white;
+}
+#countries {
+  margin-bottom: 2rem;
 }
 .ob-img img {
   width: 100%;
   max-height: 220px;
 }
 .obser-item {
-  color: white;
-  margin-top: 2rem;
+  border: 2px solid rgb(72, 234, 189);
+  box-shadow: 0 3px 15px 2px rgba(56, 105, 255, 0.5);
+  border-radius: 8px;
   padding: 1rem 0;
-  backdrop-filter: blur(5px) !important;
-  box-shadow: inset 0px 15px 15px -10px rgba(0, 162, 255, 0.5),
-    inset 15px 0 15px -10px rgba(0, 162, 255, 0.5),
-    inset -15px 0 15px -10px rgba(0, 162, 255, 0.5),
-    inset 0px -15px 15px -10px rgba(0, 162, 255, 0.5);
+  margin-bottom: 2rem;
+  background-color: rgb(26, 36, 48, 0.7);
+  min-height: 250px;
+  transition: background-image 300ms ease-in-out;
 }
 .read-more-btn {
-  background: linear-gradient(90deg, #f72585 0%, #4361ee 100%);
+  background: linear-gradient(to right, #f72585 0%, #4361ee 51%, #f72585 100%);
   border: none;
+  color: white;
+  transition: 0.5s;
+  background-size: 200% auto;
+  font-family: "Ubuntu", sans-serif;
 }
 .read-more-btn:hover {
-  background: linear-gradient(90deg, #7209b7 0%, #4cc9f0 100%);
-  transform: scale(0.96);
+  background-position: right center;
+  text-decoration: none;
+  transform: scale(1.05);
+  color: white;
+}
+.load-more-btn {
+  background: linear-gradient(45deg, #f72585 30%, #fdbb2d);
+  padding: 0.5rem 2rem;
+  border: none;
+  box-shadow: 0 4px 2px 0px black;
+  color: white;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.load-more-btn:hover {
+  background: linear-gradient(0deg, #f72585 30%, #fdbb2d);
+  transform: scale(1.1);
 }
 /* OBSERVATORIES DETAIL */
 .obser-content h3 {
@@ -44,7 +74,7 @@ label {
 .obser-detail h1 {
   margin: 2rem 0;
 }
-
+/* Observatories side bar */
 .obser-side-img {
   padding: 0;
 }
@@ -53,7 +83,9 @@ label {
   cursor: pointer;
 }
 .obser-side-title:hover {
-  color: #ffb830;
+  background: -webkit-linear-gradient(100deg, #f72585 30%, #fdbb2d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .obser-img img {
   width: 100%;
@@ -63,14 +95,21 @@ label {
 .obser-map i {
   color: grey;
 }
+
 .obser-side-bar {
   padding: 1rem;
-  box-shadow: inset 0px 15px 15px -10px rgba(0, 162, 255, 0.5),
-    inset 15px 0 15px -10px rgba(0, 162, 255, 0.5),
-    inset -15px 0 15px -10px rgba(0, 162, 255, 0.5),
-    inset 0px -15px 15px -10px rgba(0, 162, 255, 0.5);
+  border: 2px solid rgb(72, 234, 189);
+  box-shadow: 0 3px 15px 2px rgba(56, 105, 255, 0.5);
+  border-radius: 8px;
+  background-color: rgb(26, 36, 48, 0.7);
+  min-height: 250px;
+  transition: background-image 300ms ease-in-out;
 }
-
+.obser-side-bar h4 {
+  background: -webkit-linear-gradient(0deg, #f72585, #4361ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .obser-side-img img {
   width: 100%;
 }
