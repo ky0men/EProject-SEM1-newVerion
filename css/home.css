@@ -255,9 +255,11 @@ body {
 .banner-content h1 {
   color: white;
 }
-.banner-content p {
-  color: white;
-  margin-top: 4rem;
+
+.banner-content a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fdbb2d;
 }
 .banner-content .bi-chevron-double-down {
   height: 36px;
@@ -291,6 +293,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .banner-content p {
+  margin-top: 4rem;
   color: #fdbb2d;
   position: relative;
   padding-bottom: 2rem;
@@ -484,6 +487,7 @@ body {
 .info-content {
   position: relative;
   overflow: hidden;
+  padding-top: 3.5rem;
 }
 .info-icon {
   display: flex;
@@ -612,6 +616,52 @@ body {
   }
   100% {
     bottom: 0;
+  }
+}
+/* Our universe animation */
+.solar-system-sub,
+.planets-sub,
+.constell-sub,
+.galaxies-sub,
+.sun-info-content {
+  opacity: 0;
+}
+.sun-info-content.show {
+  animation: show-up 1s ease forwards;
+}
+.info-content .solar-system-sub.show,
+.info-content .planets-sub.show,
+.info-content .constell-sub.show,
+.info-content .galaxies-sub.show {
+  animation: fade-right 0.6s ease forwards;
+}
+.info-content .planets-sub.show {
+  animation-delay: 0.2s;
+}
+.info-content .constell-sub.show {
+  animation-delay: 0.3s;
+}
+.info-content .galaxies-sub.show {
+  animation-delay: 0.4s;
+}
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes show-up {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 /* PLANETS */
