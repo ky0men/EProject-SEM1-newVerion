@@ -273,7 +273,9 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -moz-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   font-family: "Superstar X";
 }
 .astro-mark-1 {
