@@ -104,8 +104,8 @@ var constellSub = document.querySelector(".constell-sub");
 var galaxiesSub = document.querySelector(".galaxies-sub");
 var sunInfoContent = document.querySelector(".sun-info-content");
 window.addEventListener("scroll", function () {
-  console.log(window.scrollY);
-  console.log(window.outerWidth);
+  // console.log(window.scrollY);
+  // console.log(window.outerWidth);
   if (this.window.outerWidth > 1024) {
     if (window.scrollY > 350) {
       solarSystemSub.classList.add("show");
@@ -158,3 +158,60 @@ window.addEventListener("scroll", function () {
     sunInfoContent.classList.remove("show");
   }
 });
+//LOADMORE PLANETS
+var planetsInner = document.querySelector(".planets-inner");
+var loadMorePlanetsBtn = document.querySelector(".load-more-planets-btn");
+loadMorePlanetsBtn.addEventListener("click", loadMorePlanets);
+
+var currentIdPlanets = -2;
+function loadMorePlanets() {
+  currentIdPlanets += 3;
+  fetch("https://fake-api-sem.herokuapp.com/planets")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      for (var i = currentIdPlanets; i < currentIdPlanets + 3; i++) {
+        data.forEach(function (planet) {
+          if (planet.id == i && i % 2 == 0) {
+            var planetsCard = document.createElement("div");
+            planetsCard.className = "row planets-card";
+            planetsCard.innerHTML = `
+            <div class="col-md-4 d-flex flex-wrap align-content-center">
+              <img class="w-100" src="${planet.image}" alt="${planet.name} Image">
+            </div>
+            <div class="col-md-8 p-4 d-flex flex-column justify-content-center planets-card-content">
+              <h2 class="astro-mark-1">${planet.name}</h2>
+              <p class="text-justify">${planet.content1}</p>
+              <p class="text-justify">${planet.content2}</p>
+              <div class="info-content-btn text-right">
+                <button class="btn btn-gradient" href="#">Read More...</button>
+              </div>
+            </div>
+            `;
+            planetsInner.appendChild(planetsCard);
+          }
+          if (planet.id == i && i % 2 != 0) {
+            var planetsCard = document.createElement("div");
+            planetsCard.className = "row planets-card";
+            planetsCard.innerHTML = `
+            <div class="col-md-4 order-1 order-md-2 d-flex flex-wrap align-content-center">
+              <img class="w-100" src="${planet.image}" alt="${planet.name} Image">
+            </div>
+            <div class="col-md-8 p-4 order-2 order-md-1 d-flex flex-column justify-content-center planets-card-content">
+              <h2 class="astro-mark-1">${planet.name}</h2>
+              <p class="text-justify">${planet.content1}</p>
+              <p class="text-justify">${planet.content2}</p>
+              <div class="info-content-btn text-right">
+                <button class="btn btn-gradient" href="#">Read More...</button>
+              </div>
+            </div>
+            `;
+            planetsInner.appendChild(planetsCard);
+          }
+        });
+        if (currentIdPlanets > 3) {
+          loadMorePlanetsBtn.style.display = "none";
+        }
+      }
+    });
+}

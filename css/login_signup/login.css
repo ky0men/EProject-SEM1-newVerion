@@ -7,15 +7,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* .login-inner {
-  color: white;
-  padding: 2rem;
-  backdrop-filter: blur(5px) !important;
-  box-shadow: inset 0px 15px 15px -10px rgba(0, 162, 255, 0.5),
-    inset 15px 0 15px -10px rgba(0, 162, 255, 0.5),
-    inset -15px 0 15px -10px rgba(0, 162, 255, 0.5),
-    inset 0px -15px 15px -10px rgba(0, 162, 255, 0.5);
-} */
+.login-inner {
+  position: relative;
+  z-index: 9;
+}
 .login-inner h2 {
   color: white;
   margin-bottom: 2rem;

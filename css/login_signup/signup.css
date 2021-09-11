@@ -1,20 +1,13 @@
-body {
-}
 .signup {
-  padding: 100px;
+  padding-top: 100px;
   background: url(../../images/login_signup/bg-signup.jpg);
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
 }
 .signup-inner {
-  /* color: white;
-  padding: 2rem;
-  backdrop-filter: blur(5px) !important;
-  box-shadow: inset 0px 15px 15px -10px rgba(0, 162, 255, 0.5),
-    inset 15px 0 15px -10px rgba(0, 162, 255, 0.5),
-    inset -15px 0 15px -10px rgba(0, 162, 255, 0.5),
-    inset 0px -15px 15px -10px rgba(0, 162, 255, 0.5); */
+  position: relative;
+  z-index: 9;
 }
 .signup-inner h2 {
   margin-bottom: 2rem;
@@ -24,7 +17,7 @@ body {
   width: 100%;
 }
 .signup-right {
-  padding: 2rem;
+  padding: 2rem 3rem;
 }
 form small {
   visibility: hidden;

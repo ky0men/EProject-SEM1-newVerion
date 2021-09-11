@@ -87,17 +87,17 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title text-center">Search Infomation</h4>
+          <h4 class="modal-title text-center astro-mark-1">Search Infomation</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <!-- Modal body -->
         <div class="modal-body">
-          <form action="search.html">
+          <form action="search.html" class="d-flex">
             <input type="text" placeholder="Search astronomy information...">
-            <button type="submit" class="search-astronomy-information"><i class="fas fa-search"></i></button>
+            <button type="submit" class="search-astronomy-information btn-navbar ml-2"><i
+                class="fas fa-search"></i></button>
           </form>
         </div>
-
       </div>
     </div>
   </div>
@@ -123,7 +123,6 @@
       <img class="moving-star-1" src="./images/star-moving.png" alt="Moving Star">
       <img class="moving-star-2" src="./images/star-moving-1.png" alt="Moving Star">
       <img class="moving-star-3" src="./images/star-moving.png" alt="Moving Star">
-
     </div>
   </section>
 
@@ -143,7 +142,7 @@
       </div>
       <div class="row">
         <div class="col-md-7">
-          <div class="row col-xs-12 sub-content solar-system-sub">
+          <div class="row col-xs-12 sub-content solar-system-sub mx-1">
             <div class="col-sm-3 info-icon text-center">
               <img src="./images/sun-1.png" alt="Sun Icon">
             </div>
@@ -160,7 +159,7 @@
               </div>
             </div>
           </div>
-          <div class="row col-xs-12 sub-content planets-sub">
+          <div class="row col-xs-12 sub-content planets-sub mx-1">
             <div class="col-md-3 info-icon text-center">
               <img src="./images/planet-icon-1.png" alt="Planet Icon">
             </div>
@@ -176,7 +175,7 @@
               </div>
             </div>
           </div>
-          <div class="row col-xs-12 sub-content constell-sub">
+          <div class="row col-xs-12 sub-content constell-sub mx-1">
             <div class="col-md-3 info-icon text-center">
               <img src="./images/comet-icon-1.png" alt="Comet Icon">
             </div>
@@ -192,7 +191,7 @@
               </div>
             </div>
           </div>
-          <div class="row col-xs-12 sub-content galaxies-sub">
+          <div class="row col-xs-12 sub-content galaxies-sub mx-1">
             <div class="col-md-3 info-icon text-center">
               <img src="./images/galaxy-icon.png" alt="Galaxy Icon">
             </div>
@@ -227,8 +226,8 @@
   </section>
 
   <!-- PLANETS -->
-  <section class="planets p-5">
-    <div class="container">
+  <section class="planets p-2">
+    <div class="container planets-inner">
       <div class="info-content-title text-center mb-5">
         <h2 class="astro-mark">PLANETS
           <div class="title-decoration">
@@ -305,13 +304,14 @@
         </div>
 
       </div>
-      <div class="info-content-btn text-right">
-        <button class="load-more-planets-btn"><strong>Load more...</strong></button>
-      </div>
+
+    </div>
+    <div class="info-content-btn text-right mr-5">
+      <button class="btn load-more-planets-btn"><strong>Load more...</strong></button>
     </div>
   </section>
   <!-- GALAXY -->
-  <section class="galaxy-cards">
+  <section class="galaxy-cards pt-5">
     <div class="galaxy-header-cover">
       <img src="./images/work-shape.png" alt="Header Cove Image">
     </div>
@@ -326,7 +326,7 @@
           matter</p>
       </div>
       <div class="row mx-auto">
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="card text-white circle-card">
             <img class="card-img" src="./images/circle-1.png" alt="Circle Image">
             <div
@@ -337,7 +337,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 mb-4">
           <div class="card text-white circle-card">
             <img class="card-img" src="./images/circle-1.png" alt="Circle Image">
             <div
@@ -348,7 +348,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 mx-auto">
+        <div class="col-lg-4 col-md-6 mx-auto mb-4">
           <div class="card text-white circle-card">
             <img class="card-img" src="./images/circle-1.png" alt="Circle Image">
             <div
@@ -390,7 +390,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 mb-4">
                 <div class="row obser-card usa-card">
                   <div class="col-md-3 d-flex flex-wrap align-content-center">
                     <img src="./images/obser-icon-1.png" alt="Observatories Icon">
@@ -406,7 +406,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 mb-4">
                 <div class="row obser-card russia-card">
                   <div class="col-md-3 d-flex flex-wrap align-content-center">
                     <img src="./images/obser-icon-2.png" alt="Observatories Icon">
@@ -428,7 +428,7 @@
           </div>
           <div class="carousel-item">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 mb-4">
                 <div class="row obser-card china-card">
                   <div class="col-md-3 d-flex flex-wrap align-content-center">
                     <img src="./images/obser-icon-3.png" alt="Observatories Icon">
@@ -443,7 +443,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 mb-4">
                 <div class="row obser-card japan-card">
                   <div class="col-md-3 d-flex flex-wrap align-content-center">
                     <img src="./images/obser-icon-4.png" alt="Observatories Icon">
@@ -462,7 +462,7 @@
           </div>
           <div class="carousel-item">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 mb-4">
                 <div class="row obser-card india-card">
                   <div class="col-md-3 d-flex flex-wrap align-content-center">
                     <img src="./images/obser-icon-5.png" alt="Observatories Icon">
@@ -477,7 +477,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 mb-4">
                 <div class="row obser-card france-card">
                   <div class="col-md-3 d-flex flex-wrap align-content-center">
                     <img src="./images/obser-icon-6.png" alt="Observatories Icon">
@@ -505,7 +505,7 @@
     </div>
   </section>
   <!-- ASTRONOMY NEWS -->
-  <section class="astronomy-news">
+  <section class="astronomy-news mt-5">
     <div class="container">
       <div class="astronomy-news-title text-center mb-5">
         <h2 class="astro-mark">ASTRONOMY NEWS
@@ -532,7 +532,7 @@
 
       </div>
       <div id="news-slider" class="carousel slide" data-ride="carousel">
-        <div class="d-flex justify-content-end pb-3">
+        <div class="d-flex justify-content-end py-3">
           <a class="carousel-control-prev" href="#news-slider" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
           </a>
@@ -669,14 +669,14 @@
   <!-- FOOTER -->
   <footer id="footer">
     <img class="w-100" src="./images/footer-1.png" alt="">
-    <div class="container">
+    <div class="container pt-5">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
           <div class="logo-footer"><img src="./images/logo.png" alt="logo-footer"></div>
         </div>
         <div class="col-md-8">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-6 mt-4 footer-column">
               <h5 class="astro-mark-1">Planets</h5>
               <a href="#">Mercury</a>
               <a href="#">Venus</a>
@@ -687,14 +687,14 @@
               <a href="#">Uranus</a>
               <a href="#">Neptune</a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-6 mt-4 footer-column">
               <h5 class="astro-mark-1">Latest News</h5>
               <a href="#">Bigbang theory...</a>
               <a href="#">What is a Blackhole?</a>
               <a href="#">Evolution of Earth</a>
               <a href="#">The Solar System</a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-6 mt-4 footer-column">
               <h5 class="text-wrap astro-mark-1">Observatories</h5>
               <a href="observatories.html?us">America</a>
               <a href="observatories.html?russia">Russia</a>
@@ -703,7 +703,7 @@
               <a href="observatories.html?india">Inida</a>
               <a href="observatories.html?france">France</a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-6 mt-4 footer-column">
               <a href="login.html"><button class="btn btn-navbar mb-2">Login</button></a>
               <a href="signup.html"><button class="btn btn-navbar">Sign Up</button></a>
             </div>
@@ -713,10 +713,10 @@
       <hr>
       <div class="copy">
         <div class="row">
-          <div class="col-md-6 left-end text-left d-flex align-items-center">
+          <div class="col-6 left-end text-left d-flex align-items-center">
             <p>&copy; E Project SEM 1, 2021</p>
           </div>
-          <div class="col-md-6 right-end text-right d-flex justify-content-end align-items-center">
+          <div class="col-6 right-end text-right d-flex justify-content-end align-items-center">
             <p class="mx-2">Follow us</p>
             <p class="mx-1 fl-icon"><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></p>
             <p class="mx-1 fl-icon"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></p>
