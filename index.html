@@ -37,7 +37,7 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
               aria-expanded="false">Planets</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Solar System's Planets</a>
+              <a class="dropdown-item" href="#solar-system-planets">Solar System's Planets</a>
               <a class="dropdown-item" href="#">Comet</a>
               <a class="dropdown-item" href="#">Constellation</a>
             </div>
@@ -46,14 +46,17 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
               aria-expanded="false">News</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Bigbang Theory</a>
-              <a class="dropdown-item" href="#">Earth Evolution</a>
-              <a class="dropdown-item" href="#">Blackhole</a>
+              <a class="dropdown-item" href="news.html">News Main Page</a>
+              <a class="dropdown-item" href="newsContent.html?id=theory-bigbang">Bigbang Theory</a>
+              <a class="dropdown-item" href="newsContent.html?id=earth-evolution">Earth Evolution</a>
+              <a class="dropdown-item" href="newsContent.html?id=what-is-black-hole">Blackhole</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Solar System</a>
-              <a class="dropdown-item" href="#">Galaxies</a>
-              <a class="dropdown-item" href="#">Exoplanets</a>
-              <a class="dropdown-item" href="#">Space Flight</a>
+              <a class="dropdown-item" href="newsContent.html?id=our-solar-system">Solar System</a>
+              <a class="dropdown-item"
+                href="newsContent.html?id=Ask%20Astro:%20Do%20supermassive%20black%20holes%20create%20bars%20in%20galaxies?">Galaxies</a>
+              <a class="dropdown-item" href="newsContent.html?id=Exoplanet%20surprise">Exoplanets</a>
+              <a class="dropdown-item" href="newsContent.html?id=UK%20approves%20human%20space%20flight">Space
+                Flight</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -225,7 +228,7 @@
   </section>
 
   <!-- PLANETS -->
-  <section class="planets p-2">
+  <section class="planets pb-2" id="solar-system-planets">
     <div class="container planets-inner">
       <div class="info-content-title text-center mb-5">
         <h2 class="astro-mark">PLANETS
@@ -513,14 +516,18 @@
       <div class="card img-fluid news-card">
         <img class="card-img-top" src="./images/bigbang-theory.jpg" alt="Card image" style="width:100%">
         <div class="card-img-overlay">
-          <a class="news-card-content" href="#">
+          <a class="news-card-content" href="newsContent.html?id=theory-bigbang">
             <h4 class="card-title astro-mark-1">What is the Big Bang Theory?</h4>
             <p class="card-text text-justify">The Big Bang Theory is the leading explanation about how the universe
               began. At its
               simplest, it says the universe as we know it started with an infinitely hot, infinitely dense singularity,
               then inflated — first at unimaginable speed, and then at a more measurable rate — over the next 13.8
               billion years to the cosmos that we know today...</p>
-            <div class="text-right text-yellow"><small>By Elizabeth Howell May 18, 2021</small></div>
+            <div class="d-flex justify-content-between">
+              <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 46 views</span>
+                  <span class="ml-2"><i class="fas fa-comment-dots"></i> 19 comments</span></small></div>
+              <div class="text-right text-yellow"><small>By Elizabeth Howell May 18, 2021</small></div>
+            </div>
           </a>
         </div>
       </div>
@@ -540,9 +547,13 @@
                 <div class="card img-fluid news-card">
                   <img class="card-img-top" src="./images/black-hole.jpg" alt="Card image" style="width:100%">
                   <div class="card-img-overlay">
-                    <a class="news-card-content-small" href="#">
-                      <h4 class="card-title astro-mark-1 m-0">Black-hole light show</h4>
-                      <div class="text-right text-yellow"><small>May 18, 2021</small></div>
+                    <a class="news-card-content-small" href="newsContent.html?id=what-is-black-hole">
+                      <h4 class="card-title astro-mark-1 m-0">What Is a Black Hole?</h4>
+                      <div class="d-flex justify-content-between">
+                        <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 32 views</span>
+                            <span class="ml-2"><i class="fas fa-comment-dots"></i> 12 comments</span></small></div>
+                        <div class="text-right text-yellow"><small>June 19, 2021</small></div>
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -551,9 +562,13 @@
                 <div class="card img-fluid news-card">
                   <img class="card-img-top" src="./images/solar-system-news.jpg" alt="Card image" style="width:100%">
                   <div class="card-img-overlay">
-                    <a class="news-card-content-small" href="#">
-                      <h4 class="card-title astro-mark-1 m-0">Understanding the solar system</h4>
-                      <div class="text-right text-yellow"><small>June 12, 2021</small></div>
+                    <a class="news-card-content-small" href="newsContent.html?id=our-solar-system">
+                      <h4 class="card-title astro-mark-1 m-0">Our Solar System</h4>
+                      <div class="d-flex justify-content-between">
+                        <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 24 views</span>
+                            <span class="ml-2"><i class="fas fa-comment-dots"></i> 17 comments</span></small></div>
+                        <div class="text-right text-yellow"><small>June 12, 2021</small></div>
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -562,9 +577,13 @@
                 <div class="card img-fluid news-card">
                   <img class="card-img-top" src="./images/evolution-earth.jpg" alt="Card image" style="width:100%">
                   <div class="card-img-overlay">
-                    <a class="news-card-content-small" href="#">
+                    <a class="news-card-content-small" href="newsContent.html?id=earth-evolution">
                       <h4 class="card-title astro-mark-1 m-0">Evolution of Earth</h4>
-                      <div class="text-right text-yellow"><small>July 23, 2021</small></div>
+                      <div class="d-flex justify-content-between">
+                        <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 41 views</span>
+                            <span class="ml-2"><i class="fas fa-comment-dots"></i> 23 comments</span></small></div>
+                        <div class="text-right text-yellow"><small>July 23, 2021</small></div>
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -575,33 +594,46 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="card img-fluid news-card">
-                  <img class="card-img-top" src="./images/black-hole.jpg" alt="Card image" style="width:100%">
+                  <img class="card-img-top" src="./images/hubble-big-bang.jpg" alt="Card image" style="width:100%">
                   <div class="card-img-overlay">
-                    <a class="news-card-content-small" href="#">
-                      <h4 class="card-title astro-mark-1 m-0">Black-hole light show</h4>
-                      <div class="text-right text-yellow"><small>May 18, 2021</small></div>
+                    <a class="news-card-content-small"
+                      href="newsContent.html?id=Hubble%20spies%20Big%20Bang%20frontiers">
+                      <h4 class="card-title astro-mark-1 m-0">Hubble spies Big Bang frontiers</h4>
+                      <div class="d-flex justify-content-between">
+                        <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 27 views</span>
+                            <span class="ml-2"><i class="fas fa-comment-dots"></i> 12 comments</span></small></div>
+                        <div class="text-right text-yellow"><small>October 26, 2015</small></div>
+                      </div>
                     </a>
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="card img-fluid news-card">
-                  <img class="card-img-top" src="./images/solar-system-news.jpg" alt="Card image" style="width:100%">
+                  <img class="card-img-top" src="./images/big-bang-bottle.jpg" alt="Card image" style="width:100%">
                   <div class="card-img-overlay">
-                    <a class="news-card-content-small" href="#">
-                      <h4 class="card-title astro-mark-1 m-0">Understanding the solar system</h4>
-                      <div class="text-right text-yellow"><small>June 12, 2021</small></div>
+                    <a class="news-card-content-small" href="newsContent.html?id=Big%20Bang%20in%20a%20bottle">
+                      <h4 class="card-title astro-mark-1 m-0">Big Bang in a bottle</h4>
+                      <div class="d-flex justify-content-between">
+                        <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 36 views</span>
+                            <span class="ml-2"><i class="fas fa-comment-dots"></i> 15 comments</span></small></div>
+                        <div class="text-right text-yellow"><small>April 26, 2005</small></div>
+                      </div>
                     </a>
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="card img-fluid news-card">
-                  <img class="card-img-top" src="./images/evolution-earth.jpg" alt="Card image" style="width:100%">
+                  <img class="card-img-top" src="./images/exoplanet-suprise.jpg" alt="Card image" style="width:100%">
                   <div class="card-img-overlay">
-                    <a class="news-card-content-small" href="#">
-                      <h4 class="card-title astro-mark-1 m-0">Evolution of Earth</h4>
-                      <div class="text-right text-yellow"><small>July 23, 2021</small></div>
+                    <a class="news-card-content-small" href="newsContent.html?id=Exoplanet%20surprise">
+                      <h4 class="card-title astro-mark-1 m-0">Exoplanet surprise</h4>
+                      <div class="d-flex justify-content-between">
+                        <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 23 views</span>
+                            <span class="ml-2"><i class="fas fa-comment-dots"></i> 11 comments</span></small></div>
+                        <div class="text-right text-yellow"><small>February 26, 2007</small></div>
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -612,33 +644,46 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="card img-fluid news-card">
-                  <img class="card-img-top" src="./images/black-hole.jpg" alt="Card image" style="width:100%">
+                  <img class="card-img-top" src="./images/comet-news.jpg" alt="Card image" style="width:100%">
                   <div class="card-img-overlay">
-                    <a class="news-card-content-small" href="#">
-                      <h4 class="card-title astro-mark-1 m-0">Black-hole light show</h4>
-                      <div class="text-right text-yellow"><small>May 18, 2021</small></div>
+                    <a class="news-card-content-small" href="newsContent.html?id=Tour%20the%20solar%20system:%20Comets">
+                      <h4 class="card-title astro-mark-1 m-0">Tour the solar system: Comets</h4>
+                      <div class="d-flex justify-content-between">
+                        <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 27 views</span>
+                            <span class="ml-2"><i class="fas fa-comment-dots"></i> 16 comments</span></small></div>
+                        <div class="text-right text-yellow"><small>September 9, 2011</small></div>
+                      </div>
                     </a>
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="card img-fluid news-card">
-                  <img class="card-img-top" src="./images/solar-system-news.jpg" alt="Card image" style="width:100%">
+                  <img class="card-img-top" src="./images/applo-8.jpg" alt="Card image" style="width:100%">
                   <div class="card-img-overlay">
-                    <a class="news-card-content-small" href="#">
-                      <h4 class="card-title astro-mark-1 m-0">Understanding the solar system</h4>
-                      <div class="text-right text-yellow"><small>June 12, 2021</small></div>
+                    <a class="news-card-content-small"
+                      href="newsContent.html?id=The%20historic%20flight%20of%20Apollo%208">
+                      <h4 class="card-title astro-mark-1 m-0">The historic flight of Apollo 8</h4>
+                      <div class="d-flex justify-content-between">
+                        <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 38 views</span>
+                            <span class="ml-2"><i class="fas fa-comment-dots"></i> 19 comments</span></small></div>
+                        <div class="text-right text-yellow"><small>November 27, 2018</small></div>
+                      </div>
                     </a>
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="card img-fluid news-card">
-                  <img class="card-img-top" src="./images/evolution-earth.jpg" alt="Card image" style="width:100%">
+                  <img class="card-img-top" src="./images/new-exoplanet.jpg" alt="Card image" style="width:100%">
                   <div class="card-img-overlay">
-                    <a class="news-card-content-small" href="#">
-                      <h4 class="card-title astro-mark-1 m-0">Evolution of Earth</h4>
-                      <div class="text-right text-yellow"><small>July 23, 2021</small></div>
+                    <a class="news-card-content-small" href="newsContent.html?id=New%20exoplanet%20found">
+                      <h4 class="card-title astro-mark-1 m-0">New exoplanet found</h4>
+                      <div class="d-flex justify-content-between">
+                        <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 33 views</span>
+                            <span class="ml-2"><i class="fas fa-comment-dots"></i> 12 comments</span></small></div>
+                        <div class="text-right text-yellow"><small>July 25, 2008</small></div>
+                      </div>
                     </a>
                   </div>
                 </div>

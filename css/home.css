@@ -726,6 +726,7 @@ body {
 .planets {
   background-color: #1a2430;
   background-size: cover;
+  padding-top: 60px;
 }
 .planets-card {
   margin-bottom: 3rem;
@@ -856,6 +857,9 @@ body {
   position: relative;
 }
 .news-card:hover .news-card-content {
+  background-color: #101113;
+}
+.news-card:hover .news-card-content-small {
   background-color: #101113;
 }
 .news-card-content,
