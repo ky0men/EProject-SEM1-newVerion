@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./images/planets-images/favico.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/css-plantes/planets-css.css">
+  <title>Astronomy Information - Galaxy Hunter</title>
+</head>
+<body>
+<div id="preloader">
+    <div id="loader"></div>
+  </div> 
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="./images/planets-images/logo.png" alt="Galaxy Hunter Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon">
+          <span></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Planets</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Solar System's Plantets</a>
+              <a class="dropdown-item" href="#">Comet</a>
+              <a class="dropdown-item" href="#">Constellation</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">News</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Bigbang Theory</a>
+              <a class="dropdown-item" href="#">Earth Evolution</a>
+              <a class="dropdown-item" href="#">Blackhole</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Solar System</a>
+              <a class="dropdown-item" href="#">Galaxies</a>
+              <a class="dropdown-item" href="#">Exoplanets</a>
+              <a class="dropdown-item" href="#">Space Flight</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Gallery</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Images Of The Day</a>
+              <a class="dropdown-item" href="#">Videos</a>
+              <a class="dropdown-item" href="#">Solar System 3D View</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Observatories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="navbar-btn d-flex ml-3">
+          <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#searchModal"><i
+              class="fas fa-search"></i></button>
+          <button class="btn btn-secondary btn-sm ml-2"><a href="login.html"><i class="fas fa-user"></i></a></button>
+        </div>
+
+      </div>
+    </div>
+</nav>
+<!-- SEARCH MODAL -->
+<div class="modal fade" id="searchModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-center">Search Infomation</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="search.html">
+            <input type="text" placeholder="Search astronomy information...">
+            <button type="submit" class="search-astronomy-information"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+</div>
+<!-- CONTENT -->
+<div class="content_planets">Extrasolar planets
+  <div class="container">
+    <div class="row">
+      <!-- SELECT_planets-->    
+      <div class="select_option col-lg-3">
+        <h2>THE PLANETS</h2>  
+        <div class="wrap">
+          <select>
+            <optgroup label="Solar System">
+              <option value="inner" selected>Inner Solar system</option>
+              <option value="outer">Outer Solar system</option></optgroup>
+            <optgroup label="Extrasolar planets">
+              <option value="other">Exoplanet</option> 
+            </optgroup>      
+          </select>
+        </div>
+        <div class="inner box"></option>
+          <div class="solar_system">
+            
+            <a href="./page-mecury.html">
+              <div class="planets_item">
+                <div class="Bg1 body_item">
+                  <div class="name_item">MECURY
+                  </div>
+                  <div class="text_item">Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days...</div>
+                </div>
+              </div>
+            </a>
+    
+            <a href="./page-venus.html">
+              <div class="planets_item">
+                <div class="Bg2 body_item">
+                  <div class="name_item">VENUS
+                  </div>
+                  <div class="text_item">Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty. As the brightest natural object in Earth's night sky after the Moon...</div>
+                </div>
+              </div>
+            </a>
+    
+            <a href="./page-earth.html">
+              <div class="planets_item">
+                <div class="Bg3 body_item">
+                  <div class="name_item">EARTH
+                  </div>
+                  <div class="text_item">Earth is the third planet from the Sun and the only astronomical object known to harbor and support life...</div>
+                </div>
+              </div>
+            </a>
+            
+            <a href="./page-mars.html">
+              <div class="planets_item">
+                <div class="Bg4 body_item">
+                  <div class="name_item">MARS
+                  </div>
+                  <div class="text_item">Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury...</div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+        <div class="outer box"></option>
+          <div class="solar_system">
+
+            <a href="./page-jupiter.html">
+              <div class="planets_item">
+                <div class="Bg5 body_item">
+                  <div class="name_item">JUPITER
+                  </div>
+                  <div class="text_item">Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets...</div>
+                </div>
+              </div>
+            </a>
+    
+            <a href="./page-saturn.html">
+              <div class="planets_item">
+                <div class="Bg6 body_item">
+                  <div class="name_item">SATURN
+                  </div>
+                  <div class="text_item">Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth...</div>
+                </div>
+              </div>
+            </a>
+    
+            <a href="./page-nuranus.html">
+              <div class="planets_item">
+                <div class="Bg7 body_item">
+                  <div class="name_item">URANUS
+                  </div>
+                  <div class="text_item">Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days...</div>
+                </div>
+              </div>
+            </a>
+            
+            <a href="./page-neptune.html">
+              <div class="planets_item">
+              <div class="Bg8 body_item">
+                <div class="name_item">NEPTUNE
+                </div>
+                <div class="text_item">Neptune is the eighth and farthest known Solar planet from the Sun. In the Solar System, it is the fourth-largest...</div>
+              </div>
+            </div></a>
+
+          </div>
+          
+        </div>
+        <div class="other box"></option>
+    
+          <div class="solar_system">
+
+            <a href="./page-pluto.html">
+              <div class="planets_item">
+                <div class="Bg9 body_item">
+                  <div class="name_item">PLUTO
+                  </div>
+                  <div class="text_item">Pluto (minor planet designation: 134340 Pluto) is a dwarf planet in the Kuiper belt...</div>
+                </div>
+              </div>
+            </a>
+    
+            <a href="./page-eris.html">
+              <div class="planets_item">
+                <div class="Bg10 body_item">
+                  <div class="name_item">ERIS
+                  </div>
+                  <div class="text_item">Eris is a trans-Neptunian dwarf planet (plutoid).Its orbital characteristics more specifically categorize it as a scattered-disk...</div>
+                </div>
+              </div>
+            </a>
+    
+            <a href="./page-orcus.html">
+              <div class="planets_item">
+                <div class="Bg11 body_item">
+                  <div class="name_item">ORCUS
+                  </div>
+                  <div class="text_item">Orcus is a plutino, a trans-Neptunian object that is locked in a 2:3 resonance with the ice giant Neptune... </div>
+                </div>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </div>  
+      <!-- END SELECT_planets-->     
+
+      <!-- ABOUT_planets-->    
+      <div class="planets_about col-lg-9">       
+        <img class="d-block img-fluid" src="./images/planets-images/mecury/area mecury2.png" alt="">      
+        <div class="name_planets">URANUS</div>
+        <div class="planets_facts">
+          <div class= "facts1 summaryBg">
+            <p class="col-gl-6">Mercury is the closest planet to the sun. As such, it circles the sun faster than all the other planets. Mercury's axis has the smallest tilt of any of the Solar System's planets (about 1⁄30 degree). Its orbital eccentricity is the largest of all known planets in the Solar System. </p>
+            <div class="widget col-lg-4">
+              <div class="widget_header"><h6>MERCURY PLANET PROFILE</h6></div>                 
+              <div class="textwidget">
+                  <table>
+                  <tbody>
+                  <tr class="row-1 odd">
+                    <td class="column-1"><strong>Diameter:</strong></td>
+                    <td class="column-2">4,879 km</td>
+                  </tr>
+                  <tr class="row-2 even">
+                    <td class="column-1"><strong>Mass:</strong></td>
+                    <td class="column-2">3.29 × 10^23 kg (0.06 Earths)</td>
+                  </tr>
+                  <tr class="row-3 odd">
+                    <td class="column-1"><strong>Moons:</strong></td>
+                    <td class="column-2">None</td>
+                  </tr>
+                  <tr class="row-4 even">
+                    <td class="column-1"><strong>Orbit Distance:</strong></td>
+                    <td class="column-2">57,909,227 km (0.39 AU)</td>
+                  </tr>
+                  <tr class="row-5 odd">
+                    <td class="column-1"><strong>Orbit Period:</strong></td>
+                    <td class="column-2">88 days</td>
+                  </tr>
+                  <tr class="row-6 even">
+                    <td class="column-1"><strong>Temperature: </strong></td>
+                    <td class="column-2">-173 to 427°C</td>
+                  </tr>
+                  <tr class="row-7 odd">
+                    <td class="column-1"><strong>First Record:</strong></td>
+                    <td class="column-2">14th century BC</td>
+                  </tr>
+                  <tr class="row-8 even">
+                    <td class="column-1"><strong>Recorded By:</strong></td>
+                    <td class="column-2">Assyrian astronomers</td>
+                  </tr>
+                  </tbody>
+                  </table> 
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="facts2_list col-lg-6">
+              <h4>Facts about Mercury</h4>
+            <ul>
+              <li>Mercury does not have any moons or rings.</li>
+              <li>Mercury is the smallest planet.</li>
+              <li>Mercury is the closest planet to the Sun.</li>
+              <li>Your weight on Mercury would be 38% of your weight on Earth.</li>
+              <li>A solar day on the surface of Mercury lasts 176 Earth days.</li>
+              <li>A year on Mercury takes 88 Earth days.</li>
+              <li>It’s not known who discovered Mercury.</li>
+            </ul>
+            </div>
+            <div class="wy col-lg-6">
+              <div class="youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/m3ZUhpisWeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <hr class="sep-2" />
+          <div class="facts3">
+            <div class="facts3_item">
+              <img src="./planets-images/mecury/Mecury-Orbit.png" alt="">
+              <div class="facst3_text">
+                <h4>Orbit</h4>
+                <p>Mercury's highly eccentric, egg-shaped orbit it takes a trip around the Sun every 88 days thus 1 orbit/year is the equivalent of 88 Earth days. Mercury travels through space at nearly 29 miles or 47 kilometers per second, faster than any other planet.The diagram above illustrates the effects of the eccentricity, showing Mercury’s orbit overlaid with a circular orbit having the same semi-major axis. </p>
+              </div>
+            </div>
+            <div class="facts3_item">
+              <div class="facst3_text">
+                <h4>Rotation</h4>
+                <p>The planet has a 3:2 spin–orbit resonance, rotating three times for every two revolutions around the Sun. Mercury was captured into the 3:2 spin–orbit state at a very early stage of its history, within 20 or 10 million years after its formation.Moving fastest in its elliptical orbit around the Sun, and it is closest to the Sun, each rotation is not accompanied by a sunrise and sunset like on most other planets. The morning Sun appears to rise briefly.</p>
+              </div>
+              <img src="./planets-images/mecury/Mercury-rotation.png" alt="">
+            </div>
+          </div>
+          <div class="facts4">
+            <div class="title-line">
+              <div class="title-decor"></div>
+              <h3>Structure</h3>
+            </div>
+            <div class="facts4_item">
+              <p>Mercury is a terrestrial planet having three main layers: a core, mantle and crust. Mercury’s crust has no tectonic plates and its iron core is enormous, making up 85% of the planets radius while Earth’s inner and outer core, account for about 55%.</p>
+              <img src="./planets-images/mecury/mercury-Structure.jpg" alt="">
+              <p>The planet consists of about 70% metallic and 30% silicate material.This density also indicates that its core is huge and rich in iron. Mercury’s crust is estimated to be around 35 km or 22 mi thick.</p>
+            </div>
+          </div>
+
+          <div class="facts5">
+            <div class="title-line">
+              <div class="title-decor"></div>
+              <h3>Surface and Geology</h3>
+            </div>
+            <div class="facts3_item">
+              <ul>
+                <li>Mercury’s surface is scarred by many impact craters from comets or meteoroids,many craters. There are also extensive mare-like plains present. Basins such as the Caloris Basin were filled with magma, producing smooth plains similar to the lunar marias found on the Moon.</li>
+                <li>It is believed that Mercury was heavy bombarded by comets and asteroids during and shortly after its formation 4.6 billion years ago, as well as during a possibly separate subsequent event called the Late Heavy Bombardment that ended 3.8 billion years ago.</li>
+              </ul>
+              <img src="./planets-images/mecury/Unmasking_the_Secrets_of_Mercury.jpg" alt="">
+            </div>
+            <div class="facts3_item">
+            <img src="./planets-images/mecury/mercury-mess.jpg" alt="">
+            <p>The largest known crater is Caloris Planitia, or Caloris Basin, with a diameter of 1,550 km.[57] The impact that created the Caloris Basin was so powerful that it caused lava eruptions and left a concentric mountainous ring ~2 km tall surrounding the impact crater. The floor of the Caloris Basin is filled by a geologically distinct flat plain, broken up by ridges and fractures in a roughly polygonal pattern. It is not clear whether they are volcanic lava flows induced by the impact or a large sheet of impact melt.</p>
+          </div>
+          </div>
+
+          
+        </div>
+      </div>
+      <!-- END ABOUT_planets-->  
+    </div> 
+  </div>
+</div>
+<!-- END CONTENT -->
+
+<!-- CONTACT -->
+<hr class="sep-2" />
+<div class="contact">
+  <div class="container">
+    <div class="hr_icon1">
+      <img src="./images/planets-images/sunicon.png" alt="SUN">
+      <img src="./images/planets-images/mercuryIC.png" alt="mecury">
+      <img src="./images/planets-images/venusIC.png" alt="venus">
+      <img src="./images/planets-images/earthIC.png" alt="earth">
+      <img src="./images/planets-images/marsIC.png" alt="mars">
+      <img src="./images/planets-images/jupiterIC.png" alt="jupiter">
+      <img src="./images/planets-images/saturnIC.png" alt="saturn">
+      <img src="./images/planets-images/uranusIC.png" alt="uranus">
+      <img src="./images/planets-images/neptuneIC.png" alt="neptune">
+    </div>
+    <div class="contact_share"></div>
+    <div class="contact_comment">
+      <label for="subject">Reply</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+      <input type="submit" value="POST COMMENT">
+    </div>
+    <div class="hr_icon2">
+      <img src="./images/planets-images/sunicon.png" alt="SUN">
+      <img src="./images/planets-images/mercuryIC.png" alt="mecury">
+      <img src="./images/planets-images/venusIC.png" alt="venus">
+      <img src="./images/planets-images/earthIC.png" alt="earth">
+      <img src="./images/planets-images/marsIC.png" alt="mars">
+      <img src="./images/planets-images/jupiterIC.png" alt="jupiter">
+      <img src="./images/planets-images/saturnIC.png" alt="saturn">
+      <img src="./images/planets-images/uranusIC.png" alt="uranus">
+      <img src="./images/planets-images/neptuneIC.png" alt="neptune">
+    </div>
+  </div>
+</div>
+<!-- END CONTACT -->
+
+<!-- NEWS-->
+<div class="title-line">
+  <div class="title-decor"></div>
+  <h2>ASTRONOMY NEWS</h2>
+</div>
+<!-- ASTRONOMY NEWS -->
+  <div class="astronomy-news">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mg-card-left">
+          <div class="card text-white card-left d-flex justify-content-end">
+            <div class="news-title">
+              <h4 class="card-title">What is the Big Bang Theory?</h4>
+              <p class="card-text">How was our Universe created? How did it come to be the seemingly infinite place we
+                know of today? And what will become of it, ages from now? These are...</p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 2 mins ago</small>
+              </p>
+              <div class="text-right">
+                <button class="btn btn-sm btn-primary">Read more...</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12 mg-card-right">
+              <div class="card text-white card-right-top d-flex justify-content-end">
+                <div class="news-titles">
+                  <h4 class="card-title">What Is a Black Hole?</h4>
+                  <p class="card-text">A black hole is a place in space where gravity pulls so much that even light
+                    can not get out. The gravity is so strong because...</p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </p>
+                  <div class="text-right">
+                    <button class="btn btn-sm btn-primary">Read more...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mg-card-right">
+              <div class="card text-white card-right-bt-left d-flex justify-content-end">
+                <div class="news-titles">
+                  <h4 class="card-title">Evolution of Earth</h4>
+                  <p class="card-text">The evolution of this planet and its atmosphere gave rise to life...</p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 2 days ago</small>
+                  </p>
+                  <div class="text-right">
+                    <button class="btn btn-sm btn-primary">Read more...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mg-card-right">
+              <div class="card text-white card-right-bt-right d-flex justify-content-end">
+                <div class="news-titles">
+                  <h4 class="card-title">The solar system</h4>
+                  <p class="card-text">Our solar system is made up of the sun and all the amazing objects that travel
+                    around....</p>
+                  <p class="card-text">
+                    <small class="text-muted">Last updated 3 days ago</small>
+                  </p>
+                  <div class="text-right">
+                    <button class="btn btn-sm btn-primary">Read more...</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- SCRIPT -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/quotes.js"></script>
+  
+    <!--Planets-->
+    <script src="./js/js-planets/planets-example.js"></script>
+</body>
+
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+<script>
+(function ($){
+	$(document).ready(function() {
+		$('.devvn-row-slider').each(function(){
+			$(this).find('style[scope="scope"]').remove();
+			$(this).flickity({
+			cellAlign:'left',
+			contain:true,
+			groupCells:1,
+			prevNextButtons:true,
+			pageDots:true,
+			});
+		});
+	});
+})(jQuery);
+</script>
+</html>

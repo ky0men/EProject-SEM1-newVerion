@@ -170,7 +170,7 @@ function loadMorePlanets() {
               <p class="text-justify">${planet.content1}</p>
               <p class="text-justify">${planet.content2}</p>
               <div class="info-content-btn text-right">
-                <button class="btn btn-gradient" href="#">Read More...</button>
+                <a class="btn btn-gradient" href="${planet.pageLink}">Read More...</a>
               </div>
             </div>
             `;
@@ -188,7 +188,7 @@ function loadMorePlanets() {
               <p class="text-justify">${planet.content1}</p>
               <p class="text-justify">${planet.content2}</p>
               <div class="info-content-btn text-right">
-                <button class="btn btn-gradient" href="#">Read More...</button>
+                <a class="btn btn-gradient" href="${planet.pageLink}">Read More...</a>
               </div>
             </div>
             `;

@@ -190,4 +190,12 @@ function showLastPageResult(currentPage, searchDATA) {
     searchResultContainer.appendChild(searchResult);
   }
 }
-//CHANGE PAGE
+//SEARCH FROM NAVBAR
+document.addEventListener("DOMContentLoaded", searchFromNav);
+
+function searchFromNav() {
+  if (window.location.search.substring(1) != "") {
+    searchValue.value = window.location.search.substring(1).replace("%20", " ");
+    searchInfo();
+  }
+}
