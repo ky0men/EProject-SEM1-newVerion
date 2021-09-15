@@ -1,6 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-/* @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @font-face {
@@ -12,10 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  /* font-family: "Poppins", sans-serif; */
   font-family: "Roboto", sans-serif;
-  /* font-family: "Lato", sans-serif; */
-  /* background: url(../images/bg-fill.gif); */
   color: white;
   background-color: #1a2430;
 }
@@ -148,7 +143,6 @@ body {
 }
 .navbar-dark .navbar-nav .dropdown-item:hover {
   background: rgba(76, 221, 242, 1);
-  /* color: yellow; */
 }
 /* Animation nav-mobile Button */
 .navbar-dark .navbar-toggler {
@@ -325,6 +319,12 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.astro-mark-link-1 {
+  background: -webkit-linear-gradient(0deg, #4cc9f0 30%, #fdbb2d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .banner-content p {
   margin-top: 4rem;
   color: #fdbb2d;
@@ -725,14 +725,12 @@ body {
 /* PLANETS */
 .planets {
   background-color: #1a2430;
-  /* background: url(../images/banner-12-bg.png); */
   background-size: cover;
 }
 .planets-card {
   margin-bottom: 3rem;
 }
 .planets-card-content {
-  /* backdrop-filter: blur(15px) !important; */
   box-shadow: 0 4px 2px 0px black;
   margin-bottom: 2rem;
   border-radius: 16px;

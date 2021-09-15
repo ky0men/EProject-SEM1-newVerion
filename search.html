@@ -11,8 +11,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/home.css">
-  <link rel="stylesheet" href="./css/observatories/observatories.css">
-  <title>Observatories Page</title>
+  <link rel="stylesheet" href="./css/search/search.css">
+  <title>Search Page</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="index.html">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
@@ -66,7 +66,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="observatories.html">Observatories</a>
+            <a class="nav-link" href="observatories.html">Observatories</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
@@ -78,7 +78,6 @@
           <button type="button" class="btn btn-navbar btn-sm ml-2"><a href="login.html"><i
                 class="fas fa-user"></i></a></button>
         </div>
-
       </div>
     </div>
   </nav>
@@ -101,31 +100,84 @@
       </div>
     </div>
   </div>
-  <!-- OBSERVATORIES -->
-  <section class="observatories">
-    <div class="container">
-      <h1 class="text-center">LIST OBSERVATORIES IN THE WORLD</h1>
-      <label for="countries">Seclect Country: </label>
-      <select name="countries" id="countries">
-        <option value="all">All</option>
-        <option value="us">United State</option>
-        <option value="russia">Russia</option>
-        <option value="china">China</option>
-        <option value="japan">Japan</option>
-        <option value="india">India</option>
-        <option value="france">France</option>
-      </select>
-      <div class="obser-card-outer">
-
+  <!-- SEARCH MAIN -->
+  <section id="search-main">
+    <img class="search-banner" src="./images/search/search-banner.png" alt="Rocket Image">
+    <div class="search-title">
+      <h1 class="astro-mark-1 mb-3">Astronomy Information Search</h1>
+      <div class="search-form">
+        <input type="text" name="search-text" id="search-text" class="search-value">
+        <button type="submit" class="btn btn-navbar search-info-btn">Search</button>
       </div>
-      <div class="load-more text-right mt-5">
-        <button class="btn load-more-btn">Load More</button>
+      <div class="loading-image">
+        <img src="./images/loading-buffering.gif" alt="Loading Image">
       </div>
+    </div>
   </section>
+  <section class="search-result-main mb-5" id="top-search">
+    <div class="container search-result">
+      <!-- <div class="row card-search-result mt-5">
+        <div class="col-md-4">
+          <div class="card-search-img text-center">
+            <img src="https://fakeimg.pl/250x250/" alt="">
+          </div>
+        </div>
+        <div class="col-md-8 d-flex flex-column justify-content-center">
+          <div class="card-search-title">
+            <h3 class="astro-mark-1">Planet Pluto</h3>
+          </div>
+          <div class="card-search-content">
+            <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam molestiae
+              explicabo consequuntur
+              laboriosam fuga saepe! Perferendis quo, explicabo consectetur totam architecto quasi tempora autem facere,
+              illum id deleniti quis quod a nisi asperiores sequi! Soluta doloribus nulla doloremque consequatur
+              corrupti.</p>
+            <div class="view-comment text-right font-italic astro-mark-link-1">
+              <span><i class="fas fa-eye"></i> 20 views</span>
+              <span class="ml-2"><i class="fas fa-comment-dots"></i> 10 comments</span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div class="row card-search-result mt-5">
+        <div class="col-md-4">
+          <div class="card-search-img text-center">
+            <img src="https://fakeimg.pl/250x250/" alt="">
+          </div>
+        </div>
+        <div class="col-md-8 d-flex flex-column justify-content-center">
+          <div class="card-search-title">
+            <h3 class="astro-mark-1">Planet Pluto</h3>
+          </div>
+          <div class="card-search-content">
+            <p class="text-justify">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam molestiae
+              explicabo consequuntur
+              laboriosam fuga saepe! Perferendis quo, explicabo consectetur totam architecto quasi tempora autem facere,
+              illum id deleniti quis quod a nisi asperiores sequi! Soluta doloribus nulla doloremque consequatur
+              corrupti.</p>
+            <div class="view-comment text-right font-italic astro-mark-link-1">
+              <span><i class="fas fa-eye"></i> 20 views</span>
+              <span class="ml-2"><i class="fas fa-comment-dots"></i> 10 comments</span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+  <section class="pagination-section text-center">
+    <ul class="pagination justify-content-center">
+      <li class="page-item prev-page-btn disabled"><a class="page-link" href="#top-search">Previous</a></li>
+      <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+      <li class="page-item next-page-btn"><a class="page-link" href="#top-search">Next</a></li>
+    </ul>
+  </section>
+
 
   <!-- FOOTER -->
   <footer id="footer">
-    <img class="w-100" src="./images/footer-1.png" alt="">
+    <!-- <img class="w-100" src="./images/login_signup/footer-login.png" alt=""> -->
     <div class="container pt-5">
       <div class="row">
         <div class="col-md-4 text-center">
@@ -190,7 +242,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/preloader.js"></script>
-  <script src="./js/observatories/observatories.js"></script>
+  <script src="./js/search/search.js"></script>
 </body>
 
 </html>

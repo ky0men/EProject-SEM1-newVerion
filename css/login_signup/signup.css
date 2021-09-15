@@ -4,6 +4,8 @@
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
 }
 .signup-inner {
   position: relative;
@@ -112,7 +114,6 @@ small.success {
   border-radius: 24px;
   transition: 0.5s;
 }
-
 .signup-btn:hover {
   background: linear-gradient(0deg, #f72585 30%, #fdbb2d);
   transform: scale(1.02);
