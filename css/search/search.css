@@ -1,6 +1,3 @@
-/* .search-banner {
-  object-fit: cover;
-} */
 #search-main {
   position: relative;
   overflow: hidden;
@@ -42,10 +39,56 @@
   width: 100px;
   height: 100px;
   margin: 1rem auto;
-  display: none;
+  visibility: hidden;
 }
 .loading-image.active {
+  visibility: visible;
+}
+.card-search-result a {
   display: block;
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 990px) {
+  .card-search-img img {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .card-search-img img {
+    height: 260px;
+    width: 260px;
+    margin-bottom: 2rem;
+  }
+  h1.astro-mark-1 {
+    font-size: 2rem;
+  }
+  .loading-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 575px) {
+  #search-main {
+    margin-top: 50px;
+  }
+  h1.astro-mark-1 {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+  }
+  .loading-image {
+    width: 60px;
+    height: 60px;
+  }
+  .search-title {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .search-title {
+    width: 300px;
+  }
 }
 /* PAGINATION */
 .pagination-section {
@@ -53,4 +96,58 @@
 }
 .pagination-section.show {
   display: block;
+}
+/* AUTO COMPLETE SEARCH */
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type="text"] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
 }

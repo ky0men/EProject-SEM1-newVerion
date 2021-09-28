@@ -21,7 +21,7 @@ function showFirstFourObser() {
               <h3>${obser.name}</h3>
               <p class="text-justify">${obser.shortContent}</p>
               <div class="text-right">
-              <button value="${obser.id}" class="btn btn-sm read-more-btn">Read more...</button>
+              <a href="#" id="${obser.id}" class="btn btn-sm read-more-btn">Read more...</a>
               </div>
               </div>
               `;
@@ -55,7 +55,7 @@ function loadMoreObser() {
             <h3>${obser.name}</h3>
             <p class="text-justify">${obser.shortContent}</p>
             <div class="text-right">
-            <button value="${obser.id}" class="btn btn-sm read-more-btn">Read more...</button>
+            <a href="#" id="${obser.id}" class="btn btn-sm read-more-btn">Read more...</a>
             </div>
             </div>
             `;
@@ -86,7 +86,7 @@ function showAllObser() {
         <h3>${obser.name}</h3>
         <p class="text-justify">${obser.shortContent}</p>
         <div class="text-right">
-          <button value="${obser.id}" class="btn btn-sm read-more-btn">Read more...</button>
+          <a href="#" id="${obser.id}" class="btn btn-sm read-more-btn">Read more...</a>
         </div>
         </div>
         `;
@@ -122,7 +122,7 @@ function showSelectedCountryObser() {
           <h3>${obser.name}</h3>
           <p class="text-justify">${obser.shortContent}</p>
           <div class="text-right">
-            <button value="${obser.id}" class="btn btn-sm read-more-btn">Read more...</button>
+            <a href="#" id="${obser.id}" class="btn btn-sm read-more-btn">Read more...</a>
           </div>
         </div>
           `;
@@ -136,18 +136,25 @@ function showSelectedCountryObser() {
 obserCard.addEventListener("click", showDetailObser);
 
 function showDetailObser(e) {
-  e.preventDefault();
+  // e.preventDefault();
 
   if (e.target.classList.contains("read-more-btn")) {
     obserCard.innerHTML = "";
 
-    // console.log(e.target.value);
+    // console.log(e.target.id);
     fetch("https://fake-api-sem.herokuapp.com/observatories")
       .then((res) => res.json())
       .then((data) => {
         data.forEach(function (obser) {
-          if (e.target.value == obser.id) {
+          if (e.target.id == obser.id) {
             // console.log(obser.id);
+            // random obser
+            var random1 = Math.floor(Math.random() * 6) + 1;
+            var random2 = Math.floor(Math.random() * 5) + 7;
+            var random3 = Math.floor(Math.random() * 5) + 13;
+            var random4 = Math.floor(Math.random() * 5) + 19;
+            var random5 = Math.floor(Math.random() * 3) + 25;
+
             var obserDetail = document.createElement("div");
             obserDetail.className = "obser-detail";
             obserDetail.innerHTML = `
@@ -169,7 +176,7 @@ function showDetailObser(e) {
                 <div class="content-bottom">
                   <p class="text-justify">${obser.contentBottom}</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center mb-5">
                   <p class="text-center obser-map"><i>Position of Observatories</i></p>
                   <iframe
                     src="${obser.mapUrl}"
@@ -178,6 +185,8 @@ function showDetailObser(e) {
                 </div>
               </div>
             </div>
+
+            
             <div class="col-md-4">
               <div class="obser-side-bar">
               <h4 class="text-center">More Observatories</h4>
@@ -185,55 +194,55 @@ function showDetailObser(e) {
               <div class="row obser-side-card">
                 <div class="col-md-5 obser-side-img">
                   <img
-                    src="${data[3].imgUrl}"
-                    alt="${data[3].name}">
+                    src="${data[random1].imgUrl}"
+                    alt="${data[random1].name}">
                 </div>
                 <div class="col-md-7 obser-side-title">
-                  <p><strong>${data[3].name} (${data[3].country})</strong></p>
+                  <p><strong>${data[random1].name} (${data[random1].country})</strong></p>
                 </div>
               </div>
 
               <div class="row obser-side-card">
                 <div class="col-md-5 obser-side-img">
                   <img
-                    src="${data[6].imgUrl}"
-                    alt="${data[6].name}">
+                    src="${data[random2].imgUrl}"
+                    alt="${data[random2].name}">
                 </div>
                 <div class="col-md-7 obser-side-title">
-                  <p><strong>${data[6].name} (${data[6].country})</strong></p>
+                  <p><strong>${data[random2].name} (${data[random2].country})</strong></p>
                 </div>
               </div>
 
               <div class="row obser-side-card">
                 <div class="col-md-5 obser-side-img">
                   <img
-                    src="${data[12].imgUrl}"
-                    alt="${data[12].name}">
+                    src="${data[random3].imgUrl}"
+                    alt="${data[random3].name}">
                 </div>
                 <div class="col-md-7 obser-side-title">
-                  <p><strong>${data[12].name} (${data[12].country})</strong></p>
+                  <p><strong>${data[random3].name} (${data[random3].country})</strong></p>
                 </div>
               </div>
 
               <div class="row obser-side-card">
                 <div class="col-md-5 obser-side-img">
                   <img
-                    src="${data[20].imgUrl}"
-                    alt="${data[20].name}">
+                    src="${data[random4].imgUrl}"
+                    alt="${data[random4].name}">
                 </div>
                 <div class="col-md-7 obser-side-title">
-                  <p><strong>${data[20].name} (${data[20].country})</strong></p>
+                  <p><strong>${data[random4].name} (${data[random4].country})</strong></p>
                 </div>
               </div>
 
               <div class="row obser-side-card">
                 <div class="col-md-5 obser-side-img">
                   <img
-                    src="${data[24].imgUrl}"
-                    alt="${data[24].name}">
+                    src="${data[random5].imgUrl}"
+                    alt="${data[random5].name}">
                 </div>
                 <div class="col-md-7 obser-side-title">
-                  <p><strong>${data[24].name} (${data[24].country})</strong></p>
+                  <p><strong>${data[random5].name} (${data[random5].country})</strong></p>
                 </div>
               </div>
 
@@ -272,6 +281,15 @@ function showObserLink(e) {
       .then((data) => {
         data.forEach(function (obser) {
           if (obser.name == obserLinkName) {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            // random obser
+            var random1 = Math.floor(Math.random() * 6) + 1;
+            var random2 = Math.floor(Math.random() * 5) + 7;
+            var random3 = Math.floor(Math.random() * 5) + 13;
+            var random4 = Math.floor(Math.random() * 5) + 19;
+            var random5 = Math.floor(Math.random() * 3) + 25;
+
             var obserDetail = document.createElement("div");
             obserDetail.className = "obser-detail";
             obserDetail.innerHTML = `
@@ -311,55 +329,55 @@ function showObserLink(e) {
               <div class="row obser-side-card">
                 <div class="col-md-5 obser-side-img">
                   <img
-                    src="${data[3].imgUrl}"
-                    alt="${data[3].name}">
+                    src="${data[random1].imgUrl}"
+                    alt="${data[random1].name}">
                 </div>
                 <div class="col-md-7 obser-side-title">
-                  <p><strong>${data[3].name} (${data[3].country})</strong></p>
+                  <p><strong>${data[random1].name} (${data[random1].country})</strong></p>
                 </div>
               </div>
 
               <div class="row obser-side-card">
                 <div class="col-md-5 obser-side-img">
                   <img
-                    src="${data[6].imgUrl}"
-                    alt="${data[6].name}">
+                    src="${data[random2].imgUrl}"
+                    alt="${data[random2].name}">
                 </div>
                 <div class="col-md-7 obser-side-title">
-                  <p><strong>${data[6].name} (${data[6].country})</strong></p>
+                  <p><strong>${data[random2].name} (${data[random2].country})</strong></p>
                 </div>
               </div>
 
               <div class="row obser-side-card">
                 <div class="col-md-5 obser-side-img">
                   <img
-                    src="${data[12].imgUrl}"
-                    alt="${data[12].name}">
+                    src="${data[random3].imgUrl}"
+                    alt="${data[random3].name}">
                 </div>
                 <div class="col-md-7 obser-side-title">
-                  <p><strong>${data[12].name} (${data[12].country})</strong></p>
+                  <p><strong>${data[random3].name} (${data[random3].country})</strong></p>
                 </div>
               </div>
 
               <div class="row obser-side-card">
                 <div class="col-md-5 obser-side-img">
                   <img
-                    src="${data[20].imgUrl}"
-                    alt="${data[20].name}">
+                    src="${data[random4].imgUrl}"
+                    alt="${data[random4].name}">
                 </div>
                 <div class="col-md-7 obser-side-title">
-                  <p><strong>${data[20].name} (${data[20].country})</strong></p>
+                  <p><strong>${data[random4].name} (${data[random4].country})</strong></p>
                 </div>
               </div>
 
               <div class="row obser-side-card">
                 <div class="col-md-5 obser-side-img">
                   <img
-                    src="${data[24].imgUrl}"
-                    alt="${data[24].name}">
+                    src="${data[random5].imgUrl}"
+                    alt="${data[random5].name}">
                 </div>
                 <div class="col-md-7 obser-side-title">
-                  <p><strong>${data[24].name} (${data[24].country})</strong></p>
+                  <p><strong>${data[random5].name} (${data[random5].country})</strong></p>
                 </div>
               </div>
 
@@ -396,7 +414,7 @@ function showRelyOnCountry() {
               <h3>${obser.name}</h3>
               <p class="text-justify">${obser.shortContent}</p>
               <div class="text-right">
-              <button value="${obser.id}" class="btn btn-sm read-more-btn">Read more...</button>
+              <a href="#" id="${obser.id}" class="btn btn-sm read-more-btn">Read more...</a>
               </div>
               </div>
               `;

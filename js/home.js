@@ -65,24 +65,7 @@ function init() {
   // Init Typewriter
   new Typewriter(txtElement, words, wait);
 }
-//SCROLL TO TOP
-var scrollToTop = document.querySelector(".scroll-top-btn");
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 700) {
-    scrollToTop.classList.add("show");
-  }
-  if (window.scrollY < 400) {
-    scrollToTop.classList.remove("show");
-  }
-});
-
-scrollToTop.addEventListener("click", goToTop);
-
-function goToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
 //OUR UNIVERSE ANIMATION
 var solarSystemSub = document.querySelector(".solar-system-sub");
 var planetsSub = document.querySelector(".planets-sub");

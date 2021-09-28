@@ -108,9 +108,9 @@
   <section id="search-main">
     <img class="search-banner" src="./images/search/search-banner.png" alt="Rocket Image">
     <div class="search-title">
-      <h1 class="astro-mark-1 mb-3">Astronomy Information Search</h1>
+      <h1 class="astro-mark-1 mb-3 text-center">Astronomy Information Search</h1>
       <div class="search-form">
-        <input type="text" name="search-text" id="search-text" class="search-value">
+        <input type="text" name="search-text" id="search-text" class="search-value autocomplete">
         <button type="submit" class="btn btn-navbar search-info-btn">Search</button>
       </div>
       <div class="loading-image">
@@ -118,7 +118,7 @@
       </div>
     </div>
   </section>
-  <section class="search-result-main mb-5" id="top-search">
+  <section class="search-result-main mb-5 px-3" id="top-search">
     <div class="container search-result">
       <!-- <div class="row card-search-result mt-5">
         <div class="col-md-4">
@@ -166,6 +166,11 @@
           </div>
         </div>
       </div> -->
+
+      <!-- <div class="search-not-found text-center">
+        <img class="mb-4" style="width: 150px" src="./images/sad.png" alt="Cry sad">
+        <h3 class="astro-mark-1 text-center">Sorry, we couldn't find any results</h3>
+      </div> -->
     </div>
   </section>
   <section class="pagination-section text-center">
@@ -177,7 +182,12 @@
       <li class="page-item next-page-btn"><a class="page-link" href="#top-search">Next</a></li>
     </ul>
   </section>
-
+  <!-- SCROLL TO TOP -->
+  <div class="scroll-top-btn">
+    <div class="scroll-outer">
+      <i class="fas fa-arrow-up "></i>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer id="footer">

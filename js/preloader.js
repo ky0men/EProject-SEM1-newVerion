@@ -25,3 +25,21 @@ function startSearch(e) {
   console.log(searchInfoInput.value);
   window.location.replace(`search.html?${searchInfoInput.value}`);
 }
+//SCROLL TO TOP
+var scrollToTop = document.querySelector(".scroll-top-btn");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 700) {
+    scrollToTop.classList.add("show");
+  }
+  if (window.scrollY < 400) {
+    scrollToTop.classList.remove("show");
+  }
+});
+
+scrollToTop.addEventListener("click", goToTop);
+
+function goToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

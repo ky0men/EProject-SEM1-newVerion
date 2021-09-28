@@ -10,8 +10,8 @@ var incorrectAlert = document.querySelector(".incorrect-alert");
 var signUpRight = document.querySelector(".signup-right");
 
 function showMess(input, mess, type) {
-  input.target.nextElementSibling.className = "";
-  input.target.className = "";
+  // input.target.nextElementSibling.className = "";
+  // input.target.className = "";
   input.target.nextElementSibling.nextElementSibling.innerText = mess;
   input.target.nextElementSibling.nextElementSibling.classList.add(type);
   input.target.classList.add(type);

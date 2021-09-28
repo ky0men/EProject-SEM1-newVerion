@@ -1,256 +1,178 @@
-$(document).ready(function(){
-  $(".navbar-toggle").on("click", function (){
-    $(this).toggleClass("active");
-  });
+var bodySolarSystem = document.querySelector("#bodySolar");
+//Setting View BTN Event
+var settingViewBtn = document.querySelector(".switch-toggle-view");
+settingViewBtn.addEventListener("click", toggleView);
+function toggleView() {
+  if (bodySolarSystem.classList.contains("view-3d")) {
+    bodySolarSystem.classList.remove("view-3d");
+    bodySolarSystem.classList.add("view-2d");
+  } else if (bodySolarSystem.classList.contains("view-2d")) {
+    bodySolarSystem.classList.remove("view-2d");
+    bodySolarSystem.classList.add("view-3d");
+  } else if (bodySolarSystem.classList.contains("zoom-3d")) {
+    bodySolarSystem.classList.remove("zoom-3d");
+    bodySolarSystem.classList.add("zoom-2d");
+  } else if (bodySolarSystem.classList.contains("zoom-2d")) {
+    bodySolarSystem.classList.remove("zoom-2d");
+    bodySolarSystem.classList.add("zoom-3d");
+  }
+}
+//Setting Zoom BTN Event
+var settingZoomBtn = document.querySelector(".switch-toggle-zoom");
+settingZoomBtn.addEventListener("click", toggleZoom);
+function toggleZoom() {
+  if (bodySolarSystem.classList.contains("view-3d")) {
+    bodySolarSystem.classList.remove("view-3d");
+    bodySolarSystem.classList.add("zoom-3d");
+  } else if (bodySolarSystem.classList.contains("view-2d")) {
+    bodySolarSystem.classList.remove("view-2d");
+    bodySolarSystem.classList.add("zoom-2d");
+  } else if (bodySolarSystem.classList.contains("zoom-3d")) {
+    bodySolarSystem.classList.remove("zoom-3d");
+    bodySolarSystem.classList.add("view-3d");
+  } else if (bodySolarSystem.classList.contains("zoom-2d")) {
+    bodySolarSystem.classList.remove("zoom-2d");
+    bodySolarSystem.classList.add("view-2d");
+  }
+}
+//Nav Planets
+var planetsInfo = document.querySelectorAll(".planets-info");
+var orbits = document.querySelectorAll(".orbits");
 
-  $(".switch-toggle-view").click(function(){
-    if($("#bodySolar").hasClass('view-3d')){
-      $("#bodySolar").removeClass('view-3d').addClass('view-2d')
-    }else if($("#bodySolar").hasClass('view-2d')){
-      $("#bodySolar").removeClass('view-2d').addClass('view-3d')
-    }
-    else if($("#bodySolar").hasClass('zoom-3d')){
-      $("#bodySolar").removeClass('zoom-3d').addClass('zoom-2d')
-    }
-    else if($("#bodySolar").hasClass('zoom-2d')){
-      $("#bodySolar").removeClass('zoom-2d').addClass('zoom-3d')
-    }
-    
-  });
-  $(".switch-toggle-zoom").click(function(){
-    if($("#bodySolar").hasClass('view-3d')){
-      $("#bodySolar").removeClass('view-3d').addClass('zoom-3d')
-    }
-    else if($("#bodySolar").hasClass('view-2d')){
-      $("#bodySolar").removeClass('view-2d').addClass('zoom-2d')
-    }
-    else if($("#bodySolar").hasClass('zoom-3d')){
-      $("#bodySolar").removeClass('zoom-3d').addClass('view-3d')
-    }
-    else if($("#bodySolar").hasClass('zoom-2d')){
-      $("#bodySolar").removeClass('zoom-2d').addClass('view-2d')
-    }
-  });
-  $("#sun-nav").click(function(){
-    $("#mercury-info").fadeOut(1000);
-    $("#venus-info").fadeOut(1000);
-    $("#earth-info").fadeOut(1000);
-    $("#mars-info").fadeOut(1000);
-    $("#jupiter-info").fadeOut(1000);
-    $("#saturn-info").fadeOut(1000);
-    $("#uranus-info").fadeOut(1000);
-    $("#neptune-info").fadeOut(1000);
-    $("#sun-info").fadeToggle(1000);
-    $("#mercury").removeClass('orbit-color');
-    $("#venus").removeClass('orbit-color');
-    $("#earth").removeClass('orbit-color');
-    $("#mars").removeClass('orbit-color');
-    $("#jupiter").removeClass('orbit-color');
-    $("#saturn").removeClass('orbit-color');
-    $("#uranus").removeClass('orbit-color');
-    $("#neptune").removeClass('orbit-color');
-    // $(".planets-navbar-toggle").click();
-  });
-  $(".close-sun-info").click(function(){
-    $("#sun-info").fadeToggle(1000);
-  });
-  $("#mercury-nav").click(function(){
-    $("#sun-info").fadeOut(1000);
-    $("#venus-info").fadeOut(1000);
-    $("#earth-info").fadeOut(1000);
-    $("#mars-info").fadeOut(1000);
-    $("#jupiter-info").fadeOut(1000);
-    $("#saturn-info").fadeOut(1000);
-    $("#uranus-info").fadeOut(1000);
-    $("#neptune-info").fadeOut(1000);
-    $("#mercury-info").fadeToggle(1000);
-    $("#mercury").toggleClass('orbit-color');
-    $("#venus").removeClass('orbit-color');
-    $("#earth").removeClass('orbit-color');
-    $("#mars").removeClass('orbit-color');
-    $("#jupiter").removeClass('orbit-color');
-    $("#saturn").removeClass('orbit-color');
-    $("#uranus").removeClass('orbit-color');
-    $("#neptune").removeClass('orbit-color');
-    // $(".planets-navbar-toggle").click();
-  });
-  $(".close-mercury-info").click(function(){
-    $("#mercury-info").fadeToggle(1000);
-    $("#mercury").removeClass('orbit-color');
+//Sun-Nav Btn
+var sunNavBtn = document.querySelector("#sun-nav");
+var sunInfo = document.querySelector(".sun-info");
+sunNavBtn.addEventListener("click", showSunInfo);
+function showSunInfo() {
+  if (sunInfo.classList.contains("show")) {
+    sunInfo.classList.remove("show");
+  } else {
+    closeInfo();
+    sunInfo.classList.add("show");
+  }
+}
 
-  });
-  $("#venus-nav").click(function(){
-    $("#sun-info").fadeOut(1000);
-    $("#mercury-info").fadeOut(1000);
-    $("#earth-info").fadeOut(1000);
-    $("#mars-info").fadeOut(1000);
-    $("#jupiter-info").fadeOut(1000);
-    $("#saturn-info").fadeOut(1000);
-    $("#uranus-info").fadeOut(1000);
-    $("#neptune-info").fadeOut(1000);
-    $("#venus-info").fadeToggle(1000);
-    $("#venus").toggleClass('orbit-color')
-    $("#mercury").removeClass('orbit-color');
-    $("#earth").removeClass('orbit-color');
-    $("#mars").removeClass('orbit-color');
-    $("#jupiter").removeClass('orbit-color');
-    $("#saturn").removeClass('orbit-color');
-    $("#uranus").removeClass('orbit-color');
-    $("#neptune").removeClass('orbit-color');
-    // $(".planets-navbar-toggle").click();
-  });
-  $(".close-venus-info").click(function(){
-    $("#venus-info").fadeToggle(1000);
-    $("#venus").removeClass('orbit-color');
-  });
-  $("#earth-nav").click(function(){
-    $("#sun-info").fadeOut(1000);
-    $("#mercury-info").fadeOut(1000);
-    $("#venus-info").fadeOut(1000);
-    $("#mars-info").fadeOut(1000);
-    $("#jupiter-info").fadeOut(1000);
-    $("#saturn-info").fadeOut(1000);
-    $("#uranus-info").fadeOut(1000);
-    $("#neptune-info").fadeOut(1000);
-    $("#earth-info").fadeToggle(1000);
-    $("#earth").toggleClass('orbit-color')
-    $("#mercury").removeClass('orbit-color');
-    $("#venus").removeClass('orbit-color');
-    $("#mars").removeClass('orbit-color');
-    $("#jupiter").removeClass('orbit-color');
-    $("#saturn").removeClass('orbit-color');
-    $("#uranus").removeClass('orbit-color');
-    $("#neptune").removeClass('orbit-color');
-    // $(".planets-navbar-toggle").click();
-  });
-  $(".close-earth-info").click(function(){
-    $("#earth-info").fadeToggle(1000);
-    $("#venus").removeClass('orbit-color');
+//Mercury Nav Btn
+var mercuryNavBtn = document.querySelector("#mercury-nav");
+var mercuryInfo = document.querySelector(".mercury-info");
+mercuryNavBtn.addEventListener("click", showMercuryInfo);
+function showMercuryInfo() {
+  if (mercuryInfo.classList.contains("show")) {
+    mercuryInfo.classList.remove("show");
+  } else {
+    closeInfo();
+    mercuryInfo.classList.add("show");
+  }
+}
+//Venus Nav Btn
+var venusNavBtn = document.querySelector("#venus-nav");
+var venusInfo = document.querySelector(".venus-info");
+venusNavBtn.addEventListener("click", showVenusInfo);
+function showVenusInfo() {
+  if (venusInfo.classList.contains("show")) {
+    venusInfo.classList.remove("show");
+  } else {
+    closeInfo();
+    venusInfo.classList.add("show");
+  }
+}
+//Earth Nav Btn
+var earthNavBtn = document.querySelector("#earth-nav");
+var earthInfo = document.querySelector(".earth-info");
+earthNavBtn.addEventListener("click", showEarthInfo);
+function showEarthInfo() {
+  if (earthInfo.classList.contains("show")) {
+    earthInfo.classList.remove("show");
+  } else {
+    closeInfo();
+    earthInfo.classList.add("show");
+  }
+}
+//Mars Nav Btn
+var marsNavBtn = document.querySelector("#mars-nav");
+var marsInfo = document.querySelector(".mars-info");
+marsNavBtn.addEventListener("click", showMarsInfo);
+function showMarsInfo() {
+  if (marsInfo.classList.contains("show")) {
+    marsInfo.classList.remove("show");
+  } else {
+    closeInfo();
+    marsInfo.classList.add("show");
+  }
+}
+//Jupiter Nav Btn
+var jupiterNavBtn = document.querySelector("#jupiter-nav");
+var jupiterInfo = document.querySelector(".jupiter-info");
+jupiterNavBtn.addEventListener("click", showJupiterInfo);
+function showJupiterInfo() {
+  if (jupiterInfo.classList.contains("show")) {
+    jupiterInfo.classList.remove("show");
+  } else {
+    closeInfo();
+    jupiterInfo.classList.add("show");
+  }
+}
+//Saturn Nav Btn
+var saturnNavBtn = document.querySelector("#saturn-nav");
+var saturnInfo = document.querySelector(".saturn-info");
+saturnNavBtn.addEventListener("click", showSaturnInfo);
+function showSaturnInfo() {
+  if (saturnInfo.classList.contains("show")) {
+    saturnInfo.classList.remove("show");
+  } else {
+    closeInfo();
+    saturnInfo.classList.add("show");
+  }
+}
+//Uranus Nav Btn
+var uranusNavBtn = document.querySelector("#uranus-nav");
+var uranusInfo = document.querySelector(".uranus-info");
+uranusNavBtn.addEventListener("click", showUranusInfo);
+function showUranusInfo() {
+  if (uranusInfo.classList.contains("show")) {
+    uranusInfo.classList.remove("show");
+  } else {
+    closeInfo();
+    uranusInfo.classList.add("show");
+  }
+}
+//Neptune Nav Btn
+var neptuneNavBtn = document.querySelector("#neptune-nav");
+var neptuneInfo = document.querySelector(".neptune-info");
+neptuneNavBtn.addEventListener("click", showNeptuneInfo);
+function showNeptuneInfo() {
+  if (neptuneInfo.classList.contains("show")) {
+    neptuneInfo.classList.remove("show");
+  } else {
+    closeInfo();
+    neptuneInfo.classList.add("show");
+  }
+}
 
-  });
-  $("#mars-nav").click(function(){
-    $("#sun-info").fadeOut(1000);
-    $("#mercury-info").fadeOut(1000);
-    $("#venus-info").fadeOut(1000);
-    $("#earth-info").fadeOut(1000);
-    $("#jupiter-info").fadeOut(1000);
-    $("#saturn-info").fadeOut(1000);
-    $("#uranus-info").fadeOut(1000);
-    $("#neptune-info").fadeOut(1000);
-    $("#mars-info").fadeToggle(1000);
-    $("#mars").toggleClass('orbit-color')
-    $("#mercury").removeClass('orbit-color');
-    $("#venus").removeClass('orbit-color');
-    $("#earth").removeClass('orbit-color');
-    $("#jupiter").removeClass('orbit-color');
-    $("#saturn").removeClass('orbit-color');
-    $("#uranus").removeClass('orbit-color');
-    $("#neptune").removeClass('orbit-color');
-    // $(".planets-navbar-toggle").click();
-  });
-  $(".close-mars-info").click(function(){
-    $("#mars-info").fadeToggle(1000);
-    $("#mars").removeClass('orbit-color');
+var closeSunInfoBtn = document.querySelector(".close-sun-info");
+var closeMercuryInfoBtn = document.querySelector(".close-mercury-info");
+var closeVenusInfoBtn = document.querySelector(".close-venus-info");
+var closeEarthInfoBtn = document.querySelector(".close-earth-info");
+var closeMarsInfoBtn = document.querySelector(".close-mars-info");
+var closeJupiterInfoBtn = document.querySelector(".close-jupiter-info");
+var closeSaturnInfoBtn = document.querySelector(".close-saturn-info");
+var closeUranusInfoBtn = document.querySelector(".close-uranus-info");
+var closeNeptuneInfoBtn = document.querySelector(".close-neptune-info");
+closeSunInfoBtn.addEventListener("click", closeInfo);
+closeMercuryInfoBtn.addEventListener("click", closeInfo);
+closeVenusInfoBtn.addEventListener("click", closeInfo);
+closeEarthInfoBtn.addEventListener("click", closeInfo);
+closeMarsInfoBtn.addEventListener("click", closeInfo);
+closeJupiterInfoBtn.addEventListener("click", closeInfo);
+closeSaturnInfoBtn.addEventListener("click", closeInfo);
+closeUranusInfoBtn.addEventListener("click", closeInfo);
+closeNeptuneInfoBtn.addEventListener("click", closeInfo);
 
+function closeInfo() {
+  planetsInfo.forEach(function (planet) {
+    planet.classList.remove("show");
   });
-  $("#jupiter-nav").click(function(){
-    $("#sun-info").fadeOut(1000);
-    $("#mercury-info").fadeOut(1000);
-    $("#venus-info").fadeOut(1000);
-    $("#earth-info").fadeOut(1000);
-    $("#mars-info").fadeOut(1000);
-    $("#saturn-info").fadeOut(1000);
-    $("#uranus-info").fadeOut(1000);
-    $("#neptune-info").fadeOut(1000);
-    $("#jupiter-info").fadeToggle(1000);
-    $("#jupiter").toggleClass('orbit-color')
-    $("#mercury").removeClass('orbit-color');
-    $("#venus").removeClass('orbit-color');
-    $("#earth").removeClass('orbit-color');
-    $("#mars").removeClass('orbit-color');
-    $("#saturn").removeClass('orbit-color');
-    $("#uranus").removeClass('orbit-color');
-    $("#neptune").removeClass('orbit-color');
-    // $(".planets-navbar-toggle").click();
+  orbits.forEach(function (orbit) {
+    orbit.classList.remove("orbit-color");
   });
-  $(".close-jupiter-info").click(function(){
-    $("#jupiter-info").fadeToggle(1000);
-    $("#jupiter").removeClass('orbit-color');
-
-  });
-  $("#saturn-nav").click(function(){
-    $("#sun-info").fadeOut(1000);
-    $("#mercury-info").fadeOut(1000);
-    $("#venus-info").fadeOut(1000);
-    $("#earth-info").fadeOut(1000);
-    $("#mars-info").fadeOut(1000);
-    $("#jupiter-info").fadeOut(1000);
-    $("#uranus-info").fadeOut(1000);
-    $("#neptune-info").fadeOut(1000);
-    $("#saturn-info").fadeToggle(1000);
-    $("#saturn").toggleClass('orbit-color')
-    $("#mercury").removeClass('orbit-color');
-    $("#venus").removeClass('orbit-color');
-    $("#earth").removeClass('orbit-color');
-    $("#mars").removeClass('orbit-color');
-    $("#jupiter").removeClass('orbit-color');
-    $("#uranus").removeClass('orbit-color');
-    $("#neptune").removeClass('orbit-color');
-    // $(".planets-navbar-toggle").click();
-  });
-  $(".close-saturn-info").click(function(){
-    $("#saturn-info").fadeToggle(1000);
-    $("#saturn").removeClass('orbit-color');
-
-  });
-  $("#uranus-nav").click(function(){
-    $("#sun-info").fadeOut(1000);
-    $("#mercury-info").fadeOut(1000);
-    $("#venus-info").fadeOut(1000);
-    $("#earth-info").fadeOut(1000);
-    $("#mars-info").fadeOut(1000);
-    $("#jupiter-info").fadeOut(1000);
-    $("#saturn-info").fadeOut(1000);
-    $("#neptune-info").fadeOut(1000);
-    $("#uranus-info").fadeToggle(1000);
-    $("#uranus").toggleClass('orbit-color')
-    $("#mercury").removeClass('orbit-color');
-    $("#venus").removeClass('orbit-color');
-    $("#earth").removeClass('orbit-color');
-    $("#mars").removeClass('orbit-color');
-    $("#jupiter").removeClass('orbit-color');
-    $("#saturn").removeClass('orbit-color');
-    $("#neptune").removeClass('orbit-color');
-    // $(".planets-navbar-toggle").click();
-  });
-  $(".close-uranus-info").click(function(){
-    $("#uranus-info").fadeToggle(1000);
-    $("#uranus").removeClass('orbit-color');
-
-  });
-  $("#neptune-nav").click(function(){
-    $("#sun-info").fadeOut(1000);
-    $("#mercury-info").fadeOut(1000);
-    $("#venus-info").fadeOut(1000);
-    $("#earth-info").fadeOut(1000);
-    $("#mars-info").fadeOut(1000);
-    $("#jupiter-info").fadeOut(1000);
-    $("#saturn-info").fadeOut(1000);
-    $("#uranus-info").fadeOut(1000);
-    $("#neptune-info").fadeToggle(1000);
-    $("#neptune").toggleClass('orbit-color')
-    $("#mercury").removeClass('orbit-color');
-    $("#venus").removeClass('orbit-color');
-    $("#earth").removeClass('orbit-color');
-    $("#mars").removeClass('orbit-color');
-    $("#jupiter").removeClass('orbit-color');
-    $("#saturn").removeClass('orbit-color');
-    $("#uranus").removeClass('orbit-color');
-    // $(".planets-navbar-toggle").click();
-  });
-  $(".close-neptune-info").click(function(){
-    $("#neptune-info").fadeToggle(1000);
-    $("#neptune").removeClass('orbit-color');
-
-  });
-});
+}

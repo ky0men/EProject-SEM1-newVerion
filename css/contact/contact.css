@@ -19,29 +19,25 @@
 .contact-right {
   padding: 0 2rem;
 }
-.name-box,
-.email-box {
+.input-box {
   position: relative;
 }
-.name-box input,
-.email-box input {
+.input-box input {
   width: 100%;
   padding: 10px 0;
   color: white;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   border: none;
   border-bottom: 1px solid #fdbb2d;
   outline: none;
   background: transparent;
 }
-.name-box input:focus,
-.email-box input:focus {
+.input-box input:focus {
   border-bottom: 1px solid #f72585;
   transition: all 1s ease;
 }
 
-.name-box label,
-.email-box label {
+.input-box label {
   position: absolute;
   top: 0;
   left: 0;
@@ -51,10 +47,8 @@
   pointer-events: none;
   transition: 0.5s;
 }
-.name-box input:focus ~ label,
-.name-box input:valid ~ label,
-.email-box input:focus ~ label,
-.email-box input:valid ~ label {
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
   top: -20px;
   left: 0;
   color: #f72585;
@@ -87,6 +81,36 @@ textarea:focus-visible {
 .btn:focus,
 .btn-primary:focus {
   box-shadow: none;
+}
+form small {
+  visibility: hidden;
+}
+small.error {
+  visibility: visible;
+  color: red;
+}
+small.success {
+  visibility: visible;
+  color: green;
+}
+.input-box input.error ~ span::before {
+  content: "✖";
+  color: red;
+}
+.input-box input.success ~ span::before {
+  content: "✓";
+  color: green;
+}
+.input-box input.error {
+  border-bottom: 1px solid red;
+}
+.input-box input.success {
+  border-bottom: 1px solid green;
+}
+.input-box input ~ span::before {
+  position: absolute;
+  right: -20px;
+  top: 20px;
 }
 /* AFTER CHECK */
 .success-img img {

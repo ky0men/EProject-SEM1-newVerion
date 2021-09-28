@@ -131,7 +131,7 @@ body {
 .navbar-dark .navbar-nav .nav-link.active {
   color: yellow !important;
 }
-.nav-link:hover {
+.navbar-dark .nav-link:hover {
   color: yellow !important;
 }
 .dropdown-menu {
