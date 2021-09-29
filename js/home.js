@@ -117,6 +117,16 @@ window.addEventListener("scroll", function () {
     if (window.scrollY > 300) {
       sunInfoContent.classList.add("show");
     }
+    if (window.scrollY > 1700) {
+      // console.log("show");
+      pnCardOdd.classList.add("show");
+    }
+    if (window.scrollY > 2100) {
+      pnCardEven.classList.add("show");
+    }
+    if (window.scrollY > 2500) {
+      pnCardOdd2.classList.add("show");
+    }
   } else {
     if (window.scrollY > 0) {
       solarSystemSub.classList.add("show");
@@ -130,6 +140,16 @@ window.addEventListener("scroll", function () {
     }
     if (window.scrollY > 200) {
       sunInfoContent.classList.add("show");
+    }
+    if (window.scrollY > 1700) {
+      // console.log("show");
+      pnCardOdd.classList.add("show");
+    }
+    if (window.scrollY > 2100) {
+      pnCardEven.classList.add("show");
+    }
+    if (window.scrollY > 2500) {
+      pnCardOdd2.classList.add("show");
     }
   }
   if (this.window.scrollY < 100) {
