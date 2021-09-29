@@ -1,7 +1,16 @@
 function timeOut(){
-  setTimeout(function(){
-    window.scroll({top: 1000, behavior: "smooth"})
-  },200)
+  
+  var screenW = window.screen.width
+  if (screenW >= 768){
+    setTimeout(function(){
+      window.scroll({top: 1300, behavior: "smooth"})
+    },200)
+  } else {
+    setTimeout(function(){
+      window.scroll({top: 2085, behavior: "smooth"})
+    },200)
+  }
+  
 }
 
 // solarSystem

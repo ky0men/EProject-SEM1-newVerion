@@ -82,7 +82,7 @@ body {
     transform: rotate(360deg);
   }
 }
-/* NAVBAR */
+/* NAVBAR ---------------------------------------------------------------------------------------------*/
 .navbar {
   padding: 0px 15px;
   z-index: 999;
@@ -254,7 +254,7 @@ body {
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
 }
-/* BANNER */
+/* BANNER -----------------------------------------------------------------------------------------*/
 .banner {
   position: relative;
   overflow: hidden;
@@ -504,7 +504,7 @@ body {
 .modal-header .close {
   outline: none;
 }
-/* OUR UNIVERSE */
+/* OUR UNIVERSE ----------------------------------------------------------------------------*/
 .title-decoration {
   position: relative;
   display: block;
@@ -722,7 +722,16 @@ body {
     transform: scale(1);
   }
 }
-/* PLANETS */
+/*Responsive Our universe*/
+@media screen and (max-width: 768px) {
+  .ltr {
+    direction: unset;
+  }
+  .sun-info-content {
+    width: 100%;
+  }
+}
+/* PLANETS ------------------------------------------------------------------------------*/
 .planets {
   background-color: #1a2430;
   background-size: cover;
@@ -760,7 +769,42 @@ body {
   background: linear-gradient(0deg, #f72585 30%, #fdbb2d);
   transform: scale(1.1);
 }
-/* GALAXY */
+/* Planets Animation */
+.pn-card-odd,
+.pn-card-even,
+.pn-card-odd2 {
+  opacity: 0;
+}
+.pn-card-odd.show,
+.pn-card-odd2.show {
+  /* opacity: 1; */
+  animation: fade-card-left 1s ease forwards;
+}
+.pn-card-even.show {
+  animation: fade-card-right 1s ease forwards;
+}
+@keyframes fade-card-left {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-card-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* GALAXY ----------------------------------------------------------------------------*/
 .galaxy-cards {
   background: url(../images/galaxy-bg.jpg);
   background-size: cover;

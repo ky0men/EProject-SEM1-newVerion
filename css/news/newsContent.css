@@ -11,6 +11,7 @@
     display: flex;
     flex: 2;
     flex-direction: column;
+    
 }
 #article-sidebar {
     display: flex;
@@ -43,14 +44,7 @@
         width: 70%;
         height: auto;
     }
-    .comment-area{
-        padding-bottom: 5px;
-        display: flex;
-        flex-direction: column;
-        margin-left: 15px;
-        width: 90%;
-        align-items: flex-end;
-    }
+    
 }
 @media screen and (max-width:576px) {
     .article-img img{
@@ -70,7 +64,8 @@
 }
 .carousel-thumbnail img {
     width: 150px;
-    height: 140px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .flex-row{
@@ -96,33 +91,22 @@ div.avatar {
     margin-bottom: 0 !important;
     margin-top: 5px;
 }
-.comment-area{
-    padding-bottom: 5px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 15px;
-    width: 90%;
-    align-items: flex-end;
+.comment-display .row div:first-child,
+.comment .row div:first-child 
+{
+    padding-right: 0;
 }
-.comment .row {
-    margin: 0;
-}
-.comment {
-    border-top: 0.1rem solid #797979;
-    padding: 10px;
-    margin-top: 20px;
-}
+
 .comment-input {
-    margin-left: 15px;
     width: 100%;
-    height: 34px;
+    height: 36px;
     resize: none;
     overflow: hidden;
     word-break: break-word;
     outline: none;
     background-color: #3A3B3C;
     color: white;
-    border-radius: 18px;
+    border-radius: 9px;
     padding: 5px 10px;
     border:none;
 }
@@ -132,11 +116,12 @@ div.avatar {
 
 }
 .btn-comment {
-    height: 30px;
+    height: 34px;
     width: 90px;
     padding: 0;
-    margin-top: 10px;
-    border-radius:25px;
+    margin-top: 7px;
+    border-radius:9px;
+    margin-left: 0;
 }
 .a .btn {
     border-radius: 25px;
@@ -151,35 +136,16 @@ div.avatar {
     #article .news-letter {
         display: none;
     }
-    .comment-area{
-        
-        width: 90%;
-    }
+ 
     
   }
-  @media screen and (max-width:514px){
-      .comment-area{
-        width: 85% !important;
-      }
-  }
-  @media screen and (max-width:421px){
-    .comment-area{
-      width: 79% !important;
-    }
-}
-@media screen and (max-width:320px){
-    .comment-area{
-        width: 70% !important;
-    }
-}
+
 @media screen and (max-width:768px) {
     .article-img img{
         width: 70%;
         height: auto;
     }
-    .comment-area{
-        width: 88%;
-    }
+    
 }
 @media screen and (max-width:576px) {
     .article-img img{
@@ -358,7 +324,7 @@ background-color: #404040;
 }
 #article-content h1,
 #article-content h4{
-    color: white;
+    
     font-weight: 700;
 }
 
@@ -369,7 +335,78 @@ background-color: #404040;
 small{
     color:#c7c7c7;
 }
-.main-content col-lg-8 {
-    display: flex;
+
+.btn-comment:hover {
+    color: white;
+    background-color: rgba(194, 0, 0, 0.5);
+}
+.border-top-comment {
+    border-top: 0.1rem solid #797979;
+    margin: 20px 0;
+}
+#article-content div.img-with-content:last-child {
+    margin-bottom: 0;
+}
+.carousel-title{
+    color:white;
+    transition: all 0.3s;
+    margin-top:10px;
+    text-align: center;
+}
+.related{
+    background: linear-gradient( 
+180deg, rgb(13 14 14) 0%, rgb(0 0 0) 35%, rgba(26,36,48,1) 100%);
+}
+.related a:hover .carousel-title{
+    color: #c20000;
+}
+.owl-nav{
+    position: absolute;
+    right: 0;
+    top: -31px;
+}
+.owl-theme .owl-nav [class*=owl-]{
+    margin: 2px;
+    transition: all 0.3s;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: transparent !important;
+    color: #c20000;
+    text-decoration: none;
+}
+.related-thumbnail img {
+    height: 400px;
+    object-fit: cover;
+}
+.comment-display {
+    margin-top:10px;
+}
+.comment-box-display {
+    border-radius: 9px;
+
+    background-color: #3a3b3c;
+}
+.comment-box-display p {
+    padding: 5px 13px;
+    overflow-wrap: break-word;
+   
+}
+@media screen and (max-width: 576px){
+    .comment .row .avatar,
+    .comment-display .row .avatar {
+        flex-direction: row;
+        margin-bottom: 7px;
+    }
+    .comment .row .avatar img,
+    .comment-display .row .avatar img {
+        margin-right: 8px;
+    }
+}
+.comment-area.d-flex {
     flex-direction: column;
+    align-items: flex-end;
+}
+
+.fa-angle-double-right{
+    color: #546b77;
 }

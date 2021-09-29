@@ -38,6 +38,14 @@ function toggleZoom() {
 //Nav Planets
 var planetsInfo = document.querySelectorAll(".planets-info");
 var orbits = document.querySelectorAll(".orbits");
+var mercuryOrbit = document.querySelector(".mercury-orbit");
+var venusOrbit = document.querySelector(".venus-orbit");
+var earthOrbit = document.querySelector(".earth-orbit");
+var marsOrbit = document.querySelector(".mars-orbit");
+var jupiterOrbit = document.querySelector(".jupiter-orbit");
+var saturnOrbit = document.querySelector(".saturn-orbit");
+var uranusOrbit = document.querySelector(".uranus-orbit");
+var neptuneOrbit = document.querySelector(".neptune-orbit");
 
 //Sun-Nav Btn
 var sunNavBtn = document.querySelector("#sun-nav");
@@ -59,9 +67,11 @@ mercuryNavBtn.addEventListener("click", showMercuryInfo);
 function showMercuryInfo() {
   if (mercuryInfo.classList.contains("show")) {
     mercuryInfo.classList.remove("show");
+    mercuryOrbit.classList.remove(".orbit-color");
   } else {
     closeInfo();
     mercuryInfo.classList.add("show");
+    mercuryOrbit.classList.add("orbit-color");
   }
 }
 //Venus Nav Btn
@@ -71,9 +81,11 @@ venusNavBtn.addEventListener("click", showVenusInfo);
 function showVenusInfo() {
   if (venusInfo.classList.contains("show")) {
     venusInfo.classList.remove("show");
+    venusOrbit.classList.remove("orbit-color");
   } else {
     closeInfo();
     venusInfo.classList.add("show");
+    venusOrbit.classList.add("orbit-color");
   }
 }
 //Earth Nav Btn
@@ -83,9 +95,11 @@ earthNavBtn.addEventListener("click", showEarthInfo);
 function showEarthInfo() {
   if (earthInfo.classList.contains("show")) {
     earthInfo.classList.remove("show");
+    earthOrbit.classList.remove("orbit-color");
   } else {
     closeInfo();
     earthInfo.classList.add("show");
+    earthOrbit.classList.add("orbit-color");
   }
 }
 //Mars Nav Btn
@@ -95,9 +109,11 @@ marsNavBtn.addEventListener("click", showMarsInfo);
 function showMarsInfo() {
   if (marsInfo.classList.contains("show")) {
     marsInfo.classList.remove("show");
+    marsOrbit.classList.remove("orbit-color");
   } else {
     closeInfo();
     marsInfo.classList.add("show");
+    marsOrbit.classList.add("orbit-color");
   }
 }
 //Jupiter Nav Btn
@@ -107,9 +123,11 @@ jupiterNavBtn.addEventListener("click", showJupiterInfo);
 function showJupiterInfo() {
   if (jupiterInfo.classList.contains("show")) {
     jupiterInfo.classList.remove("show");
+    jupiterOrbit.classList.remove("orbit-color");
   } else {
     closeInfo();
     jupiterInfo.classList.add("show");
+    jupiterOrbit.classList.add("orbit-color");
   }
 }
 //Saturn Nav Btn
@@ -119,9 +137,11 @@ saturnNavBtn.addEventListener("click", showSaturnInfo);
 function showSaturnInfo() {
   if (saturnInfo.classList.contains("show")) {
     saturnInfo.classList.remove("show");
+    saturnOrbit.classList.remove("orbit-color");
   } else {
     closeInfo();
     saturnInfo.classList.add("show");
+    saturnOrbit.classList.add("orbit-color");
   }
 }
 //Uranus Nav Btn
@@ -131,9 +151,11 @@ uranusNavBtn.addEventListener("click", showUranusInfo);
 function showUranusInfo() {
   if (uranusInfo.classList.contains("show")) {
     uranusInfo.classList.remove("show");
+    uranusOrbit.classList.remove("orbit-color");
   } else {
     closeInfo();
     uranusInfo.classList.add("show");
+    uranusOrbit.classList.add("orbit-color");
   }
 }
 //Neptune Nav Btn
@@ -143,9 +165,11 @@ neptuneNavBtn.addEventListener("click", showNeptuneInfo);
 function showNeptuneInfo() {
   if (neptuneInfo.classList.contains("show")) {
     neptuneInfo.classList.remove("show");
+    neptuneOrbit.classList.remove("orbit-color");
   } else {
     closeInfo();
     neptuneInfo.classList.add("show");
+    neptuneOrbit.classList.add("orbit-color");
   }
 }
 

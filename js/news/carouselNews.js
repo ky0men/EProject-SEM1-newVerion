@@ -1,5 +1,5 @@
 setTimeout(function (){
-    fetch('./js/news/json/carousel1.json')
+    fetch('https://fake-api-sem.herokuapp.com/carousel1')
     .then(respond => respond.json())
     .then(data =>  {
         const carouselData = data
@@ -24,7 +24,7 @@ setTimeout(function (){
     })
 },100)
 setTimeout(function(){
-    fetch('./js/news/json/carousel2.json')   
+    fetch('https://fake-api-sem.herokuapp.com/carousel2')   
     .then(respond => respond.json())
     .then(data =>  {
         const carouselData = data

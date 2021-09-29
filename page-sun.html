@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./images/favico.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./font/SuperstarX-5E7G.ttf">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/css-planets/css-sun.css">
+  <title>Astronomy Information - Galaxy Hunter</title>
+</head>
+
+<body>
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div id="loader"></div>
+  </div>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark active fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt="Galaxy Hunter Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon">
+          <span></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="main-planets.html">Planets</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">News</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="news.html">News Main Page</a>
+              <a class="dropdown-item" href="newsContent.html?id=theory-bigbang">Bigbang Theory</a>
+              <a class="dropdown-item" href="newsContent.html?id=earth-evolution">Earth Evolution</a>
+              <a class="dropdown-item" href="newsContent.html?id=what-is-black-hole">Blackhole</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="news.html?id=solar-system">Solar System</a>
+              <a class="dropdown-item" href="news.html?id=galaxy">Galaxies</a>
+              <a class="dropdown-item" href="news.html?id=exoplanet">Exoplanets</a>
+              <a class="dropdown-item" href="news.html?id=space-flight">Space
+                Flight</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Gallery</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Images</a>
+              <a class="dropdown-item" href="#">Videos</a>
+              <a class="dropdown-item" href="./page3D/index.html" target="_blank">Solar System 3D View</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="observatories.html">Observatories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="navbar-btn d-flex ml-3">
+          <button type="button" class="btn btn-navbar btn-sm" data-toggle="modal" data-target="#searchModal"><i
+              class="fas fa-search"></i></button>
+          <button type="button" class="btn btn-navbar btn-sm ml-2"><a href="login.html"><i
+                class="fas fa-user"></i></a></button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <!-- SEARCH MODAL -->
+  <div class="modal fade" id="searchModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-center astro-mark-1">Search Infomation</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form action="" class="d-flex">
+            <input id="search-infomation-input" type="text" placeholder="Search astronomy information...">
+            <button type="submit" class="search-astronomy-information btn-navbar ml-2"><i
+                class="fas fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CONTENT -->
+  <div class="header_content-sun ">
+    <div class="container">
+      <div class="header_item">
+        <div class="name_planet">
+          <h1>THE SUN</h1>
+        </div>
+        <p>The Sun is the star at the centre of our solar system. It is an almost perfect sphere of super-hot gases
+          whose gravity holds the solar system together. The energy produced by the Sun is essential for life on Earth
+          and is a driving force behind the Earth’s weather.</p>
+      </div>
+    </div>
+  </div>
+  <div class="planet_facts">
+    <div class="facts_title">
+      <h1 class="astro-mark">Key Facts & Summary</h1>
+    </div>
+    <div class="facts1">
+      <div class="container">
+        <div class="row facts1_item">
+          <div class="col-md-5 d-flex flex-wrap align-content-center">
+            <img class="w-100" src="./images/planets-images/sun/facts1.png" alt="">
+          </div>
+          <div class="col-md-7  d-flex flex-row-reverse align-content-center">
+            <div class="widget col-lg-8">
+              <div class="widget_header">SUN PLANET PROFILE</div>
+              <div class="textwidget">
+                <table>
+                  <tbody>
+                    <tr class="row-1 odd">
+                      <td class="column-1"><strong>Age:</strong></td>
+                      <td class="column-2">4.6 Billion Years</td>
+                    </tr>
+                    <tr class="row-2 even">
+                      <td class="column-1"><strong>Type:</strong></td>
+                      <td class="column-2">Yellow Dwarf (G2V)</td>
+                    </tr>
+                    <tr class="row-3 odd">
+                      <td class="column-1"><strong>Diameter:</strong></td>
+                      <td class="column-2">1,392,684 km</td>
+                    </tr>
+                    <tr class="row-4 even">
+                      <td class="column-1"><strong>Equatorial Circumference:</strong></td>
+                      <td class="column-2">4,370,005.6 km</td>
+                    </tr>
+                    <tr class="row-5 odd">
+                      <td class="column-1"><strong>Mass:</strong></td>
+                      <td class="column-2">1.99 × 10^30 kg (333,060 Earths)</td>
+                    </tr>
+                    <tr class="row-6 even">
+                      <td class="column-1"><strong>Temperature: </strong></td>
+                      <td class="column-2"> 5,500 °C</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="facts2">
+      <div class="Container-fluid">
+        <div class="row facts2_item">
+          <div class="col-md-4 d-flex flex-wrap align-content-center">
+            <img class="w-100" src="./images/planets-images/sun/facts2.jpg" alt="">
+          </div>
+          <div class="col-md-8">
+            <div class="col-12 col-sm-12">
+              <div class="facts2_list">
+                <div class="widget_header">FACTS ABOUT THE SUN</div>
+                <ul>
+                  <li>The Sun is all the colours mixed together, this appears white to our eyes.</li>
+                  <li>The Sun is composed of hydrogen (70%) and Helium (28%).</li>
+                  <li>The Sun is a main-sequence G2V star (or Yellow Dwarf).</li>
+                  <li>The Sun is 109 times wider than the Earth and 330,000 times as massive.</li>
+                  <li>The Sun’s surface area is 11,990 times that of the Earth’s.</li>
+                  <li>The distance between the Earth and the Sun is an Astronomical Unit (AU)</li>
+                  <li>The Sun travels at 220 kilometres per second.</li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="col-12 col-sm-12">
+              <div class="wy">
+                <div class="youtube">
+                  <iframe src="https://www.youtube.com/embed/2HoTK_Gqi2Q" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="sep-2" />
+
+    <h1 class="facts4-h1">STRUCTURE</h1>
+    <div class="facts4">
+      <div class="facts4_item">
+        <p>The Sun is basically a big ball of gas, being made by around 91% hydrogen and 8.9% helium, in regards to
+          atoms. When it comes to the Sun’s mass, it is made out of 70.6% hydrogen and 27.4% helium.
+
+          The Sun’s mass is enormous, being 330.000 times than our Earth’s mass, which is 5.9 quadrillion kg. This mass
+          is held together by gravity, and it produces great pressure and temperatures at its core.</p>
+        <img src="./images/planets-images/sun/structure.jpeg" alt="">
+        <p>Six regions comprise our Sun, namely the core, the radiative zone, the convective zone; these are the
+          interior regions, followed by the photosphere, chromosphere, and the outer region, which is called the corona.
+
+          Inside the Sun, temperatures are unphatomable, especially at its core. The Sun’s core temperature is estimated
+          to be around 27 million degrees Fahrenheit / 15 million degrees Celsius.</p>
+      </div>
+    </div>
+
+    <div class="container table-planets">
+      <h1 class="astro-mark-1">Satellites
+
+        <div class="title-decoration">
+          <img src="./images/favico.png" alt="Title Icon">
+        </div>
+      </h1>
+      <table id="tablepress-satellites" class="tablepress tablepress-id-satellites table">
+        <thead>
+          <tr class="row-1">
+            <th class="column-1">Name</th>
+            <th class="column-2">Distance from Sun</th>
+            <th class="column-3">Length of Year</th>
+            <th class="column-4">Classification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-2">
+            <td class="column-1"><strong><a href="./page-mecury.html" style="color: #969599;">Mecury</a></strong></td>
+            <td class="column-2">57,909,227 km</td>
+            <td class="column-3">88 Earth days<br />
+            </td>
+            <td class="column-4">Planet</td>
+          </tr>
+          <tr class="row-3">
+            <td class="column-1"><strong><a href="./page-venus.html" style="color: #ded4b8;">Venus</a></strong></td>
+            <td class="column-2">108,209,475 km</td>
+            <td class="column-3">225 Earth days<br />
+            </td>
+            <td class="column-4">Planet</td>
+          </tr>
+          <tr class="row-4">
+            <td class="column-1"><strong><a href="./page-earth.html" style="color: #6e75a0;">Earth</a></strong></td>
+            <td class="column-2">149,598,262 km</td>
+            <td class="column-3">365.24 days<br />
+            </td>
+            <td class="column-4">Planet</td>
+          </tr>
+          <tr class="row-5">
+            <td class="column-1"><strong><a href="./page-mars.html" style="color: #d36540;">Mars</a></strong></td>
+            <td class="column-2">227,943,824 km</td>
+            <td class="column-3">1.9 Earth years<br />
+            </td>
+            <td class="column-4">Planet</td>
+          </tr>
+          <tr class="row-6">
+            <td class="column-1"><strong><a href="./page-ceres.html" style="color: #90847d;">Ceres</a></strong></td>
+            <td class="column-2">413,700,000 km</td>
+            <td class="column-3">4.6 Earth years<br />
+            </td>
+            <td class="column-4">Dwarf Planet</td>
+          </tr>
+          <tr class="row-7">
+            <td class="column-1"><strong><a href="./page-jupiter.html" style="color: #e8b28e;">Jupiter</a></strong></td>
+            <td class="column-2">778,340,821 km</td>
+            <td class="column-3">11.9 Earth years<br />
+            </td>
+            <td class="column-4">Planet</td>
+          </tr>
+          <tr class="row-8">
+            <td class="column-1"><strong><a href="./page-saturn.html" style="color: #d0a673;">Saturn</a></strong></td>
+            <td class="column-2">1,426,666,422 km</td>
+            <td class="column-3">29.5 Earth years<br />
+            </td>
+            <td class="column-4">Planet</td>
+          </tr>
+          <tr class="row-9">
+            <td class="column-1"><strong><a href="./page-uranus.html" style="color: #d1e7e9;">Uranus</a></strong></td>
+            <td class="column-2">2,870,658,186 km</td>
+            <td class="column-3">84.0 Earth years<br />
+            </td>
+            <td class="column-4">Planet</td>
+          </tr>
+          <tr class="row-10">
+            <td class="column-1"><strong><a href="./page-neptune.html" style="color: #6491da;">Neptune</a></strong></td>
+            <td class="column-2">4,498,396,441 km</td>
+            <td class="column-3">164.8 Earth years<br />
+            </td>
+            <td class="column-4">Planet</td>
+          </tr>
+          <tr class="row-11">
+            <td class="column-1"><strong><a href="./page-pluto.html" style="color: #D0AB88;">Pluto</a></strong></td>
+            <td class="column-2">5,874,000,000 km</td>
+            <td class="column-3">248.0 Earth years<br />
+            </td>
+            <td class="column-4">Dwarf Planet</td>
+          </tr>
+
+          <tr class="row-12">
+            <td class="column-1"><strong><a href="./page-eris.html" style="color: #c4bfba;">Eris</a></strong></td>
+            <td class="column-2">10,120,000,000 km</td>
+            <td class="column-3">560.9 Earth years<br />
+            </td>
+            <td class="column-4">Dwarf Planet</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- END CONTENT -->
+
+    <div class="planets-select">
+
+      <div class="container">
+        <h2 class="astro-mark-1">More Destinations
+          <div class="title-decoration">
+            <img src="./images/favico.png" alt="Title Icon">
+          </div>
+        </h2>
+        <div class="wrap">
+          <select>
+            <option value="inner">Solar system</option>
+            <option value="outer">Dwarf Planets</option>
+            <option value="other">Other Objects </option>
+          </select>
+          <div class="inner box">
+            </option>
+            <div class="row slider">
+              <div class="col-md-12 ">
+                <a href="./page-mecury.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/mercury.png" alt="">
+                    <h3>Mecury</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-12 ">
+                <a href="./page-venus.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/venus.png" alt="">
+                    <h3>Venus</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-12">
+                <a href="./page-earth.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/earth.png" alt="">
+                    <h3>Earth</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-12">
+                <a href="./page-mars.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/mars.png" alt="">
+                    <h3>Mars</h3>
+                  </div>
+                </a>
+              </div>
+
+
+              <div class="col-md-12">
+                <a href="./page-jupiter.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/jupiter.png" alt="">
+                    <h3>Jupiter</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-12">
+                <a href="./page-saturn.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/saturn.png" alt="">
+                    <h3>Saturn</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-12">
+                <a href="./page-uranus.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/uranus.png" alt="">
+                    <h3>Uranus</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-12">
+                <a href="./page-neptune.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/neptune.png" alt="">
+                    <h3>Neptune</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="outer box">
+            </option>
+            <div class="row other-slider">
+              <div class="col-md-4">
+                <a href="./page-pluto.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/venus.png" alt="">
+                    <h3>Pluto</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-4">
+                <a href="./page-eris.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/venus.png" alt="">
+                    <h3>Eris</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-4">
+                <a href="./page-orcus.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/venus.png" alt="">
+                    <h3>Orcus </h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="other box">
+            </option>
+            <div class="row other-slider">
+              <div class="col-md-4">
+                <a href="./page-sun.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/sun/sun.png" alt="">
+                    <h3>The Sun</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-4">
+                <a href="./page-moon.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/moon/moon.png" alt="">
+                    <h3>The Moon</h3>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-4 comets">
+                <a href="./page-comets.html">
+                  <div class="card-select">
+                    <img src="./images/planets-images/comets/comets.jpg" alt="">
+                    <h3>The Comets </h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+        <!-- ASTRONOMY NEWS -->
+        <section class="astronomy-news mt-5">
+          <div class="container">
+            <div class="astronomy-news-title text-center mb-5">
+              <h2 class="astro-mark-1">ASTRONOMY NEWS
+                <div class="title-decoration">
+                  <img src="./images/favico.png" alt="Title Icon">
+                </div>
+              </h2>
+              <p>Observatories are a room or building housing an astronomical telescope or other scientific equipment
+                for the
+                study of natural phenomena</p>
+            </div>
+            <div class="card img-fluid news-card">
+              <img class="card-img-top" src="./images/bigbang-theory.jpg" alt="Card image" style="width:100%">
+              <div class="card-img-overlay">
+                <a class="news-card-content" href="newsContent.html?id=theory-bigbang">
+                  <h4 class="card-title astro-mark-1">What is the Big Bang Theory?</h4>
+                  <p class="card-text text-justify">The Big Bang Theory is the leading explanation about how the
+                    universe
+                    began. At its
+                    simplest, it says the universe as we know it started with an infinitely hot, infinitely dense
+                    singularity,
+                    then inflated — first at unimaginable speed, and then at a more measurable rate — over the next 13.8
+                    billion years to the cosmos that we know today...</p>
+                  <div class="d-flex justify-content-between">
+                    <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 46 views</span>
+                        <span class="ml-2"><i class="fas fa-comment-dots"></i> 19 comments</span></small></div>
+                    <div class="text-right text-yellow"><small>By Elizabeth Howell May 18, 2021</small></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div id="news-slider" class="carousel slide" data-ride="carousel">
+              <div class="d-flex justify-content-end py-3">
+                <a class="carousel-control-prev" href="#news-slider" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#news-slider" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card img-fluid news-card">
+                        <img class="card-img-top" src="./images/black-hole.jpg" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                          <a class="news-card-content-small" href="newsContent.html?id=what-is-black-hole">
+                            <h4 class="card-title astro-mark-1 m-0">What Is a Black Hole?</h4>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 32 views</span>
+                                  <span class="ml-2"><i class="fas fa-comment-dots"></i> 12 comments</span></small>
+                              </div>
+                              <div class="text-right text-yellow"><small>June 19, 2021</small></div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card img-fluid news-card">
+                        <img class="card-img-top" src="./images/solar-system-news.jpg" alt="Card image"
+                          style="width:100%">
+                        <div class="card-img-overlay">
+                          <a class="news-card-content-small" href="newsContent.html?id=our-solar-system">
+                            <h4 class="card-title astro-mark-1 m-0">Our Solar System</h4>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 24 views</span>
+                                  <span class="ml-2"><i class="fas fa-comment-dots"></i> 17 comments</span></small>
+                              </div>
+                              <div class="text-right text-yellow"><small>June 12, 2021</small></div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card img-fluid news-card">
+                        <img class="card-img-top" src="./images/evolution-earth.jpg" alt="Card image"
+                          style="width:100%">
+                        <div class="card-img-overlay">
+                          <a class="news-card-content-small" href="newsContent.html?id=earth-evolution">
+                            <h4 class="card-title astro-mark-1 m-0">Evolution of Earth</h4>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 41 views</span>
+                                  <span class="ml-2"><i class="fas fa-comment-dots"></i> 23 comments</span></small>
+                              </div>
+                              <div class="text-right text-yellow"><small>July 23, 2021</small></div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card img-fluid news-card">
+                        <img class="card-img-top" src="./images/hubble-big-bang.jpg" alt="Card image"
+                          style="width:100%">
+                        <div class="card-img-overlay">
+                          <a class="news-card-content-small"
+                            href="newsContent.html?id=Hubble%20spies%20Big%20Bang%20frontiers">
+                            <h4 class="card-title astro-mark-1 m-0">Hubble spies Big Bang frontiers</h4>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 27 views</span>
+                                  <span class="ml-2"><i class="fas fa-comment-dots"></i> 12 comments</span></small>
+                              </div>
+                              <div class="text-right text-yellow"><small>October 26, 2015</small></div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card img-fluid news-card">
+                        <img class="card-img-top" src="./images/big-bang-bottle.jpg" alt="Card image"
+                          style="width:100%">
+                        <div class="card-img-overlay">
+                          <a class="news-card-content-small" href="newsContent.html?id=Big%20Bang%20in%20a%20bottle">
+                            <h4 class="card-title astro-mark-1 m-0">Big Bang in a bottle</h4>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 36 views</span>
+                                  <span class="ml-2"><i class="fas fa-comment-dots"></i> 15 comments</span></small>
+                              </div>
+                              <div class="text-right text-yellow"><small>April 26, 2005</small></div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card img-fluid news-card">
+                        <img class="card-img-top" src="./images/exoplanet-suprise.jpg" alt="Card image"
+                          style="width:100%">
+                        <div class="card-img-overlay">
+                          <a class="news-card-content-small" href="newsContent.html?id=Exoplanet%20surprise">
+                            <h4 class="card-title astro-mark-1 m-0">Exoplanet surprise</h4>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 23 views</span>
+                                  <span class="ml-2"><i class="fas fa-comment-dots"></i> 11 comments</span></small>
+                              </div>
+                              <div class="text-right text-yellow"><small>February 26, 2007</small></div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card img-fluid news-card">
+                        <img class="card-img-top" src="./images/comet-news.jpg" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                          <a class="news-card-content-small"
+                            href="newsContent.html?id=Tour%20the%20solar%20system:%20Comets">
+                            <h4 class="card-title astro-mark-1 m-0">Tour the solar system: Comets</h4>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 27 views</span>
+                                  <span class="ml-2"><i class="fas fa-comment-dots"></i> 16 comments</span></small>
+                              </div>
+                              <div class="text-right text-yellow"><small>September 9, 2011</small></div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card img-fluid news-card">
+                        <img class="card-img-top" src="./images/applo-8.jpg" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                          <a class="news-card-content-small"
+                            href="newsContent.html?id=The%20historic%20flight%20of%20Apollo%208">
+                            <h4 class="card-title astro-mark-1 m-0">The historic flight of Apollo 8</h4>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 38 views</span>
+                                  <span class="ml-2"><i class="fas fa-comment-dots"></i> 19 comments</span></small>
+                              </div>
+                              <div class="text-right text-yellow"><small>November 27, 2018</small></div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card img-fluid news-card">
+                        <img class="card-img-top" src="./images/new-exoplanet.jpg" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                          <a class="news-card-content-small" href="newsContent.html?id=New%20exoplanet%20found">
+                            <h4 class="card-title astro-mark-1 m-0">New exoplanet found</h4>
+                            <div class="d-flex justify-content-between">
+                              <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 33 views</span>
+                                  <span class="ml-2"><i class="fas fa-comment-dots"></i> 12 comments</span></small>
+                              </div>
+                              <div class="text-right text-yellow"><small>July 25, 2008</small></div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- SCROLL TO TOP -->
+      <div class="scroll-top-btn">
+        <div class="scroll-outer">
+          <i class="fas fa-arrow-up "></i>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+
+
+      <footer id="footer" class="mt-5">
+        <!-- <img class="w-100" src="./images/footer-1.png" alt=""> -->
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <div class="logo-footer"><img src="./images/logo.png" alt="logo-footer"></div>
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-3 col-6 mt-4 footer-column">
+                  <h5 class="astro-mark-1">Planets</h5>
+                  <a href="page-mecury.html">Mercury</a>
+                  <a href="page-venus.html">Venus</a>
+                  <a href="page-earth.html">Earth</a>
+                  <a href="page-mars.html">Mars</a>
+                  <a href="page-jupiter.html">Jupiter</a>
+                  <a href="page-saturn.html">Saturn</a>
+                  <a href="page-uranus.html">Uranus</a>
+                  <a href="page-neptune.html">Neptune</a>
+                </div>
+                <div class="col-md-3 col-6 mt-4 footer-column">
+                  <h5 class="astro-mark-1">Latest News</h5>
+                  <a href="newsContent.html?id=theory-bigbang">Bigbang theory...</a>
+                  <a href="newsContent.html?id=what-is-black-hole">What is a Blackhole?</a>
+                  <a href="newsContent.html?id=earth-evolution">Evolution of Earth</a>
+                  <a href="newsContent.html?id=our-solar-system">Our Solar System</a>
+                </div>
+                <div class="col-md-3 col-6 mt-4 footer-column">
+                  <h5 class="text-wrap astro-mark-1">Observatories</h5>
+                  <a href="observatories.html?us">America</a>
+                  <a href="observatories.html?russia">Russia</a>
+                  <a href="observatories.html?china">China</a>
+                  <a href="observatories.html?japan">Japan</a>
+                  <a href="observatories.html?india">Inida</a>
+                  <a href="observatories.html?france">France</a>
+                </div>
+                <div class="col-md-3 col-6 mt-4 footer-column">
+                  <a href="login.html"><button class="btn btn-navbar mb-2">Login</button></a>
+                  <a href="signup.html"><button class="btn btn-navbar">Sign Up</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="copy">
+            <div class="row">
+              <div class="col-6 left-end text-left d-flex align-items-center">
+                <p>&copy; E Project SEM 1, 2021</p>
+              </div>
+              <div class="col-6 right-end text-right d-flex justify-content-end align-items-center">
+                <p class="mx-2">Follow us</p>
+                <p class="mx-1 fl-icon"><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></p>
+                <p class="mx-1 fl-icon"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></p>
+                <p class="mx-1 fl-icon"><a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+
+      <!-- SCRIPT -->
+      <script src="./js/jquery-3.6.0.min.js"></script>
+      <script src="./js/bootstrap.bundle.min.js"></script>
+      <script src="./js/bootstrap.min.js"></script>
+      <script src="./js/preloader.js"></script>
+
+
+      <!--Planets-->
+      <script src="./js/js-planets/planets-example.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="./js/js-planets/slick.js"></script>
+</body>
+
+</html>

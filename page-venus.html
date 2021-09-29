@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="./images/planets-images/favico.png" />
+  <link rel="icon" type="image/png" href="./images/favico.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/css-plantes/planets-css.css">
+  <link rel="stylesheet" href="./css/css-planets/css-planets.css">
   <title>Astronomy Information - Galaxy Hunter</title>
 </head>
+
 <body>
-<div id="preloader">
+  <!-- PRELOADER -->
+  <div id="preloader">
     <div id="loader"></div>
-  </div> 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  </div>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark active fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="./images/planets-images/logo.png" alt="Galaxy Hunter Logo"></a>
+      <a class="navbar-brand" href="index.html"><img src="./images/logo.png" alt="Galaxy Hunter Logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon">
           <span></span>
@@ -27,450 +38,169 @@
       <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-              aria-expanded="false">Planets</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Solar System's Plantets</a>
-              <a class="dropdown-item" href="#">Comet</a>
-              <a class="dropdown-item" href="#">Constellation</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link active" href="main-planets.html">Planets</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
               aria-expanded="false">News</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Bigbang Theory</a>
-              <a class="dropdown-item" href="#">Earth Evolution</a>
-              <a class="dropdown-item" href="#">Blackhole</a>
+              <a class="dropdown-item" href="news.html">News Main Page</a>
+              <a class="dropdown-item" href="newsContent.html?id=theory-bigbang">Bigbang Theory</a>
+              <a class="dropdown-item" href="newsContent.html?id=earth-evolution">Earth Evolution</a>
+              <a class="dropdown-item" href="newsContent.html?id=what-is-black-hole">Blackhole</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Solar System</a>
-              <a class="dropdown-item" href="#">Galaxies</a>
-              <a class="dropdown-item" href="#">Exoplanets</a>
-              <a class="dropdown-item" href="#">Space Flight</a>
+              <a class="dropdown-item" href="news.html?id=solar-system">Solar System</a>
+              <a class="dropdown-item" href="news.html?id=galaxy">Galaxies</a>
+              <a class="dropdown-item" href="news.html?id=exoplanet">Exoplanets</a>
+              <a class="dropdown-item" href="news.html?id=space-flight">Space
+                Flight</a>
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
               aria-expanded="false">Gallery</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Images Of The Day</a>
+              <a class="dropdown-item" href="#">Images</a>
               <a class="dropdown-item" href="#">Videos</a>
-              <a class="dropdown-item" href="#">Solar System 3D View</a>
+              <a class="dropdown-item" href="./page3D/index.html" target="_blank">Solar System 3D View</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Observatories</a>
+            <a class="nav-link" href="observatories.html">Observatories</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
         <div class="navbar-btn d-flex ml-3">
-          <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#searchModal"><i
+          <button type="button" class="btn btn-navbar btn-sm" data-toggle="modal" data-target="#searchModal"><i
               class="fas fa-search"></i></button>
-          <button class="btn btn-secondary btn-sm ml-2"><a href="login.html"><i class="fas fa-user"></i></a></button>
+          <button type="button" class="btn btn-navbar btn-sm ml-2"><a href="login.html"><i
+                class="fas fa-user"></i></a></button>
         </div>
 
       </div>
     </div>
-</nav>
-<!-- SEARCH MODAL -->
-<div class="modal fade" id="searchModal">
+  </nav>
+  <!-- SEARCH MODAL -->
+  <div class="modal fade" id="searchModal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title text-center">Search Infomation</h4>
+          <h4 class="modal-title text-center astro-mark-1">Search Infomation</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <!-- Modal body -->
         <div class="modal-body">
-          <form action="search.html">
-            <input type="text" placeholder="Search astronomy information...">
-            <button type="submit" class="search-astronomy-information"><i class="fas fa-search"></i></button>
+          <form action="" class="d-flex">
+            <input id="search-infomation-input" type="text" placeholder="Search astronomy information...">
+            <button type="submit" class="search-astronomy-information btn-navbar ml-2"><i
+                class="fas fa-search"></i></button>
           </form>
         </div>
-
       </div>
     </div>
-</div>
-<!-- CONTENT -->
-<div class="content_planets">
-  <div class="container">
-    <div class="row">
-      <!-- SELECT_planets-->    
-      <div class="select_option col-lg-3">
-        <h2>THE PLANETS</h2>  
-        <div class="wrap">
-          <select>
-            <optgroup label="Solar System">
-              <option selected value="inner" selected>Inner Solar system</option>
-              <option value="outer">Outer Solar system</option></optgroup>
-            <optgroup label="Extrasolar planets">
-              <option value="other">Exoplanet</option> 
-            </optgroup>      
-          </select>
-        </div>
-        <div class="inner box"></option>
-          <div class="solar_system">
-            
-            <a href="./page-mecury.html">
-              <div class="planets_item">
-                <div class="Bg1 body_item">
-                  <div class="name_item">MECURY
-                  </div>
-                  <div class="text_item">Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days...</div>
-                </div>
-              </div>
-            </a>
-    
-            <a href="./page-venus.html">
-              <div class="planets_item">
-                <div class="Bg2 body_item">
-                  <div class="name_item">VENUS
-                  </div>
-                  <div class="text_item">Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty. As the brightest natural object in Earth's night sky after the Moon...</div>
-                </div>
-              </div>
-            </a>
-    
-            <a href="./page-earth.html">
-              <div class="planets_item">
-                <div class="Bg3 body_item">
-                  <div class="name_item">EARTH
-                  </div>
-                  <div class="text_item">Earth is the third planet from the Sun and the only astronomical object known to harbor and support life...</div>
-                </div>
-              </div>
-            </a>
-            
-            <a href="./page-mars.html">
-              <div class="planets_item">
-                <div class="Bg4 body_item">
-                  <div class="name_item">MARS
-                  </div>
-                  <div class="text_item">Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury...</div>
-                </div>
-              </div>
-            </a>
-
-          </div>
-        </div>
-        <div class="outer box"></option>
-          <div class="solar_system">
-
-            <a href="./page-jupiter.html">
-              <div class="planets_item">
-                <div class="Bg5 body_item">
-                  <div class="name_item">JUPITER
-                  </div>
-                  <div class="text_item">Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than two and a half times that of all the other planets...</div>
-                </div>
-              </div>
-            </a>
-    
-            <a href="./page-saturn.html">
-              <div class="planets_item">
-                <div class="Bg6 body_item">
-                  <div class="name_item">SATURN
-                  </div>
-                  <div class="text_item">Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth...</div>
-                </div>
-              </div>
-            </a>
-    
-            <a href="./page-nuranus.html">
-              <div class="planets_item">
-                <div class="Bg7 body_item">
-                  <div class="name_item">URANUS
-                  </div>
-                  <div class="text_item">Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days...</div>
-                </div>
-              </div>
-            </a>
-            
-            <a href="./page-neptune.html">
-              <div class="planets_item">
-              <div class="Bg8 body_item">
-                <div class="name_item">NEPTUNE
-                </div>
-                <div class="text_item">Neptune is the eighth and farthest known Solar planet from the Sun. In the Solar System, it is the fourth-largest...</div>
-              </div>
-            </div></a>
-
-          </div>
-          
-        </div>
-        <div class="other box"></option>
-    
-          <div class="solar_system">
-
-            <a href="./page-pluto.html">
-              <div class="planets_item">
-                <div class="Bg9 body_item">
-                  <div class="name_item">PLUTO
-                  </div>
-                  <div class="text_item">Pluto (minor planet designation: 134340 Pluto) is a dwarf planet in the Kuiper belt...</div>
-                </div>
-              </div>
-            </a>
-    
-            <a href="./page-eris.html">
-              <div class="planets_item">
-                <div class="Bg10 body_item">
-                  <div class="name_item">ERIS
-                  </div>
-                  <div class="text_item">Eris is a trans-Neptunian dwarf planet (plutoid).Its orbital characteristics more specifically categorize it as a scattered-disk...</div>
-                </div>
-              </div>
-            </a>
-    
-            <a href="./page-orcus.html">
-              <div class="planets_item">
-                <div class="Bg11 body_item">
-                  <div class="name_item">ORCUS
-                  </div>
-                  <div class="text_item">Orcus is a plutino, a trans-Neptunian object that is locked in a 2:3 resonance with the ice giant Neptune... </div>
-                </div>
-              </div>
-            </a>
-            
-          </div>
-        </div>
-      </div>  
-      <!-- END SELECT_planets-->     
-
-      <!-- ABOUT_planets-->    
-      <div class="planets_about col-lg-9">       
-        <img class="d-block img-fluid" src="./images/imagesplanets-images/mecury/area mecury2.png" alt="">      
-        <div class="name_planets">VENUS</div>
-        <div class="planets_facts">
-          <div class= "facts1 summaryBg2">
-            <p class="col-gl-6">Venus is the second planet from the Sun and is the second largest terrestrial planet. Venus is sometimes referred to as the Earth’s sister planet due to their similar size and mass.Venus has a retrograde rotation, moving in the opposite direction than most planets,Venus is the hottest planet. </p>
-            <div class="widget col-lg-4">
-              <div class="widget_header"><h6>VENUS PLANET PROFILE</h6></div>                 
-              <div class="textwidget">
-                  <table>
-                  <tbody>
-                  <tr class="row-1 odd">
-                    <td class="column-1"><strong>Diameter:</strong></td>
-                    <td class="column-2">12,104 km</td>
-                  </tr>
-                  <tr class="row-2 even">
-                    <td class="column-1"><strong>Mass:</strong></td>
-                    <td class="column-2">4.87 × 10^24 kg (0.82 Earths)</td>
-                  </tr>
-                  <tr class="row-3 odd">
-                    <td class="column-1"><strong>Moons:</strong></td>
-                    <td class="column-2">None</td>
-                  </tr>
-                  <tr class="row-4 even">
-                    <td class="column-1"><strong>Orbit Distance:</strong></td>
-                    <td class="column-2">108,209,475 km (0.73 AU)</td>
-                  </tr>
-                  <tr class="row-5 odd">
-                    <td class="column-1"><strong>Orbit Period:</strong></td>
-                    <td class="column-2">225 days</td>
-                  </tr>
-                  <tr class="row-6 even">
-                    <td class="column-1"><strong>Temperature: </strong></td>
-                    <td class="column-2">462 °C</td>
-                  </tr>
-                  <tr class="row-7 odd">
-                    <td class="column-1"><strong>First Record:</strong></td>
-                    <td class="column-2">17th century BC</td>
-                  </tr>
-                  <tr class="row-8 even">
-                    <td class="column-1"><strong>Recorded By:</strong></td>
-                    <td class="column-2">Babylonian astronomers</td>
-                  </tr>
-                  </tbody>
-                  </table> 
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="facts2_list col-lg-6">
-              <h4>Facts about Venus</h4>
-            <ul>
-              <li>Venus does not have any moons or rings.</li>
-              <li>Venus is nearly as big as the Earth with a diameter of 12,104 km.</li>
-              <li>Venus is thought to be made up of a central iron core, rocky mantle and silicate crust.</li>
-              <li>A day on the surface of Venus (solar day) would appear to take 117 Earth days.</li>
-              <li>A year on Venus takes 225 Earth days.</li>
-              <li>The surface temperature on Venus can reach 471 °C..</li>
-    
-            </div>
-            <div class="wy col-lg-6">
-              <div class="youtube">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/yzqbN6z8ncc" title="YouTube video player" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-          <hr class="sep-2" />
-          <div class="facts3">
-            <div class="facts3_item">
-              <img src="./images/planets-images/venus/venus-orbit.jpg" alt="">
-              <div class="facst3_text">
-                <h4>Orbit</h4>
-                <p>Venus orbits the Sun at an average distance of about 0.72 AU and completes an orbit every 224.7 days. Though most planetary orbits are elliptical, Venus’s orbit is the closest to circular with an eccentricity of less than 0.01.The orbit is a bit inclined relative to Earth’s orbit </p>
-              </div>
-            </div>
-            <div class="facts3_item">
-              <div class="facst3_text">
-                <h4>Rotation</h4>
-                <p>Venus has a retrograde rotation, moving in the opposite direction than most planets,moving from East to West, clockwise.As a comparison, Venus’s equator rotates at 6.52 km/h while Earth’s rotates at 1,674.4 km/h.</p>
-              </div>
-              <img src="./images/planets-images/venus/venus-otation.jpg" alt="">
-            </div>
-          </div>
-          <div class="facts4">
-            <div class="title-line">
-              <div class="title-decor"></div>
-              <h3>Structure</h3>
-            </div>
-            <div class="facts4_item">
-              <p>The core is posseses is approximately 2.000 miles or 3.200 kilometers in radius. Above that core rests a mantle of hot rock, slowly churning due to the planet’s interior heat. As a result the surface is a thin crust of rock that bulges and moves as Venus’s mantle shifts, and creates volcanoes.</p>
-              <img src="./images/planets-images/venus/venus-structure.jpg" alt="">
-              <p>Its core is at least partially liquid since both Venus and Earth started cooling at about the same rate. Due to its smaller size, it is estimated that Venus’s pressure is about 24% lower in its deep interior.</p>
-            </div>
-          </div>
-
-          <div class="facts5">
-            <div class="title-line">
-              <div class="title-decor"></div>
-              <h3>Surface and Geology</h3>
-            </div>
-            <div class="facts3_item">
-              <ul>
-                <li>About 80% of the Venusian surface is covered by smooth, volcanic plains, consisting of 70% plains with ridges and 10% smooth or lobate plains. Venus does contain two highland “continents” that make up the rest of its surface area. One is located in the planet’s northern hemisphere and it is called Ishtar Terra after Ishtar.</li>
-                <li>The highest mountain on Venus is named Maxwell Montes and it is located here, its peak is about 11 kilometers or 7 miles above the Venusian average surface elevation.</li>
-              </ul>
-              <img src="./images/planets-images/venus/venus-surface.jpg" alt="">
-            </div>
-            <div class="facts3_item">
-            <img src="./images/planets-images/venus/venus-geolory.jpg" alt="">
-            <p>With few and small impact craters, it is suggested that Venus’s dense atmosphere burns up smaller meteors, and in the same time it indicates that its surface is young. As far as we know, Venus doesn’t have tectonic activity like Earth.Venus long ago lost its water because of the greenhouse effect. The surface even though it appears young, has craters that appear equally eroded that point towards a catastrophic event that resurfaced the planet about half a billion years ago.</p>
-          </div>
-          </div>
-
-          
-        </div>
-      </div>
-      <!-- END ABOUT_planets-->  
-    </div> 
   </div>
-</div>
-<!-- END CONTENT -->
-
-<!-- CONTACT -->
-<hr class="sep-2" />
-<div class="contact">
-  <div class="container">
-    <div class="hr_icon1">
-      <img src="./images/planets-images/sunicon.png" alt="SUN">
-      <img src="./images/planets-images/mercuryIC.png" alt="mecury">
-      <img src="./images/planets-images/venusIC.png" alt="venus">
-      <img src="./images/planets-images/earthIC.png" alt="earth">
-      <img src="./images/planets-images/marsIC.png" alt="mars">
-      <img src="./images/planets-images/jupiterIC.png" alt="jupiter">
-      <img src="./images/planets-images/saturnIC.png" alt="saturn">
-      <img src="./images/planets-images/uranusIC.png" alt="uranus">
-      <img src="./images/planets-images/neptuneIC.png" alt="neptune">
-    </div>
-    <div class="contact_share"></div>
-    <div class="contact_comment">
-      <label for="subject">Reply</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
-      <input type="submit" value="POST COMMENT">
-    </div>
-    <div class="hr_icon2">
-      <img src="./images/planets-images/sunicon.png" alt="SUN">
-      <img src="./images/planets-images/mercuryIC.png" alt="mecury">
-      <img src="./images/planets-images/venusIC.png" alt="venus">
-      <img src="./images/planets-images/earthIC.png" alt="earth">
-      <img src="./images/planets-images/marsIC.png" alt="mars">
-      <img src="./images/planets-images/jupiterIC.png" alt="jupiter">
-      <img src="./images/planets-images/saturnIC.png" alt="saturn">
-      <img src="./images/planets-images/uranusIC.png" alt="uranus">
-      <img src="./images/planets-images/neptuneIC.png" alt="neptune">
-    </div>
-  </div>
-</div>
-<!-- END CONTACT -->
-
-<!-- NEWS-->
-<div class="title-line">
-  <div class="title-decor"></div>
-  <h2>ASTRONOMY NEWS</h2>
-</div>
-<!-- ASTRONOMY NEWS -->
-  <div class="astronomy-news">
+  <!-- CONTENT -->
+  <div class="header_content-venus ">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 mg-card-left">
-          <div class="card text-white card-left d-flex justify-content-end">
-            <div class="news-title">
-              <h4 class="card-title">What is the Big Bang Theory?</h4>
-              <p class="card-text">How was our Universe created? How did it come to be the seemingly infinite place we
-                know of today? And what will become of it, ages from now? These are...</p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 2 mins ago</small>
-              </p>
-              <div class="text-right">
-                <button class="btn btn-sm btn-primary">Read more...</button>
+      <div class="header_item">
+        <div class="name_planet">
+          <h1>VENUS</h1>
+        </div>
+        <p>Mercury is the closest planet to the Sun but, perhaps surprisingly, it does not have the highest
+          temperatures. It is the second densest planet of the Solar System, but also the smallest planet. The structure
+          of Mercury makes it the most similar planet to Earth.</p>
+      </div>
+    </div>
+  </div>
+  <div class="planet_facts">
+    <div class="facts_title">
+      <h1>Key Facts & Summary</h1>
+    </div>
+    <div class="facts1">
+      <div class="container">
+        <div class="row facts1_item">
+          <div class="col-md-5 d-flex flex-wrap align-content-center">
+            <img class="w-100" src="./images/planets-images/venus.png" alt="">
+          </div>
+          <div class="col-md-7  d-flex flex-row-reverse align-content-center">
+            <div class="widget col-lg-8">
+              <div class="widget_header">VENUS PLANET PROFILE</div>
+              <div class="textwidget">
+                <table>
+                  <tbody>
+                    <tr class="row-1 odd">
+                      <td class="column-1"><strong>Diameter:</strong></td>
+                      <td class="column-2">12,104 km</td>
+                    </tr>
+                    <tr class="row-2 even">
+                      <td class="column-1"><strong>Mass:</strong></td>
+                      <td class="column-2">4.87 × 10^24 kg (0.82 Earths)</td>
+                    </tr>
+                    <tr class="row-3 odd">
+                      <td class="column-1"><strong>Moons:</strong></td>
+                      <td class="column-2">None</td>
+                    </tr>
+                    <tr class="row-4 even">
+                      <td class="column-1"><strong>Orbit Distance:</strong></td>
+                      <td class="column-2">108,209,475 km (0.73 AU)</td>
+                    </tr>
+                    <tr class="row-5 odd">
+                      <td class="column-1"><strong>Orbit Period:</strong></td>
+                      <td class="column-2">225 days</td>
+                    </tr>
+                    <tr class="row-6 even">
+                      <td class="column-1"><strong>Temperature: </strong></td>
+                      <td class="column-2">462 °C</td>
+                    </tr>
+                    <tr class="row-7 odd">
+                      <td class="column-1"><strong>First Record:</strong></td>
+                      <td class="column-2">17th century BC</td>
+                    </tr>
+                    <tr class="row-8 even">
+                      <td class="column-1"><strong>Recorded By:</strong></td>
+                      <td class="column-2">Babylonian astronomers</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-12 mg-card-right">
-              <div class="card text-white card-right-top d-flex justify-content-end">
-                <div class="news-titles">
-                  <h4 class="card-title">What Is a Black Hole?</h4>
-                  <p class="card-text">A black hole is a place in space where gravity pulls so much that even light
-                    can not get out. The gravity is so strong because...</p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </p>
-                  <div class="text-right">
-                    <button class="btn btn-sm btn-primary">Read more...</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+      </div>
+    </div>
+    <div class="facts2">
+      <div class="Container-fluid">
+        <div class="row facts2_item">
+          <div class="col-md-4 d-flex flex-wrap align-content-center">
+            <img class="w-100" src="./images/planets-images/venus/facts2.jpg" alt="">
           </div>
-          <div class="row">
-            <div class="col-md-6 mg-card-right">
-              <div class="card text-white card-right-bt-left d-flex justify-content-end">
-                <div class="news-titles">
-                  <h4 class="card-title">Evolution of Earth</h4>
-                  <p class="card-text">The evolution of this planet and its atmosphere gave rise to life...</p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 2 days ago</small>
-                  </p>
-                  <div class="text-right">
-                    <button class="btn btn-sm btn-primary">Read more...</button>
-                  </div>
-                </div>
+          <div class="col-md-8">
+            <div class="col-12 col-sm-12">
+              <div class="facts2_list">
+                <div class="widget_header">FACTS ABOUT THE VENUS </div>
+                <ul>
+                  <li>Venus does not have any moons or rings.</li>
+                  <li>Venus is nearly as big as the Earth with a diameter of 12,104 km.</li>
+                  <li>Venus is thought to be made up of a central iron core, rocky mantle and silicate crust.</li>
+                  <li>A day on the surface of Venus (solar day) would appear to take 117 Earth days.</li>
+                  <li>A year on Venus takes 225 Earth days.</li>
+                  <li>The surface temperature on Venus can reach 471 °C.</li>
+
+                </ul>
               </div>
+
             </div>
-            <div class="col-md-6 mg-card-right">
-              <div class="card text-white card-right-bt-right d-flex justify-content-end">
-                <div class="news-titles">
-                  <h4 class="card-title">The solar system</h4>
-                  <p class="card-text">Our solar system is made up of the sun and all the amazing objects that travel
-                    around....</p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 days ago</small>
-                  </p>
-                  <div class="text-right">
-                    <button class="btn btn-sm btn-primary">Read more...</button>
-                  </div>
+            <div class="col-12 col-sm-12">
+              <div class="wy">
+                <div class="youtube">
+                  <iframe src="https://www.youtube.com/embed/yzqbN6z8ncc" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -478,48 +208,546 @@
         </div>
       </div>
     </div>
+    <hr class="sep-2" />
+    <div class="facts3">
+      <div class="container">
+        <div class="row facts3-card">
+          <div class="col-md-2 order-1 order-md-2 d-flex flex-wrap align-content-center">
+            <img class="w-100" src="./images/planets-images/venus/venus-orbit.jpg" alt="Venus Image">
+          </div>
+          <div class="col-md-10 p-4 d-flex flex-column justify-content-center facts3-card-content">
+            <h2 class="astro-mark-1">Orbit</h2>
+            <p class="text-justify">Venus orbits the Sun at an average distance of about 0.72 AU and completes an orbit
+              every 224.7 days. Though most planetary orbits are elliptical, Venus’s orbit is the closest to circular
+              with an eccentricity of less than 0.01. When Venus lies between Earth and the Sun in inferior conjunction,
+              it makes the closest approach to Earth of any planet at a distance of 41 million km or 25 million miles.
+              Venus spends most of its time away from Earth.
+            </p>
+          </div>
+        </div>
+
+        <div class="row facts3-card">
+          <div class="col-md-2 d-flex flex-wrap align-content-center">
+            <img class="w-100" src="./images/planets-images/venus/venus-otation.jpg" alt="Earth Image">
+          </div>
+          <div class="col-md-10 p-4 d-flex flex-column justify-content-center facts3-card-content">
+            <h2 class="astro-mark-1">Rotation</h2>
+            <p class="text-justify">There is a highly noticeable rhythm in the motion of Venus. After 8 years, it
+              returns to the same place in the sky on the same date.
+
+              This was known to many ancient civilizations such as the Maya, it is termed the pentagram of Venus.
+
+              Over eight years, each phenomenon – each relative position of Earth, Venus, and the Sun – occurs five
+              times, and then over the next eight years they repeat five times almost identically.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <h1 class="facts4-h1">STRUCTURE</h1>
+    <div class="facts4">
+      <div class="facts4_item">
+        <p>Venus's crust appears to be 70 kilometres (43 mi) thick, and composed of silicate rocks.Venus's mantle is
+          approximately 2,840 kilometres (1,760 mi) thick, its chemical composition is probably similar to that of
+          chondrites.Since Venus is a terrestrial planet, it is presumed to have a core made of semisolid iron and
+          nickel with a radius of approximately 3,000 kilometres (1,900 mi).</p>
+        <img src="./images/planets-images/venus/venus-structure.jpg" alt="">
+        <p>expected that the uppermost mantle, from about 70 kilometres (43 mi) to 480 kilometres (300 mi) deep is
+          mostly made of the mineral olivine. Descending through the mantle, the chemical composition remains largely
+          the same but at somewhere between about 480 kilometres (300 mi) and 760 kilometres (470 mi), the increasing
+          pressure causes the crystal structure of olivine to change to the more densely packed structure of spinel.
+          Another transition occurs between 760 kilometres (470 mi) and 1,000 kilometres (620 mi) deep, where the
+          material takes on the progressively more compact crystal structures of ilmenite and perovskite, and gradually
+          becomes more like perovskite until the core boundary is reached.</p>
+      </div>
+    </div>
+
+    <h1 class="facts5-h1">SURFACE AND GEOLOGY</h1>
+    <div class="facts5">
+      <div class="row facts5-card">
+        <div class="col-md-4 d-flex flex-wrap align-content-center facts5-card-img1">
+          <img src="./images/planets-images/venus/venus-surface.jpg" alt="">
+        </div>
+        <div class="col-md-8 p-4 d-flex flex-column justify-content-center planets-card-content">
+          <p class="text-justify">About 80% of the Venusian surface is covered by smooth, volcanic plains, consisting of
+            70% plains with ridges and 10% smooth or lobate plains. Venus does contain two highland “continents” that
+            make up the rest of its surface area. One is located in the planet’s northern hemisphere and it is called
+            Ishtar Terra after Ishtar, the Babylonian goddess of love, and it is about the size of Australia.
+          </p>
+        </div>
+      </div>
+
+      <div class="row facts5-card">
+        <div class="col-md-4 order-1 order-md-2 d-flex flex-wrap align-content-center facts5-card-img2">
+          <img src="./images/planets-images/venus/surface2.jpg" alt="">
+        </div>
+        <div class="col-md-8 p-4 order-2 order-md-1 d-flex flex-column justify-content-center planets-card-content">
+          <p class="text-justify">The second “continent” is located in the southern hemisphere, south of the equator,
+            and it is called Aphrodite Terra, after the Greek goddess of love. It is the larger of the two highlands, at
+            a roughly size of South America. Here there is a network of fractures and faults that covers much of the
+            area. What is an enigma is the absence of evidence of lava flow and calderas.
+        </div>
+      </div>
+
+      <div class="row facts5-card">
+        <div class="col-md-4 d-flex flex-wrap align-content-center facts5-card-img3">
+          <img src="./images/planets-images/venus/venus-geolory.jpg" alt="">
+        </div>
+        <div class="col-md-8 p-4 d-flex flex-column justify-content-center planets-card-content">
+          <p class="text-justify">
+            With few and small impact craters, it is suggested that Venus’s dense atmosphere burns up smaller meteors,
+            and in the same time it indicates that its surface is young. As far as we know, Venus doesn’t have tectonic
+            activity like Earth.It is believed that water helps drive that, and Venus long ago lost its water because of
+            the greenhouse effect. The surface even though it appears young, has craters that appear equally eroded that
+            point towards a catastrophic event that resurfaced the planet about half a billion years ago.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- END CONTENT -->
+
+  <div class="planets-select">
+
+    <div class="container">
+      <h2 class="astro-mark-1">More Destinations
+        <div class="title-decoration">
+          <img src="./images/favico.png" alt="Title Icon">
+        </div>
+      </h2>
+      <div class="wrap">
+        <select>
+          <option value="inner">Solar system</option>
+          <option value="outer">Dwarf Planets</option>
+          <option value="other">Other Objects </option>
+
+        </select>
+        <div class="inner box">
+          </option>
+          <div class="row slider">
+            <div class="col-md-12">
+              <a href="./page-venus.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/venus.png" alt="">
+                  <h3>Venus</h3>
+                </div>
+              </a>
+            </div>
+
+
+            <div class="col-md-12">
+              <a href="./page-earth.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/earth.png" alt="">
+                  <h3>Earth</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-12">
+              <a href="./page-mars.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/mars.png" alt="">
+                  <h3>Mars</h3>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-12">
+              <a href="./page-mecury.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/mercury.png" alt="">
+                  <h3>Mecury</h3>
+                </div>
+              </a>
+            </div>
+
+
+            <div class="col-md-12">
+              <a href="./page-jupiter.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/jupiter.png" alt="">
+                  <h3>Jupiter</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-12">
+              <a href="./page-saturn.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/saturn.png" alt="">
+                  <h3>Saturn</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-12">
+              <a href="./page-uranus.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/uranus.png" alt="">
+                  <h3>Uranus</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-12">
+              <a href="./page-neptune.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/neptune.png" alt="">
+                  <h3>Neptune</h3>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <div class="outer box">
+          </option>
+          <div class="row other-slider">
+            <div class="col-md-4">
+              <a href="./page-pluto.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/venus.png" alt="">
+                  <h3>Pluto</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a href="./page-eris.html">
+                <div class="card-select">
+                  <img src="./images/planets-images//venus.png" alt="">
+                  <h3>Eris</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a href="./page-orcus.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/venus.png" alt="">
+                  <h3>Orcus </h3>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="other box">
+          </option>
+          <div class="row other-slider">
+            <div class="col-md-4">
+              <a href="./page-sun.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/sun/sun.png" alt="">
+                  <h3>The Sun</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a href="./page-moon.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/moon/moon.png" alt="">
+                  <h3>The Moon</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4 comets">
+              <a href="./page-comets.html">
+                <div class="card-select">
+                  <img src="./images/planets-images/comets/comets.jpg" alt="">
+                  <h3>The Comets </h3>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- ASTRONOMY NEWS -->
+      <section class="astronomy-news mt-5">
+        <div class="container">
+          <div class="astronomy-news-title text-center mb-5">
+            <h2 class="astro-mark-1">ASTRONOMY NEWS
+              <div class="title-decoration">
+                <img src="./images/favico.png" alt="Title Icon">
+              </div>
+            </h2>
+            <p>Observatories are a room or building housing an astronomical telescope or other scientific equipment for
+              the
+              study of natural phenomena</p>
+          </div>
+          <div class="card img-fluid news-card">
+            <img class="card-img-top" src="./images/bigbang-theory.jpg" alt="Card image" style="width:100%">
+            <div class="card-img-overlay">
+              <a class="news-card-content" href="newsContent.html?id=theory-bigbang">
+                <h4 class="card-title astro-mark-1">What is the Big Bang Theory?</h4>
+                <p class="card-text text-justify">The Big Bang Theory is the leading explanation about how the universe
+                  began. At its
+                  simplest, it says the universe as we know it started with an infinitely hot, infinitely dense
+                  singularity,
+                  then inflated — first at unimaginable speed, and then at a more measurable rate — over the next 13.8
+                  billion years to the cosmos that we know today...</p>
+                <div class="d-flex justify-content-between">
+                  <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 46 views</span>
+                      <span class="ml-2"><i class="fas fa-comment-dots"></i> 19 comments</span></small></div>
+                  <div class="text-right text-yellow"><small>By Elizabeth Howell May 18, 2021</small></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div id="news-slider" class="carousel slide" data-ride="carousel">
+            <div class="d-flex justify-content-end py-3">
+              <a class="carousel-control-prev" href="#news-slider" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#news-slider" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card img-fluid news-card">
+                      <img class="card-img-top" src="./images/black-hole.jpg" alt="Card image" style="width:100%">
+                      <div class="card-img-overlay">
+                        <a class="news-card-content-small" href="newsContent.html?id=what-is-black-hole">
+                          <h4 class="card-title astro-mark-1 m-0">What Is a Black Hole?</h4>
+                          <div class="d-flex justify-content-between">
+                            <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 32 views</span>
+                                <span class="ml-2"><i class="fas fa-comment-dots"></i> 12 comments</span></small></div>
+                            <div class="text-right text-yellow"><small>June 19, 2021</small></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card img-fluid news-card">
+                      <img class="card-img-top" src="./images/solar-system-news.jpg" alt="Card image"
+                        style="width:100%">
+                      <div class="card-img-overlay">
+                        <a class="news-card-content-small" href="newsContent.html?id=our-solar-system">
+                          <h4 class="card-title astro-mark-1 m-0">Our Solar System</h4>
+                          <div class="d-flex justify-content-between">
+                            <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 24 views</span>
+                                <span class="ml-2"><i class="fas fa-comment-dots"></i> 17 comments</span></small></div>
+                            <div class="text-right text-yellow"><small>June 12, 2021</small></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card img-fluid news-card">
+                      <img class="card-img-top" src="./images/evolution-earth.jpg" alt="Card image" style="width:100%">
+                      <div class="card-img-overlay">
+                        <a class="news-card-content-small" href="newsContent.html?id=earth-evolution">
+                          <h4 class="card-title astro-mark-1 m-0">Evolution of Earth</h4>
+                          <div class="d-flex justify-content-between">
+                            <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 41 views</span>
+                                <span class="ml-2"><i class="fas fa-comment-dots"></i> 23 comments</span></small></div>
+                            <div class="text-right text-yellow"><small>July 23, 2021</small></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card img-fluid news-card">
+                      <img class="card-img-top" src="./images/hubble-big-bang.jpg" alt="Card image" style="width:100%">
+                      <div class="card-img-overlay">
+                        <a class="news-card-content-small"
+                          href="newsContent.html?id=Hubble%20spies%20Big%20Bang%20frontiers">
+                          <h4 class="card-title astro-mark-1 m-0">Hubble spies Big Bang frontiers</h4>
+                          <div class="d-flex justify-content-between">
+                            <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 27 views</span>
+                                <span class="ml-2"><i class="fas fa-comment-dots"></i> 12 comments</span></small></div>
+                            <div class="text-right text-yellow"><small>October 26, 2015</small></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card img-fluid news-card">
+                      <img class="card-img-top" src="./images/big-bang-bottle.jpg" alt="Card image" style="width:100%">
+                      <div class="card-img-overlay">
+                        <a class="news-card-content-small" href="newsContent.html?id=Big%20Bang%20in%20a%20bottle">
+                          <h4 class="card-title astro-mark-1 m-0">Big Bang in a bottle</h4>
+                          <div class="d-flex justify-content-between">
+                            <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 36 views</span>
+                                <span class="ml-2"><i class="fas fa-comment-dots"></i> 15 comments</span></small></div>
+                            <div class="text-right text-yellow"><small>April 26, 2005</small></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card img-fluid news-card">
+                      <img class="card-img-top" src="./images/exoplanet-suprise.jpg" alt="Card image"
+                        style="width:100%">
+                      <div class="card-img-overlay">
+                        <a class="news-card-content-small" href="newsContent.html?id=Exoplanet%20surprise">
+                          <h4 class="card-title astro-mark-1 m-0">Exoplanet surprise</h4>
+                          <div class="d-flex justify-content-between">
+                            <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 23 views</span>
+                                <span class="ml-2"><i class="fas fa-comment-dots"></i> 11 comments</span></small></div>
+                            <div class="text-right text-yellow"><small>February 26, 2007</small></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="card img-fluid news-card">
+                      <img class="card-img-top" src="./images/comet-news.jpg" alt="Card image" style="width:100%">
+                      <div class="card-img-overlay">
+                        <a class="news-card-content-small"
+                          href="newsContent.html?id=Tour%20the%20solar%20system:%20Comets">
+                          <h4 class="card-title astro-mark-1 m-0">Tour the solar system: Comets</h4>
+                          <div class="d-flex justify-content-between">
+                            <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 27 views</span>
+                                <span class="ml-2"><i class="fas fa-comment-dots"></i> 16 comments</span></small></div>
+                            <div class="text-right text-yellow"><small>September 9, 2011</small></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card img-fluid news-card">
+                      <img class="card-img-top" src="./images/applo-8.jpg" alt="Card image" style="width:100%">
+                      <div class="card-img-overlay">
+                        <a class="news-card-content-small"
+                          href="newsContent.html?id=The%20historic%20flight%20of%20Apollo%208">
+                          <h4 class="card-title astro-mark-1 m-0">The historic flight of Apollo 8</h4>
+                          <div class="d-flex justify-content-between">
+                            <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 38 views</span>
+                                <span class="ml-2"><i class="fas fa-comment-dots"></i> 19 comments</span></small></div>
+                            <div class="text-right text-yellow"><small>November 27, 2018</small></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card img-fluid news-card">
+                      <img class="card-img-top" src="./images/new-exoplanet.jpg" alt="Card image" style="width:100%">
+                      <div class="card-img-overlay">
+                        <a class="news-card-content-small" href="newsContent.html?id=New%20exoplanet%20found">
+                          <h4 class="card-title astro-mark-1 m-0">New exoplanet found</h4>
+                          <div class="d-flex justify-content-between">
+                            <div class="text-yellow"><small><span><i class="fas fa-eye"></i> 33 views</span>
+                                <span class="ml-2"><i class="fas fa-comment-dots"></i> 12 comments</span></small></div>
+                            <div class="text-right text-yellow"><small>July 25, 2008</small></div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+
+
+    <footer id="footer" class="mt-5">
+      <!-- <img class="w-100" src="./images/footer-1.png" alt=""> -->
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <div class="logo-footer"><img src="./images/logo.png" alt="logo-footer"></div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-3 col-6 mt-4 footer-column">
+                <h5 class="astro-mark-1">Planets</h5>
+                <a href="page-mecury.html">Mercury</a>
+                <a href="page-venus.html">Venus</a>
+                <a href="page-earth.html">Earth</a>
+                <a href="page-mars.html">Mars</a>
+                <a href="page-jupiter.html">Jupiter</a>
+                <a href="page-saturn.html">Saturn</a>
+                <a href="page-uranus.html">Uranus</a>
+                <a href="page-neptune.html">Neptune</a>
+              </div>
+              <div class="col-md-3 col-6 mt-4 footer-column">
+                <h5 class="astro-mark-1">Latest News</h5>
+                <a href="newsContent.html?id=theory-bigbang">Bigbang theory...</a>
+                <a href="newsContent.html?id=what-is-black-hole">What is a Blackhole?</a>
+                <a href="newsContent.html?id=earth-evolution">Evolution of Earth</a>
+                <a href="newsContent.html?id=our-solar-system">Our Solar System</a>
+              </div>
+              <div class="col-md-3 col-6 mt-4 footer-column">
+                <h5 class="text-wrap astro-mark-1">Observatories</h5>
+                <a href="observatories.html?us">America</a>
+                <a href="observatories.html?russia">Russia</a>
+                <a href="observatories.html?china">China</a>
+                <a href="observatories.html?japan">Japan</a>
+                <a href="observatories.html?india">Inida</a>
+                <a href="observatories.html?france">France</a>
+              </div>
+              <div class="col-md-3 col-6 mt-4 footer-column">
+                <a href="login.html"><button class="btn btn-navbar mb-2">Login</button></a>
+                <a href="signup.html"><button class="btn btn-navbar">Sign Up</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="copy">
+          <div class="row">
+            <div class="col-6 left-end text-left d-flex align-items-center">
+              <p>&copy; E Project SEM 1, 2021</p>
+            </div>
+            <div class="col-6 right-end text-right d-flex justify-content-end align-items-center">
+              <p class="mx-2">Follow us</p>
+              <p class="mx-1 fl-icon"><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></p>
+              <p class="mx-1 fl-icon"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></p>
+              <p class="mx-1 fl-icon"><a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
 
     <!-- SCRIPT -->
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/quotes.js"></script>
-  
+
     <!--Planets-->
     <script src="./js/js-planets/planets-example.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+      integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/js-planets/slick.js"></script>
 </body>
 
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-<script>
-(function ($){
-	$(document).ready(function() {
-		$('.devvn-row-slider').each(function(){
-			$(this).find('style[scope="scope"]').remove();
-			$(this).flickity({
-			cellAlign:'left',
-			contain:true,
-			groupCells:1,
-			prevNextButtons:true,
-			pageDots:true,
-			});
-		});
-	});
-})(jQuery);
-</script>
 </html>

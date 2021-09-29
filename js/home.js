@@ -72,10 +72,13 @@ var planetsSub = document.querySelector(".planets-sub");
 var constellSub = document.querySelector(".constell-sub");
 var galaxiesSub = document.querySelector(".galaxies-sub");
 var sunInfoContent = document.querySelector(".sun-info-content");
+var pnCardOdd = document.querySelector(".pn-card-odd");
+var pnCardOdd2 = document.querySelector(".pn-card-odd2");
+var pnCardEven = document.querySelector(".pn-card-even");
 window.addEventListener("scroll", function () {
   // console.log(window.scrollY);
   // console.log(window.outerWidth);
-  if (this.window.outerWidth > 1024) {
+  if (window.outerWidth > 1024) {
     if (window.scrollY > 350) {
       solarSystemSub.classList.add("show");
       planetsSub.classList.add("show");
@@ -84,11 +87,21 @@ window.addEventListener("scroll", function () {
     if (window.scrollY > 700) {
       constellSub.classList.add("show");
     }
+    if (window.scrollY > 600) {
+      sunInfoContent.classList.add("show");
+    }
     if (window.scrollY > 850) {
       galaxiesSub.classList.add("show");
     }
-    if (window.scrollY > 600) {
-      sunInfoContent.classList.add("show");
+    if (window.scrollY > 1700) {
+      // console.log("show");
+      pnCardOdd.classList.add("show");
+    }
+    if (window.scrollY > 2000) {
+      pnCardEven.classList.add("show");
+    }
+    if (window.scrollY > 2400) {
+      pnCardOdd2.classList.add("show");
     }
   } else if (window.outerWidth <= 1024 && window.outerWidth > 768) {
     if (window.scrollY > 100) {
@@ -125,6 +138,9 @@ window.addEventListener("scroll", function () {
     constellSub.classList.remove("show");
     galaxiesSub.classList.remove("show");
     sunInfoContent.classList.remove("show");
+    pnCardEven.classList.remove("show");
+    pnCardOdd2.classList.remove("show");
+    pnCardOdd.classList.remove("show");
   }
 });
 //LOADMORE PLANETS
@@ -138,12 +154,12 @@ function loadMorePlanets() {
   fetch("https://fake-api-sem.herokuapp.com/planets")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       for (var i = currentIdPlanets; i < currentIdPlanets + 3; i++) {
         data.forEach(function (planet) {
           if (planet.id == i && i % 2 == 0) {
             var planetsCard = document.createElement("div");
-            planetsCard.className = "row planets-card";
+            planetsCard.className = "row planets-card pn-card-odd show";
             planetsCard.innerHTML = `
             <div class="col-md-4 d-flex flex-wrap align-content-center">
               <img class="w-100" src="${planet.image}" alt="${planet.name} Image">
@@ -161,7 +177,7 @@ function loadMorePlanets() {
           }
           if (planet.id == i && i % 2 != 0) {
             var planetsCard = document.createElement("div");
-            planetsCard.className = "row planets-card";
+            planetsCard.className = "row planets-card pn-card-even show";
             planetsCard.innerHTML = `
             <div class="col-md-4 order-1 order-md-2 d-flex flex-wrap align-content-center">
               <img class="w-100" src="${planet.image}" alt="${planet.name} Image">

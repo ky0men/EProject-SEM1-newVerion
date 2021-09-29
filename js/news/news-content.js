@@ -3,8 +3,15 @@ const urlParams = new URLSearchParams(queryString);
 // console.log(queryString)
 const titleUrl = urlParams.get("id");
 // console.log(titleUrl);
+var bigBang = new Request("https://fake-api-sem.herokuapp.com/bigbang");
+var blackHole = new Request("https://fake-api-sem.herokuapp.com/blackhole");
+var exoplanet = new Request("https://fake-api-sem.herokuapp.com/exoplanet");
+var galaxies = new Request("https://fake-api-sem.herokuapp.com/galaxies");
+var solarSystem = new Request("https://fake-api-sem.herokuapp.com/solarsystem");
+var spaceFlight = new Request("https://fake-api-sem.herokuapp.com/spaceflight");
 if (titleUrl === "theory-bigbang") {
   const news = `
+       
         <div class="content-title">
             <h2>What is BigBang Theory?</h2>
         </div>
@@ -38,7 +45,41 @@ if (titleUrl === "theory-bigbang") {
             </div>
 
     `;
+    
   document.querySelector("#article-content").innerHTML = news;
+  const carouselRelated = `
+  
+  <div class="owl-carousel owl-theme">
+        <a href="newsContent.html?id=earth-evolution">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/earth-evo.jpg">
+           </div>
+           <h6 class="carousel-title ">Evolution of Earth</h6>
+          </div>
+        </a>  
+        <a href="newsContent.html?id=what-is-black-hole">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/astronaut-entering-black-hole-4k-y2-1920x1080.jpg">
+           </div>
+           <h6 class="carousel-title ">What Is a Black Hole?</h6>
+          </div>
+        </a>  
+        <a href="newsContent.html?id=our-solar-system">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/the-solar-system.jpg">
+           </div>
+           <h6 class="carousel-title ">Our Solar System</h6>
+          </div>
+        </a> 
+      </div>
+  
+
+  `
+//   console.log(carouselRelated);
+  document.querySelector(".related .row .col-lg-8").innerHTML = carouselRelated
 }
 if (titleUrl === "earth-evolution") {
   const news = `
@@ -226,13 +267,44 @@ if (titleUrl === "earth-evolution") {
               <p class="text-justify">CLAUDE J. ALLGRE and STEPHEN H. SCHNEIDER study various aspects of Earths geologic history and its climate. Allgre is professor at the University of Paris and directs the department of geochemistry at the Paris Geophysical Institute. He is a foreign member of the National Academy of Sciences. Schneider is professor in the department of biological sciences at Stanford University and co-director of the Center for Environmental Science and Policy. He was honored with a MacArthur Prize Fellowship in 1992 and was elected to membership in the National Academy of Sciences in 2002.</p>
             </div>
   `;
-  const recommend = `
-    <p>Recommended</p>
+
+  document.querySelector("#article-content").innerHTML = news;
+  const carouselRelated = `
+  
+  <div class="owl-carousel owl-theme">
+        <a href="newsContent.html?id=what-is-black-hole">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/astronaut-entering-black-hole-4k-y2-1920x1080.jpg">
+           </div>
+           <h6 class="carousel-title ">What Is a Black Hole?</h6>
+          </div>
+        </a>  
+        <a href="newsContent.html?id=our-solar-system">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/the-solar-system.jpg">
+           </div>
+           <h6 class="carousel-title ">Our Solar System</h6>
+          </div>
+        </a> 
+        <a href="newsContent.html?id=theory-bigbang">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/big-bang-33344.jpg">
+           </div>
+           <h6 class="carousel-title ">What is BigBang Theory?</h6>
+          </div>
+        </a> 
+      
+      </div>
+  
+
   `
-  document.querySelector("#article-content").innerHTML = news
-  // document.querySelector(".recommended").innerHTML = recommend
+//   console.log(carouselRelated);
+  document.querySelector(".related .row .col-lg-8").innerHTML = carouselRelated
 }
-if(titleUrl === "what-is-black-hole") {
+if (titleUrl === "what-is-black-hole") {
   const news = `
   <div class="content-title">
   <h2>What Is a Black Hole?</h2>
@@ -340,10 +412,44 @@ if(titleUrl === "what-is-black-hole") {
     <b>Credits: X-ray: NASA/UMass/D.Wang et al., IR: NASA/STScI</b>
   </div>
 </div>
+  `;
+  document.querySelector("#article-content").innerHTML = news;
+  const carouselRelated = `
+  
+  <div class="owl-carousel owl-theme">
+         
+        <a href="newsContent.html?id=our-solar-system">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/the-solar-system.jpg">
+           </div>
+           <h6 class="carousel-title ">Our Solar System</h6>
+          </div>
+        </a> 
+        <a href="newsContent.html?id=theory-bigbang">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/big-bang-33344.jpg">
+           </div>
+           <h6 class="carousel-title ">What is BigBang Theory?</h6>
+          </div>
+        </a> 
+        <a href="newsContent.html?id=earth-evolution">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/earth-evo.jpg">
+           </div>
+           <h6 class="carousel-title ">Evolution of Earth</h6>
+          </div>
+        </a>  
+      </div>
+  
+
   `
-  document.querySelector("#article-content").innerHTML = news
+//   console.log(carouselRelated);
+  document.querySelector(".related .row .col-lg-8").innerHTML = carouselRelated
 }
-if(titleUrl ==="our-solar-system"){
+if (titleUrl === "our-solar-system") {
   const news = `
   <div class="content-title">
   <h1>Our Solar System</h1>
@@ -414,39 +520,45 @@ if(titleUrl ==="our-solar-system"){
   <p>The order and arrangement of the planets and other bodies in our solar system is due to the way the solar system formed. Nearest to the Sun, only rocky material could withstand the heat when the solar system was young. For this reason, the first four planets – Mercury, Venus, Earth, and Mars – are terrestrial planets. They are all small with solid, rocky surfaces.
 
     <br/><br/>Meanwhile, materials we are used to seeing as ice, liquid, or gas settled in the outer regions of the young solar system. Gravity pulled these materials together, and that is where we find gas giants Jupiter and Saturn, and the ice giants Uranus and Neptune.</p>
+  `;
+  document.querySelector("#article-content").innerHTML = news;
+  const carouselRelated = `
+  
+  <div class="owl-carousel owl-theme">
+        <a href="newsContent.html?id=what-is-black-hole">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/astronaut-entering-black-hole-4k-y2-1920x1080.jpg">
+           </div>
+           <h6 class="carousel-title ">What Is a Black Hole?</h6>
+          </div>
+        </a>  
+       
+        <a href="newsContent.html?id=theory-bigbang">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/big-bang-33344.jpg">
+           </div>
+           <h6 class="carousel-title ">What is BigBang Theory?</h6>
+          </div>
+        </a> 
+        <a href="newsContent.html?id=earth-evolution">
+          <div class="item">
+            <div class="related-thumbnail">
+            <img src="./images/news/earth-evo.jpg">
+           </div>
+           <h6 class="carousel-title ">Evolution of Earth</h6>
+          </div>
+        </a>  
+      </div>
+  
+
   `
-  document.querySelector("#article-content").innerHTML = news
+//   console.log(carouselRelated);
+  document.querySelector(".related .row .col-lg-8").innerHTML = carouselRelated
 }
-// topMainNews
-const main = new Request("./js/news/json/newsContent.json");
-fetch(main)
-  .then((respond) => respond.json())
-  .then((data) => {
-    var x = data.find((x) => x.title === titleUrl);
-    // console.log(x)
-    const news = `
-                <div>
-                    <h2>${x.title}</h2>
-                </div>
-                <small class="text-muted">${x.time}</small>
-
-                <div>
-                    <span>${x.summary}</span>
-                </div>
-                <div class="article-img justify-content-center">
-                    <img src="${x.img}">
-                </div>
-                <div class="text-justify">
-                <p >${x.content}</p>
-                </div>
-            `;
-    document.querySelector("#article-content").innerHTML = news;
-    const recommend = `
-
-    `
-  });
 // SpaceFlight
-fetch("./js/news/json/space-flight.json")
+fetch(spaceFlight)
   .then((response) => response.json())
   .then((data) => {
     var x = data.find((x) => x.title.toString() === titleUrl);
@@ -468,10 +580,35 @@ fetch("./js/news/json/space-flight.json")
                 </div>
             `;
     document.querySelector("#article-content").innerHTML = news;
+
+    for (var i = 0; i < data.length; i++) {
+      Object.assign(data[i], { id: i });
+      
+    }
+    const carouselRelated = data
+      .map((article) => {
+        for (var i = 0; i < 12; i++) {
+          if (article.id == i) {
+            return `
+            <a href="newsContent.html?id=${article.title}">
+            <div class="item">
+              <div class="carousel-thumbnail">
+              <img src="${article.img}">
+             </div>
+             <h6 class="carousel-title ">${article.title}</h6>
+            </div>
+          </a>  
+      `;
+          }
+        }
+      })
+      .join("");
+  //   console.log(carouselRelated);
+    document.querySelector(".related-carousel .owl-carousel").innerHTML = carouselRelated
   });
 
 // solarSystem
-fetch("./js/news/json/solar-system.json")
+fetch(solarSystem)
   .then((respond) => respond.json())
   .then((data) => {
     var x = data.find((x) => x.title.toString() === titleUrl);
@@ -494,9 +631,33 @@ fetch("./js/news/json/solar-system.json")
                 </div>
             `;
     document.querySelector("#article-content").innerHTML = news;
+    for (var i = 0; i < data.length; i++) {
+      Object.assign(data[i], { id: i });
+      
+    }
+    const carouselRelated = data
+      .map((article) => {
+        for (var i = 0; i < 12; i++) {
+          if (article.id == i) {
+            return `
+            <a href="newsContent.html?id=${article.title}">
+            <div class="item">
+              <div class="carousel-thumbnail">
+              <img src="${article.img}">
+             </div>
+             <h6 class="carousel-title ">${article.title}</h6>
+            </div>
+          </a>  
+      `;
+          }
+        }
+      })
+      .join("");
+  //   console.log(carouselRelated);
+    document.querySelector(".related-carousel .owl-carousel").innerHTML = carouselRelated
   });
 // Galaxies
-fetch("./js/news/json/galaxies.json")
+fetch(galaxies)
   .then((respond) => respond.json())
   .then((data) => {
     var x = data.find((x) => x.title.toString() === titleUrl);
@@ -519,9 +680,33 @@ fetch("./js/news/json/galaxies.json")
                 </div>
             `;
     document.querySelector("#article-content").innerHTML = news;
+    for (var i = 0; i < data.length; i++) {
+      Object.assign(data[i], { id: i });
+      
+    }
+    const carouselRelated = data
+      .map((article) => {
+        for (var i = 0; i < 12; i++) {
+          if (article.id == i) {
+            return `
+            <a href="newsContent.html?id=${article.title}">
+            <div class="item">
+              <div class="carousel-thumbnail">
+              <img src="${article.img}">
+             </div>
+             <h6 class="carousel-title ">${article.title}</h6>
+            </div>
+          </a>  
+      `;
+          }
+        }
+      })
+      .join("");
+  //   console.log(carouselRelated);
+    document.querySelector(".related-carousel .owl-carousel").innerHTML = carouselRelated
   });
 // bigBang
-fetch("./js/news/json/bigbang.json")
+fetch(bigBang)
   .then((respond) => respond.json())
   .then((data) => {
     var x = data.find((x) => x.title.toString() === titleUrl);
@@ -544,9 +729,33 @@ fetch("./js/news/json/bigbang.json")
                 </div>
             `;
     document.querySelector("#article-content").innerHTML = news;
+    for (var i = 0; i < data.length; i++) {
+      Object.assign(data[i], { id: i });
+      
+    }
+    const carouselRelated = data
+      .map((article) => {
+        for (var i = 0; i < 12; i++) {
+          if (article.id == i) {
+            return `
+            <a href="newsContent.html?id=${article.title}">
+            <div class="item">
+              <div class="carousel-thumbnail">
+              <img src="${article.img}">
+             </div>
+             <h6 class="carousel-title ">${article.title}</h6>
+            </div>
+          </a>  
+      `;
+          }
+        }
+      })
+      .join("");
+  //   console.log(carouselRelated);
+    document.querySelector(".related-carousel .owl-carousel").innerHTML = carouselRelated
   });
 // blackHole
-fetch("./js/news/json/black-hole.json")
+fetch(blackHole)
   .then((respond) => respond.json())
   .then((data) => {
     var x = data.find((x) => x.title.toString() === titleUrl);
@@ -569,9 +778,33 @@ fetch("./js/news/json/black-hole.json")
                 </div>
             `;
     document.querySelector("#article-content").innerHTML = news;
+    for (var i = 0; i < data.length; i++) {
+      Object.assign(data[i], { id: i });
+      
+    }
+    const carouselRelated = data
+      .map((article) => {
+        for (var i = 0; i < 12; i++) {
+          if (article.id == i) {
+            return `
+            <a href="newsContent.html?id=${article.title}">
+            <div class="item">
+              <div class="carousel-thumbnail">
+              <img src="${article.img}">
+             </div>
+             <h6 class="carousel-title ">${article.title}</h6>
+            </div>
+          </a>  
+      `;
+          }
+        }
+      })
+      .join("");
+  //   console.log(carouselRelated);
+    document.querySelector(".related-carousel .owl-carousel").innerHTML = carouselRelated
   });
 // exoplanets
-fetch("./js/news/json/exoplanet.json")
+fetch(exoplanet)
   .then((respond) => respond.json())
   .then((data) => {
     var x = data.find((x) => x.title.toString() === titleUrl);
@@ -595,9 +828,33 @@ fetch("./js/news/json/exoplanet.json")
             `;
     // console.log(news);
     document.querySelector("#article-content").innerHTML = news;
+    for (var i = 0; i < data.length; i++) {
+      Object.assign(data[i], { id: i });
+      
+    }
+    const carouselRelated = data
+      .map((article) => {
+        for (var i = 0; i < 12; i++) {
+          if (article.id == i) {
+            return `
+            <a href="newsContent.html?id=${article.title}">
+            <div class="item">
+              <div class="carousel-thumbnail">
+              <img src="${article.img}">
+             </div>
+             <h6 class="carousel-title ">${article.title}</h6>
+            </div>
+          </a>  
+      `;
+          }
+        }
+      })
+      .join("");
+  //   console.log(carouselRelated);
+    document.querySelector(".related-carousel .owl-carousel").innerHTML = carouselRelated
   });
 // Carousel
-fetch("./js/news/json/carousel.json")
+fetch("https://fake-api-sem.herokuapp.com/carousel")
   .then((respond) => respond.json())
   .then((data) => {
     var x = data.find((x) => x.title.toString() === titleUrl);
@@ -618,12 +875,47 @@ fetch("./js/news/json/carousel.json")
                     </div>
                 `;
     document.querySelector("#article-content").innerHTML = news;
+    for (var i = 0; i < data.length; i++) {
+      Object.assign(data[i], { id: i });
+      
+    }
+    const carouselRelated = data
+      .map((article) => {
+        for (var i = 0; i < 12; i++) {
+          if (article.id == i) {
+            return `
+            <a href="newsContent.html?id=${article.title}">
+            <div class="item">
+              <div class="carousel-thumbnail">
+              <img src="${article.img}">
+             </div>
+             <h6 class="carousel-title ">${article.title}</h6>
+            </div>
+          </a>  
+      `;
+          }
+        }
+      })
+      .join("");
+  //   console.log(carouselRelated);
+    document.querySelector(".related-carousel .owl-carousel").innerHTML = carouselRelated
   });
 
-  document.querySelector('.comment-input').addEventListener('submit', (e) => {
-    const formData = new FormData(e.target);
-    console.log(formData)
+//  comment
+// document.querySelector(".comment-input").addEventListener("submit", (e) => {
+//   const formData = new FormData(e.target);
+//   console.log(formData);
+//   e.preventDefault();
+//   var a = formData.get("foo");
+//   console.log(a);
+//   console.log(e);
+  // Now you can use formData.get('foo'), for example.
+  // Don't forget e.preventDefault() if you want to stop normal form .submission
+// });
 
-    // Now you can use formData.get('foo'), for example.
-    // Don't forget e.preventDefault() if you want to stop normal form .submission
-  });
+// console.log($(".comment-input").serializeArray());
+// document
+//   .querySelector(".preventDefault")
+//   .addEventListener("click", function (event) {
+//     event.preventDefault();
+//   });

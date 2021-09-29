@@ -70,31 +70,60 @@ function loadMoreObser() {
 }
 //SHOW ALL OBSERVATORIES
 var obserCard = document.querySelector(".obser-card-outer");
-function showAllObser() {
+// function showAllObser() {
+//   fetch("https://fake-api-sem.herokuapp.com/observatories")
+//     .then((res) => res.json())
+//     .then((data) => {
+//       // console.log(data);
+//       data.forEach(function (obser) {
+//         var obserItem = document.createElement("div");
+//         obserItem.className = "obser-item row";
+//         obserItem.innerHTML = `
+//         <div class="col-md-4 ob-img d-flex flex-column justify-content-center">
+//         <img src="${obser.imgUrl}" alt="${obser.name}">
+//         </div>
+//         <div class="col-md-8">
+//         <h3>${obser.name}</h3>
+//         <p class="text-justify">${obser.shortContent}</p>
+//         <div class="text-right">
+//           <a href="#" id="${obser.id}" class="btn btn-sm read-more-btn">Read more...</a>
+//         </div>
+//         </div>
+//         `;
+//         obserCard.appendChild(obserItem);
+//       });
+//     });
+// }
+
+function showFourOfAll() {
   fetch("https://fake-api-sem.herokuapp.com/observatories")
     .then((res) => res.json())
     .then((data) => {
       // console.log(data);
-      data.forEach(function (obser) {
-        var obserItem = document.createElement("div");
-        obserItem.className = "obser-item row";
-        obserItem.innerHTML = `
-        <div class="col-md-4 ob-img d-flex flex-column justify-content-center">
-        <img src="${obser.imgUrl}" alt="${obser.name}">
-        </div>
-        <div class="col-md-8">
-        <h3>${obser.name}</h3>
-        <p class="text-justify">${obser.shortContent}</p>
-        <div class="text-right">
-          <a href="#" id="${obser.id}" class="btn btn-sm read-more-btn">Read more...</a>
-        </div>
-        </div>
-        `;
-        obserCard.appendChild(obserItem);
-      });
+      for (var i = 1; i < 5; i++) {
+        data.forEach(function (obser) {
+          if (obser.id == i) {
+            var obserItem = document.createElement("div");
+            obserItem.className = "obser-item row";
+            obserItem.innerHTML = `
+              <div class="col-md-4 ob-img d-flex flex-column justify-content-center">
+              <img src="${obser.imgUrl}" alt="${obser.name}">
+              </div>
+              <div class="col-md-8">
+              <h3>${obser.name}</h3>
+              <p class="text-justify">${obser.shortContent}</p>
+              <div class="text-right">
+              <a href="#" id="${obser.id}" class="btn btn-sm read-more-btn">Read more...</a>
+              </div>
+              </div>
+              `;
+            obserCard.appendChild(obserItem);
+          }
+        });
+      }
     });
+  loadMore.style.display = "block";
 }
-
 //SHOW SELECTED COUNTRY OBSERVATORIES
 var selectCountry = document.querySelector("#countries");
 
@@ -104,7 +133,8 @@ function showSelectedCountryObser() {
   // console.log(selectCountry.value);
   obserCard.innerHTML = "";
   if (selectCountry.value == "all") {
-    showAllObser();
+    currentId = 1;
+    showFourOfAll();
   } else {
     fetch("https://fake-api-sem.herokuapp.com/observatories")
       .then((res) => res.json())
