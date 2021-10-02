@@ -30,10 +30,7 @@
 .photo-gallery .intro p {
   margin-bottom: 0;
 }
-/* .tab-content .btn-navbar {
-  padding: 0.25rem 0.5rem;
-  margin-right: 1rem;
-} */
+
 .tab-btn {
   border: 1px solid salmon;
   margin-right: 1rem;
@@ -120,26 +117,15 @@
   background: linear-gradient(0deg, #f72585 30%, #fdbb2d);
   transform: scale(1.1);
 }
-/* .load-more-item-btn {
-  background: linear-gradient(45deg, #f72585 30%, #fdbb2d);
-  padding: 0.5rem 2rem;
-  border: none;
-  box-shadow: 0 4px 2px 0px black;
-  color: white;
-  border-radius: 8px;
-  transition: 0.5s;
-  font-family: "Ubuntu", sans-serif;
-  cursor: pointer;
-  visibility: hidden;
-} */
+
 .load-more-btn.show,
 .load-more-item-btn.show {
   visibility: visible;
 }
-/* .load-more-item-btn:hover {
-  background: linear-gradient(0deg, #f72585 30%, #fdbb2d);
-  transform: scale(1.1);
-} */
+
+.lb-container {
+  padding: 2px;
+}
 @media (max-width: 769px) {
   .item img {
     margin-bottom: 2rem;
