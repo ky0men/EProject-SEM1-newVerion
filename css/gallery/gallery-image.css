@@ -1,0 +1,147 @@
+.photo-gallery {
+  color: white;
+}
+
+.photo-gallery p {
+  color: white;
+}
+
+.photo-gallery h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .photo-gallery h2 {
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-size: 24px;
+  }
+}
+
+.photo-gallery .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.photo-gallery .intro p {
+  margin-bottom: 0;
+}
+/* .tab-content .btn-navbar {
+  padding: 0.25rem 0.5rem;
+  margin-right: 1rem;
+} */
+.tab-btn {
+  border: 1px solid salmon;
+  margin-right: 1rem;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+.tab-btn.active {
+  border: none;
+  display: inline-block;
+  background: linear-gradient(45deg, #f72585 30%, #fdbb2d);
+}
+.tab-btn:hover {
+  background: linear-gradient(
+    45deg,
+    rgb(247, 37, 133, 0.7) 30%,
+    rgb(253, 187, 45, 0.7)
+  );
+}
+.photo-gallery .photos {
+  padding-bottom: 0.5rem;
+}
+
+.photo-gallery .item {
+  padding-bottom: 0;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.item img {
+  height: 100%;
+  padding-bottom: 0.5rem;
+  object-fit: cover;
+  width: 100%;
+}
+.item {
+  height: 260px;
+  position: relative;
+}
+.item a {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.col-lg-8.item {
+  height: 520px;
+}
+.item p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.25rem 1rem;
+  opacity: 0;
+  transition: all 0.5s ease;
+  background-color: rgb(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem;
+}
+.item img:hover ~ p {
+  opacity: 1;
+}
+.last-imgs .item {
+  height: auto;
+  object-fit: cover;
+}
+.load-more-btn,
+.load-more-item-btn {
+  background: linear-gradient(45deg, #f72585 30%, #fdbb2d);
+  padding: 0.5rem 2rem;
+  border: none;
+  box-shadow: 0 4px 2px 0px black;
+  color: white;
+  border-radius: 8px;
+  transition: 0.5s;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+  visibility: hidden;
+}
+.load-more-btn:hover,
+.load-more-item-btn:hover {
+  background: linear-gradient(0deg, #f72585 30%, #fdbb2d);
+  transform: scale(1.1);
+}
+/* .load-more-item-btn {
+  background: linear-gradient(45deg, #f72585 30%, #fdbb2d);
+  padding: 0.5rem 2rem;
+  border: none;
+  box-shadow: 0 4px 2px 0px black;
+  color: white;
+  border-radius: 8px;
+  transition: 0.5s;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+  visibility: hidden;
+} */
+.load-more-btn.show,
+.load-more-item-btn.show {
+  visibility: visible;
+}
+/* .load-more-item-btn:hover {
+  background: linear-gradient(0deg, #f72585 30%, #fdbb2d);
+  transform: scale(1.1);
+} */
+@media (max-width: 769px) {
+  .item img {
+    margin-bottom: 2rem;
+  }
+}

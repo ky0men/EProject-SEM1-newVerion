@@ -1,0 +1,130 @@
+.video_img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.youtube-video-play-button {
+  height: 30px;
+  width: 45px;
+  background-color: rgba(50, 50, 50, 0.75);
+  border-radius: 5px;
+  opacity: 0.6;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.openbox:hover .youtube-video-play-button {
+  background-color: rgba(255, 69, 70, 0.9);
+  opacity: 1;
+  cursor: pointer;
+}
+.youtube-video-play-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 16px;
+  margin: 0 auto;
+  border-style: solid;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+}
+#video-gallery {
+  margin: 0 auto;
+  padding-top: 60px;
+}
+.video-title-header {
+  padding-top: 100px;
+}
+.tab-btn {
+  border: 1px solid salmon;
+  margin-right: 1rem;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+.tab-btn.active {
+  border: none;
+  display: inline-block;
+  background: linear-gradient(45deg, #f72585 30%, #fdbb2d);
+}
+.tab-btn:hover {
+  background: linear-gradient(
+    45deg,
+    rgb(247, 37, 133, 0.7) 30%,
+    rgb(253, 187, 45, 0.7)
+  );
+}
+.load-more-btn {
+  background: linear-gradient(45deg, #f72585 30%, #fdbb2d);
+  padding: 0.5rem 2rem;
+  border: none;
+  box-shadow: 0 4px 2px 0px black;
+  color: white;
+  border-radius: 8px;
+  transition: 0.5s;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+  /* visibility: hidden; */
+}
+.load-more-btn:hover {
+  background: linear-gradient(0deg, #f72585 30%, #fdbb2d);
+  transform: scale(1.1);
+}
+.openbox img {
+  height: 210px;
+  object-fit: cover;
+}
+.open-box {
+  display: none;
+}
+/* Video fanbox */
+/* .video-gallery {
+  margin: auto;
+  width: 100%;
+} */
+
+/* .video {
+  opacity: 1;
+  background: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  margin: 1%;
+  float: left;
+} */
+
+.video img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+.fancybox-skin {
+  padding: 6px !important;
+}
+.video img:hover,
+.video img:active,
+.video img:focus,
+.video:hover,
+.video-title:hover {
+  opacity: 0.75;
+}
+
+.video-title {
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  line-height: 1.25;
+  padding: 5px 8px;
+  text-align: center;
+  color: #555;
+  background-color: white;
+  margin-bottom: 1rem;
+  height: 55px;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+}
+
+a:hover {
+  text-decoration: none;
+}

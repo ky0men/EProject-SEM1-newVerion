@@ -823,7 +823,7 @@ body {
 }
 /* Circle animation */
 .circle-card img {
-  animation: rotate-circle 10s linear infinite;
+  animation: rotate-circle 15s linear infinite;
 }
 @keyframes rotate-circle {
   0% {
