@@ -325,7 +325,7 @@ if (titleUrl === "what-is-black-hole") {
 </p>
 <div class="img-with-content">
   <div>
-    <img src="http://cdn.sci-news.com/images/2021/02/image_9373-Cygnus-X-1.jpg" alt="">
+    <img src="https://skyandtelescope.org/wp-content/uploads/Cygnus-X-1_imageB-900x507.jpg" alt="">
   </div>
   <div class="">
     An artist's drawing a black hole named Cygnus X-1. It formed when a large star caved in. This black hole
