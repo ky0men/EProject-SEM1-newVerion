@@ -256,7 +256,6 @@ body {
   border-radius: 4px;
 }
 
-
 .title-decoration {
   position: relative;
   display: block;
@@ -290,7 +289,6 @@ body {
   background: -webkit-linear-gradient(0deg, #f72585 30%, #4361ee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 .astro-mark-1 {
   background: -webkit-linear-gradient(100deg, #f72585 30%, #fdbb2d);
@@ -316,98 +314,119 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-
 /* CONTENT */
-.header_content, .header_content-venus, .header_content-earth,.header_content-mars, .header_content-jupiter, .header_content-saturn,
- .header_content-uranus, .header_content-neptune{
-    margin-top: 60px;
-    background: url(../../images/planets-images/mecury/mecury-header.jpg)no-repeat center / cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.header_content,
+.header_content-venus,
+.header_content-earth,
+.header_content-mars,
+.header_content-jupiter,
+.header_content-saturn,
+.header_content-uranus,
+.header_content-neptune {
+  margin-top: 60px;
+  background: url(../../images/planets-images/mecury/mecury-header.jpg)
+    no-repeat center / cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.header_content-venus{
-    background: url(../../images/planets-images/venus/BG-2148898.jpg)no-repeat center / cover;
+.header_content-venus {
+  background: url(../../images/planets-images/venus/BG-2148898.jpg) no-repeat
+    center / cover;
 }
-.header_content-earth{
-    background: url(../../images/planets-images/earth/5521099.jpg)no-repeat center / cover;
+.header_content-earth {
+  background: url(../../images/planets-images/earth/5521099.jpg) no-repeat
+    center / cover;
 }
-.header_content-mars{
-    background: url(../../images/planets-images/mars/mars-nd.png)no-repeat center / cover;
+.header_content-mars {
+  background: url(../../images/planets-images/mars/mars-nd.png) no-repeat center /
+    cover;
 }
-.header_content-jupiter{
-    background: url(../../images/planets-images/jupiter/jupiter-superJumbo.jpg)no-repeat center / cover;
+.header_content-jupiter {
+  background: url(../../images/planets-images/jupiter/jupiter-superJumbo.jpg)
+    no-repeat center / cover;
 }
-.header_content-saturn{
-    background: url(../../images/planets-images/saturn/6146c3ec5b3a1.jpg)no-repeat center / cover;
+.header_content-saturn {
+  background: url(../../images/planets-images/saturn/6146c3ec5b3a1.jpg)
+    no-repeat center / cover;
 }
-.header_content-uranus{
-    background: url(../../images/planets-images/uranus/headBG.jpg)no-repeat center / cover;
+.header_content-uranus {
+  background: url(../../images/planets-images/uranus/headBG.jpg) no-repeat
+    center / cover;
 }
-.header_content-neptune{
-    background: url(../../images/planets-images/neptune/headBG.jpg)no-repeat center / cover;
+.header_content-neptune {
+  background: url(../../images/planets-images/neptune/headBG.jpg) no-repeat
+    center / cover;
 }
 
-.header_item{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
+.header_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
 }
-.name_planet{
-    text-align: center;
+.name_planet {
+  text-align: center;
 }
-.name_planet h1{
-  color: #eb3b74; font-family: 'Righteous', cursive; font-size: 65px; font-weight: normal; line-height: 60px; margin: 10px 0 20px; text-transform: uppercase; text-shadow: 2px 2px 0 #000, margin: 10px 0 24px; text-align: center;
+.name_planet h1 {
+  color: #eb3b74;
+  font-family: "Righteous", cursive;
+  font-size: 65px;
+  font-weight: normal;
+  line-height: 60px;
+  margin: 10px 0 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 #000;
+  margin: 10px 0 24px;
+  text-align: center;
 }
-.header_item p{
-    text-align: center;
-    font-weight: 500;
+.header_item p {
+  text-align: center;
+  font-weight: 500;
 }
-.planet_facts .facts_title{
-    padding: 40px 0;
+.planet_facts .facts_title {
+  padding: 40px 0;
 }
-.planet_facts .facts_title h1{
-    text-align: center;
-    background: -webkit-linear-gradient(100deg, #f72585 30%, #fdbb2d);
+.planet_facts .facts_title h1 {
+  text-align: center;
+  background: -webkit-linear-gradient(100deg, #f72585 30%, #fdbb2d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.planets-card-content{
- align-items: center;
+.planets-card-content {
+  align-items: center;
 }
 
-
- .widget_header{
-  background: -webkit-linear-gradient(0deg, #f72585 , #4361ee);
+.widget_header {
+  background: -webkit-linear-gradient(0deg, #f72585, #4361ee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Righteous", cursive;
-   border-left: 10px #4361ee solid;
-  
-   font-weight: 500;
-   padding-left: 5px;
-   font-size: 25px;
- }
+  border-left: 10px #4361ee solid;
+
+  font-weight: 500;
+  padding-left: 5px;
+  font-size: 25px;
+}
 .textwidget {
-   font-size: 18px;
- }
- .column-1 {
-   vertical-align: top;
-   padding: 9px;
-   color: #6c97ff ;
- }
- .column-2{
-   padding: 7px;
-   vertical-align: top;
-   padding-left: 30px;
-   font-size: 17px;
-   animation: fade-right 0.6s ease forwards;
-   animation-delay: 1.2s;
- }
- @keyframes fade-right {
+  font-size: 18px;
+}
+.column-1 {
+  vertical-align: top;
+  padding: 9px;
+  color: #6c97ff;
+}
+.column-2 {
+  padding: 7px;
+  vertical-align: top;
+  padding-left: 30px;
+  font-size: 17px;
+  animation: fade-right 0.6s ease forwards;
+  animation-delay: 1.2s;
+}
+@keyframes fade-right {
   0% {
     opacity: 0;
     transform: translateX(200px);
@@ -416,119 +435,139 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
-} 
- 
+}
 
-.facts2{
-  margin-top: 20px ;
+.facts2 {
+  margin-top: 20px;
   background-color: #000000;
   margin-left: 0;
 }
-.facts2_item{
+.facts2_item {
   animation: fade-left 1.5s ease forwards;
 }
-.facts2_list{
+.facts2_list {
   padding: 70px 0;
 }
-.facts2_list ul{
-  padding-left:0 ;
+.facts2_list ul {
+  padding-left: 0;
 }
-.facts2_list li{
+.facts2_list li {
   padding: 5px 0;
   list-style-type: none;
-  opacity:0;
-  background : #000000;
-  white-space:nowrap;
+  opacity: 0;
+  background: #000000;
+  white-space: nowrap;
   font-size: 19px;
-  word-wrap:break-word;
+  word-wrap: break-word;
 }
 
-
 .facts2_list ul li:before {
-  color:#f72585;
+  color: #f72585;
   float: left;
   margin: 0 0 0 -1em;
   width: 1em;
-  content: '\2022';
+  content: "\2022";
 }
 
+.facts2_list li:first-child {
+  animation: bringback 1s 0s forwards;
+}
+.facts2_list li:nth-child(2) {
+  animation: bringback 1s 0.5s forwards;
+}
+.facts2_list li:nth-child(3) {
+  animation: bringback 1s 1s forwards;
+}
+.facts2_list li:nth-child(4) {
+  animation: bringback 1s 1.5s forwards;
+}
+.facts2_list li:nth-child(5) {
+  animation: bringback 1s 2s forwards;
+}
+.facts2_list li:nth-child(6) {
+  animation: bringback 1s 2.5s forwards;
+}
+.facts2_list li:nth-child(7) {
+  animation: bringback 1s 3s forwards;
+}
 
-
-.facts2_list li:first-child{ animation:bringback 1s 0s forwards;}
-.facts2_list li:nth-child(2){animation:bringback 1s  0.5s forwards;}
-.facts2_list li:nth-child(3){animation:bringback 1s  1s forwards;}
-.facts2_list li:nth-child(4){ animation:bringback 1s 1.5s forwards;}
-.facts2_list li:nth-child(5){animation:bringback 1s  2s forwards;}
-.facts2_list li:nth-child(6){animation:bringback 1s 2.5s forwards;}
-.facts2_list li:nth-child(7){animation:bringback 1s 3s forwards;}
-
-
-
-
-@keyframes bringback{
-  to{opacity:1;text-indent:25px; }
+@keyframes bringback {
+  to {
+    opacity: 1;
+    text-indent: 25px;
   }
- 
-  
-  @keyframes fade-left {
-    0% {
-      opacity: 0;
-      transform: translateX(-200px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+}
 
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 /*YOUTUBE*/
 .wy {
   width: 80%;
 }
 .youtube {
-  position:relative;
-  padding-bottom:56.25%;
-  padding-top:30px;
-  height:0;
-  overflow:hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
   animation: show-up 1s ease forwards;
-  }
- 
- .youtube iframe, .youtube object, .youtube embed {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  }
+}
 
-  @keyframes show-up {
-    0% {
-      opacity: 0;
-      transform: scale(0.3);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  } 
+.youtube iframe,
+.youtube object,
+.youtube embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
- /* END YOUTUBE */
- hr.sep-2 {
-  border: 0; 
-  height: 1px; 
+@keyframes show-up {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* END YOUTUBE */
+hr.sep-2 {
+  border: 0;
+  height: 1px;
   margin: 20px 40px 10px;
-  background-image: linear-gradient(to right, #423d3d, #f0f0f0,#41d9c0, #00b9ff,#0c39b4,#00b9ff, #41d9c0, #f0f0f0,#423d3d);
+  background-image: linear-gradient(
+    to right,
+    #423d3d,
+    #f0f0f0,
+    #41d9c0,
+    #00b9ff,
+    #0c39b4,
+    #00b9ff,
+    #41d9c0,
+    #f0f0f0,
+    #423d3d
+  );
 }
-.facts3{
+.facts3 {
   margin-top: 50px;
-  
 }
-.facts3 img{
+.facts3 img {
   align-items: center;
 }
-.facts3-card{
+.facts3-card {
   margin-bottom: 60px;
   background-color: #101113;
   border-radius: 30px;
@@ -538,26 +577,26 @@ body {
   animation: show-up 1s ease forwards;
 }
 
-.facts3-card-content h2{
+.facts3-card-content h2 {
   align-items: flex-start;
 }
-.facts4-h1{
+.facts4-h1 {
   margin-left: 50px;
   background: -webkit-linear-gradient(100deg, #f72585 30%, #fdbb2d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Righteous", cursive;
 }
-.facts4{
+.facts4 {
   background-color: #101113;
   font-size: 21px;
   animation: fade-bottom 0.6s ease forwards;
   animation-delay: 1s;
 }
-.facts4_item{
+.facts4_item {
   padding: 2rem;
 }
-.facts4_item p:first-child::first-letter{
+.facts4_item p:first-child::first-letter {
   float: left;
   font-size: 85px;
   initial-letter: 2;
@@ -565,7 +604,7 @@ body {
   padding: 0 3px;
   color: #4361ee;
 }
-.facts4_item img{
+.facts4_item img {
   margin: auto;
   width: 50%;
   margin-left: 25%;
@@ -582,19 +621,16 @@ body {
   }
 }
 
-
-.facts5{
-  
+.facts5 {
   margin-top: 50px;
   font-size: 19px;
-  
 }
 .facts5-card {
- margin-left: 10%;
- margin-right: 15%;
- margin-top: 30px;
+  margin-left: 10%;
+  margin-right: 15%;
+  margin-top: 30px;
 }
-.facts5-h1{
+.facts5-h1 {
   margin-top: 20px;
   margin-left: 50px;
   background: -webkit-linear-gradient(100deg, #f72585 30%, #fdbb2d);
@@ -602,35 +638,35 @@ body {
   -webkit-text-fill-color: transparent;
   font-family: "Righteous", cursive;
 }
-.facts5 p{
+.facts5 p {
   animation: show-up 1s ease forwards;
 }
 
-.facts5-card img{
+.facts5-card img {
   max-width: 380px;
   border: 10px solid rgb(255, 255, 255);
 }
-.facts5-card-img1{
+.facts5-card-img1 {
   justify-content: center;
   animation: fade-right-f5c1 1s ease forwards;
-}  
-.facts5-card-img2{
+}
+.facts5-card-img2 {
   justify-content: center;
   animation: fade-right-f5c2 1s ease forwards;
 }
-.facts5-card-img3{
+.facts5-card-img3 {
   justify-content: center;
   animation: fade-right-f5c3 1s ease forwards;
-}    
+}
 @keyframes fade-right-f5c1 {
   0% {
-      opacity: 0;
-      transform: translateX(-400px);
+    opacity: 0;
+    transform: translateX(-400px);
   }
   100% {
-      opacity: 1;
-      transform: rotate(-5deg);
-    }
+    opacity: 1;
+    transform: rotate(-5deg);
+  }
 }
 
 @keyframes fade-right-f5c2 {
@@ -646,61 +682,58 @@ body {
 
 @keyframes fade-right-f5c3 {
   0% {
-      opacity: 0;
-      transform: translateX(-400px);
+    opacity: 0;
+    transform: translateX(-400px);
   }
   100% {
-      opacity: 1;
-      transform: rotate(3deg);
-    }
+    opacity: 1;
+    transform: rotate(3deg);
+  }
 }
 
-
-
-@media screen and (max-width:1600px){
-  .facts5-card img{
+@media screen and (max-width: 1600px) {
+  .facts5-card img {
     max-width: 320px;
   }
 }
-@media screen and (max-width:1300px){
-  .facts5{
+@media screen and (max-width: 1300px) {
+  .facts5 {
     font-size: 17px;
   }
-  .facts5-card img{
+  .facts5-card img {
     max-width: 250px;
   }
   .youtube {
     width: 500px;
-    }
+  }
 }
 
-@media screen and (max-width:1100px){
-  .facts2_list li{
+@media screen and (max-width: 1100px) {
+  .facts2_list li {
     font-size: 16px;
   }
   .facts5-card {
     margin-left: 0;
     margin-right: 0;
-   }
-   .card-select img{
+  }
+  .card-select img {
     width: 200px;
   }
 }
-@media screen and (max-width:767px){
-  .facts2_list li{
+@media screen and (max-width: 767px) {
+  .facts2_list li {
     font-size: 15px;
-    mãc
   }
-  .wy{
+  .wy {
     width: auto;
   }
   .youtube {
     width: auto;
-    }
-  .facts4{
-  font-size: 18px;
   }
-  .facts4_item img{
+  .facts4 {
+    font-size: 18px;
+  }
+  .facts4_item img {
     margin: auto;
     width: 100%;
     margin-left: 0;
@@ -710,39 +743,36 @@ body {
     margin-left: 0;
     margin-right: 0;
     text-align: center;
-   }
-   .facts5-card img{
+  }
+  .facts5-card img {
     max-width: 400px;
   }
-  .facts5-card-img1{
-  
+  .facts5-card-img1 {
     transform: rotate(0);
   }
-  .facts5-card-img2{
- 
+  .facts5-card-img2 {
     transform: rotate(0);
   }
-  .facts5-card-img3{
-
+  .facts5-card-img3 {
     transform: rotate(0);
   }
-  .card-select img{
+  .card-select img {
     width: 100px;
   }
-  .planets-select h3{
+  .planets-select h3 {
     font-size: 18px;
   }
   @keyframes fade-right-f5c1 {
     0% {
-        opacity: 0;
-        transform: translateX(-400px);
+      opacity: 0;
+      transform: translateX(-400px);
     }
     100% {
-        opacity: 1;
-        transform: rotate(0);
-      }
+      opacity: 1;
+      transform: rotate(0);
+    }
   }
-  
+
   @keyframes fade-right-f5c2 {
     0% {
       opacity: 0;
@@ -753,69 +783,69 @@ body {
       transform: rotate(0);
     }
   }
-  
+
   @keyframes fade-right-f5c3 {
     0% {
-        opacity: 0;
-        transform: translateX(-400px);
+      opacity: 0;
+      transform: translateX(-400px);
     }
     100% {
-        opacity: 1;
-        transform: rotate(0);
-      }
+      opacity: 1;
+      transform: rotate(0);
+    }
   }
-  
 }
-@media screen and (max-width:580px){
-  .slick-arrow{
+@media screen and (max-width: 580px) {
+  .slick-arrow {
     display: none;
   }
 }
 /* END CONTENT */
 
-.planets-select{
+.planets-select {
   margin-top: 100px;
 }
 
-
-.wrap{
+.wrap {
   text-align: center;
 }
-.slider{
+.slider {
   margin: 0;
 }
-.planets-select h2{
+.planets-select h2 {
   text-align: center;
 }
-.card-select{
+.card-select {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-.card-select img{
+.card-select img {
   max-width: 250px;
 }
-.card-select h3{
+.card-select h3 {
   text-align: center;
   margin-top: 10px;
 }
-.inner,.outer,.other{
+.inner,
+.outer,
+.other {
   margin-top: 45px;
 }
-.slider a{
+.slider a {
   text-decoration: none;
   color: #fff;
 }
-.other-slider a{
+.other-slider a {
   text-decoration: none;
   color: #fff;
 }
 
-.comets img{
+.comets img {
   border-radius: 50%;
-  border:2px solid #fff;
+  border: 2px solid #fff;
 }
 
 .btn-gradient {
@@ -849,8 +879,6 @@ body {
   color: white;
   text-decoration: none;
 }
-
-
 
 /* ASTRONOMY NEWS */
 .news-card {
@@ -904,7 +932,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  
 }
 .logo-footer img {
   width: 200px;
@@ -939,9 +966,9 @@ body {
 .scroll-top-btn.show {
   display: block;
 }
-.scroll-outer {
-  /* background-color: #fcbf1e; */
-}
+/* .scroll-outer {
+  background-color: #fcbf1e;
+} */
 .scroll-outer i {
   padding: 0.75rem;
   color: #fcbf1e;
@@ -966,10 +993,3 @@ body {
     transform: translate(0);
   }
 }
-
-
-
-
-
-
-
