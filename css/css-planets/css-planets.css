@@ -290,7 +290,7 @@ body {
   background: -webkit-linear-gradient(0deg, #f72585 30%, #4361ee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Superstar X";
+
 }
 .astro-mark-1 {
   background: -webkit-linear-gradient(100deg, #f72585 30%, #fdbb2d);
@@ -360,16 +360,20 @@ body {
     text-align: center;
 }
 .name_planet h1{
-  color: #fff; font-family: 'Righteous', cursive; font-size: 65px; font-weight: normal; line-height: 60px; margin: 10px 0 20px; text-transform: uppercase; text-shadow: 2px 2px 0 #000, margin: 10px 0 24px; text-align: center;
+  color: #eb3b74; font-family: 'Righteous', cursive; font-size: 65px; font-weight: normal; line-height: 60px; margin: 10px 0 20px; text-transform: uppercase; text-shadow: 2px 2px 0 #000, margin: 10px 0 24px; text-align: center;
 }
 .header_item p{
     text-align: center;
+    font-weight: 500;
 }
 .planet_facts .facts_title{
     padding: 40px 0;
 }
 .planet_facts .facts_title h1{
     text-align: center;
+    background: -webkit-linear-gradient(100deg, #f72585 30%, #fdbb2d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .planets-card-content{
  align-items: center;
@@ -399,20 +403,44 @@ body {
    padding: 7px;
    vertical-align: top;
    padding-left: 30px;
+   font-size: 17px;
+   animation: fade-right 0.6s ease forwards;
+   animation-delay: 1.2s;
  }
+ @keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} 
+ 
 
 .facts2{
   margin-top: 20px ;
   background-color: #000000;
-  font-size: 20px;
   margin-left: 0;
+}
+.facts2_item{
+  animation: fade-left 1.5s ease forwards;
 }
 .facts2_list{
   padding: 70px 0;
 }
-.facts2_list ul li{
+.facts2_list ul{
+  padding-left:0 ;
+}
+.facts2_list li{
   padding: 5px 0;
   list-style-type: none;
+  opacity:0;
+  background : #000000;
+  white-space:nowrap;
+  font-size: 19px;
+  word-wrap:break-word;
 }
 
 
@@ -423,6 +451,37 @@ body {
   width: 1em;
   content: '\2022';
 }
+
+
+
+.facts2_list li:first-child{ animation:bringback 1s 0s forwards;}
+.facts2_list li:nth-child(2){animation:bringback 1s  0.5s forwards;}
+.facts2_list li:nth-child(3){animation:bringback 1s  1s forwards;}
+.facts2_list li:nth-child(4){ animation:bringback 1s 1.5s forwards;}
+.facts2_list li:nth-child(5){animation:bringback 1s  2s forwards;}
+.facts2_list li:nth-child(6){animation:bringback 1s 2.5s forwards;}
+.facts2_list li:nth-child(7){animation:bringback 1s 3s forwards;}
+
+
+
+
+@keyframes bringback{
+  to{opacity:1;text-indent:25px; }
+  }
+ 
+  
+  @keyframes fade-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
 /*YOUTUBE*/
 .wy {
   width: 80%;
@@ -433,6 +492,7 @@ body {
   padding-top:30px;
   height:0;
   overflow:hidden;
+  animation: show-up 1s ease forwards;
   }
  
  .youtube iframe, .youtube object, .youtube embed {
@@ -442,6 +502,18 @@ body {
   width:100%;
   height:100%;
   }
+
+  @keyframes show-up {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  } 
+
  /* END YOUTUBE */
  hr.sep-2 {
   border: 0; 
@@ -463,17 +535,24 @@ body {
   border: 2px solid rgb(72, 234, 189);
   box-shadow: 0 3px 15px 2px rgba(56, 105, 255, 0.5);
   min-height: 210px;
+  animation: show-up 1s ease forwards;
 }
+
 .facts3-card-content h2{
   align-items: flex-start;
 }
 .facts4-h1{
   margin-left: 50px;
+  background: -webkit-linear-gradient(100deg, #f72585 30%, #fdbb2d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Righteous", cursive;
 }
 .facts4{
   background-color: #101113;
-  margin: 0 1%;
   font-size: 21px;
+  animation: fade-bottom 0.6s ease forwards;
+  animation-delay: 1s;
 }
 .facts4_item{
   padding: 2rem;
@@ -484,7 +563,7 @@ body {
   initial-letter: 2;
   line-height: 0.7;
   padding: 0 3px;
-  color: #2fa4e7;
+  color: #4361ee;
 }
 .facts4_item img{
   margin: auto;
@@ -492,7 +571,16 @@ body {
   margin-left: 25%;
   padding: 15px 0;
 }
-
+@keyframes fade-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 .facts5{
@@ -509,6 +597,13 @@ body {
 .facts5-h1{
   margin-top: 20px;
   margin-left: 50px;
+  background: -webkit-linear-gradient(100deg, #f72585 30%, #fdbb2d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Righteous", cursive;
+}
+.facts5 p{
+  animation: show-up 1s ease forwards;
 }
 
 .facts5-card img{
@@ -517,16 +612,51 @@ body {
 }
 .facts5-card-img1{
   justify-content: center;
-  transform: rotate(-5deg);
+  animation: fade-right-f5c1 1s ease forwards;
 }  
 .facts5-card-img2{
   justify-content: center;
-  transform: rotate(5deg);
+  animation: fade-right-f5c2 1s ease forwards;
 }
 .facts5-card-img3{
   justify-content: center;
-  transform: rotate(3deg);
+  animation: fade-right-f5c3 1s ease forwards;
 }    
+@keyframes fade-right-f5c1 {
+  0% {
+      opacity: 0;
+      transform: translateX(-400px);
+  }
+  100% {
+      opacity: 1;
+      transform: rotate(-5deg);
+    }
+}
+
+@keyframes fade-right-f5c2 {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes fade-right-f5c3 {
+  0% {
+      opacity: 0;
+      transform: translateX(-400px);
+  }
+  100% {
+      opacity: 1;
+      transform: rotate(3deg);
+    }
+}
+
+
+
 @media screen and (max-width:1600px){
   .facts5-card img{
     max-width: 320px;
@@ -545,6 +675,9 @@ body {
 }
 
 @media screen and (max-width:1100px){
+  .facts2_list li{
+    font-size: 16px;
+  }
   .facts5-card {
     margin-left: 0;
     margin-right: 0;
@@ -554,6 +687,10 @@ body {
   }
 }
 @media screen and (max-width:767px){
+  .facts2_list li{
+    font-size: 15px;
+    mãc
+  }
   .wy{
     width: auto;
   }
@@ -595,6 +732,39 @@ body {
   .planets-select h3{
     font-size: 18px;
   }
+  @keyframes fade-right-f5c1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0);
+      }
+  }
+  
+  @keyframes fade-right-f5c2 {
+    0% {
+      opacity: 0;
+      transform: translateX(200px);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes fade-right-f5c3 {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0);
+      }
+  }
+  
 }
 @media screen and (max-width:580px){
   .slick-arrow{
@@ -796,5 +966,10 @@ body {
     transform: translate(0);
   }
 }
+
+
+
+
+
 
 
